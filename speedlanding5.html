@@ -1,0 +1,2431 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedLanding | 파워링크 광고비 절감 비법 (무료 전자책)</title>
+    <meta name="description" content="네이버 파워링크 광고비, 아직도 블로그로 연결해 '태우고' 계신가요? 광고비 1억 쓴 대표가 만든 '매출 필터' 랜딩페이지 + 광고비 절약 전자책 무료 제공. 스마트플레이스 상위노출 포함.">
+    <meta name="keywords" content="랜딩페이지 제작, 네이버 파워링크, 광고비 절감, 전환율 최적화, DB 수집, 스마트스토어, 블로그 마케팅, PASONA, Tally 연동, 커피 사업, 전자책, 스마트플레이스">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SpeedLanding | 파워링크 광고비 10배 절약 솔루션 + 무료 전자책">
+    <meta property="og:description" content="광고 클릭을 '매출'로! 자동 DB 수집 랜딩페이지 + 광고비 절약 노하우 전자책 즉시 다운로드.">
+    <meta property="og:image" content="/images/og-speedlanding-ebook.jpg"> <meta property="og:url" content="https://speedlanding.com">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ... (이전과 동일한 모든 CSS 코드) ... */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: #1a1f2e;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Noto Serif KR', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        /* Hero Section */
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.02); }
+        }
+        
+        /* Price Animation */
+        .price-container {
+            position: relative;
+            height: 120px; /* 높이 유지 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem; /* 하단 마진 추가 */
+        }
+
+        /* 전자책 혜택 리스트 스타일 */
+        .ebook-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 1rem auto 2rem; /* 위아래 마진 조정 */
+            max-width: 500px; /* 최대 너비 설정 */
+            text-align: left; /* 좌측 정렬 */
+            font-size: 0.95rem; /* 폰트 크기 조정 */
+            color: #cbd5e1; /* 밝은 회색 텍스트 */
+        }
+        .ebook-benefits li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start; /* 아이콘과 텍스트 상단 정렬 */
+        }
+        .ebook-benefits li::before {
+            content: '✓'; /* 체크 아이콘 */
+            color: #60a5fa; /* 밝은 파란색 */
+            font-weight: bold;
+            margin-right: 0.75rem; /* 우측 간격 */
+            flex-shrink: 0; /* 아이콘 크기 고정 */
+            margin-top: 2px; /* 텍스트와의 수직 정렬 미세 조정 */
+        }
+        
+        .price-old {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #3b82f6;
+            text-decoration: line-through;
+            opacity: 1;
+            transition: all 1s ease;
+        }
+        
+        .price-old.fade-out {
+            opacity: 0;
+            transform: scale(0.8) translateY(-20px);
+        }
+        
+        .price-new {
+            position: absolute;
+            font-size: 5rem;
+            font-weight: 900;
+            color: #ef4444;
+            opacity: 0;
+            transform: scale(0.8) translateY(20px);
+            transition: all 1s ease;
+        }
+        
+        .price-new.fade-in {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+        
+        /* Typography Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1.0s; }
+        .delay-6 { animation-delay: 1.2s; } /* 추가 딜레이 */
+        
+        /* Brand Colors */
+        .text-brand {
+            color: #3b82f6;
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .text-brand-purple {
+            color: #8b5cf6;
+        }
+        
+        .bg-brand {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+        
+        /* Card Hover Effects */
+        .story-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .story-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+        
+        /* Package Cards - Decoy Strategy */
+        .package-card {
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .package-card.featured {
+            transform: scale(1.08);
+            z-index: 10;
+        }
+        
+        .package-card.featured:hover {
+            transform: scale(1.1) translateY(-8px);
+        }
+        
+        .package-card.decoy {
+            opacity: 0.95;
+        }
+        
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .floating-cta.visible {
+            transform: translateY(0);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            margin: auto;
+            padding: 0;
+            border-radius: 24px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1a1f2e;
+        }
+        
+        .form-group label .required {
+            color: #ef4444;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: 'Noto Sans KR', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .form-group input[type="checkbox"] { /* 체크박스 크기 조정 */
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+        .form-group label.checkbox-label { /* 체크박스 레이블 스타일 */
+            display: flex;
+            align-items: center; /* 수직 중앙 정렬 */
+            cursor: pointer;
+            margin-bottom: 0; /* 아래 마진 제거 */
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .success-message.active {
+            display: block;
+        }
+        
+        /* Button Styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
+            color: white !important;
+            font-weight: 700;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        }
+        
+        .btn-secondary {
+            border: 2px solid #3b82f6;
+            color: #3b82f6;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Ebook CTA 버튼 스타일 (Primary와 유사하게) */
+        .btn-ebook {
+             background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); /* 보라색 계열 */
+             box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+             transition: all 0.3s ease;
+             color: white !important;
+             font-weight: 700;
+             padding: 1rem 2.5rem; /* 버튼 크기 조정 */
+             border-radius: 9999px; /* 완전 둥근 형태 */
+             font-size: 1.125rem; /* 글자 크기 조정 */
+             display: inline-block;
+        }
+        .btn-ebook:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
+             background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+        }
+        /* 히어로 Secondary 버튼 스타일 수정 (흰색 배경) */
+        .btn-hero-secondary {
+            border: 2px solid white;
+            color: white;
+            background: transparent;
+            transition: all 0.3s ease;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-size: 1.125rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+        .btn-hero-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* Limited Badge */
+        .limited-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        /* Guarantee Badge */
+        .guarantee-badge {
+            display: inline-block; /* 인라인 블록으로 변경 */
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%); /* 초록색 계열 */
+            color: white;
+            padding: 8px 16px; /* 패딩 조정 */
+            border-radius: 20px;
+            font-size: 12px; /* 폰트 크기 조정 */
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            margin-top: 4px; /* 위쪽 마진 추가 */
+        }
+        
+        /* Pulse Animation */
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+        
+        /* Counter Animation */
+        .counter {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+        }
+        
+        /* Industry Examples Grid */
+        .industry-card {
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .industry-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 16px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .comparison-table td {
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table tr:hover {
+            background: rgba(59, 130, 246, 0.05);
+        }
+        
+        .check-mark {
+            color: #10b981;
+            font-size: 24px;
+            font-weight: 900;
+        }
+        
+        .x-mark {
+            color: #ef4444;
+            font-size: 24px;
+            font-weight: 900;
+        }
+
+        /* Ebook Section Styles */
+        .ebook-teaser-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .ebook-teaser-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: #3b82f6;
+        }
+        .ebook-teaser-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #3b82f6;
+        }
+        .ebook-teaser-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1f2e;
+            margin-bottom: 0.5rem;
+        }
+        .ebook-teaser-card p {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        /* Ebook Form Container */
+        .ebook-form-container {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); /* 밝은 회색 그라데이션 */
+            border-radius: 24px;
+            padding: 32px;
+            margin-top: 3rem;
+            border: 1px solid #d1d5db;
+        }
+
+        /* Keyword Sample Table */
+        .keyword-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .keyword-table th, .keyword-table td {
+            border: 1px solid #e5e7eb;
+            padding: 10px 12px;
+            text-align: center;
+        }
+        .keyword-table th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+        }
+        .keyword-table td.highlight {
+            background-color: #dbeafe; /* 연한 파란색 */
+            font-weight: 500;
+        }
+
+        /* Smartplace Checklist Accordion */
+        .checklist-accordion details {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            transition: background-color 0.2s ease;
+        }
+        .checklist-accordion details[open] {
+             background-color: #f9fafb; /* 열렸을 때 배경색 */
+        }
+        .checklist-accordion summary {
+            padding: 12px 16px;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none; /* 기본 마커 제거 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .checklist-accordion summary::after { /* 화살표 아이콘 */
+             content: '▼';
+             font-size: 0.8em;
+             transition: transform 0.2s ease;
+        }
+        .checklist-accordion details[open] summary::after {
+            transform: rotate(180deg);
+        }
+        .checklist-accordion .checklist-content {
+            padding: 0 16px 16px;
+            font-size: 0.9rem;
+            color: #4b5563;
+            border-top: 1px dashed #e5e7eb;
+            margin-top: 8px;
+            padding-top: 12px;
+        }
+        .checklist-accordion .speedlanding-link {
+            display: block;
+            margin-top: 10px;
+            padding: 8px;
+            background-color: #dbeafe;
+            color: #1e40af;
+            border-radius: 6px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Review Screenshot Placeholder */
+        .review-screenshot {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            /* 실제 이미지 크기에 맞게 가로세로 비율 조정 필요 */
+            aspect-ratio: 9 / 16; /* 예시 비율 (세로 스크린샷) */
+            background-color: #f3f4f6; /* 이미지 로딩 전 배경색 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-style: italic;
+        }
+        .review-screenshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Comparison Chart Placeholder */
+        .comparison-chart {
+             border: 1px solid #e5e7eb;
+             border-radius: 8px;
+             padding: 24px;
+             background-color: #f9fafb;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             min-height: 200px; /* 최소 높이 */
+             color: #9ca3af;
+             font-style: italic;
+             text-align: center;
+        }
+
+        /* Microcopy Style */
+        .microcopy {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            h1 { font-size: 32px; }
+            h2 { font-size: 28px; }
+            .hero-gradient { min-height: auto; padding: 80px 20px 60px; } /* 모바일 높이 조정 */
+            .price-old { font-size: 2.5rem; }
+            .price-new { font-size: 3rem; }
+             .btn-ebook, .btn-hero-secondary { padding: 0.8rem 1.8rem; font-size: 1rem; } /* 모바일 버튼 크기 조정 */
+            
+            .package-card.featured {
+                transform: scale(1);
+            }
+            
+            .btn-primary, .btn-secondary {
+                min-height: 44px;
+                padding: 14px 24px;
+            }
+
+            .keyword-table { font-size: 0.75rem; } /* 모바일 테이블 폰트 크기 */
+            .keyword-table th, .keyword-table td { padding: 8px 6px; }
+        }
+    </style>
+    <script async src="https://tally.so/widgets/embed.js"></script>
+
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"FAQPage",
+     "mainEntity":[
+      {"@type":"Question","name":"스마트스토어 상품페이지로 바로 보내는 게 낫지 않나요?",
+       "acceptedAnswer":{"@type":"Answer","text":"스마트스토어는 '결제'하는 곳, 파워링크 클릭 고객은 '고민 중'인 고객입니다. 고민 중인 고객을 바로 결제창에 보내면 99% 이탈합니다. SpeedLanding은 중간에서 고객을 '설득'하고 'DB를 수집'하는 '매출 필터' 역할을 하여 설득된 고객만 스토어로 보냅니다."}},
+      {"@type":"Question","name":"제 네이버 블로그/스토어와 디자인을 똑같이 맞출 수 있나요?",
+       "acceptedAnswer":{"@type":"Answer","text":"네, Deluxe(199,000원) 또는 Premium(220,000원) 패키지에서 고객의 블로그/스토어 메인 컬러, 로고, 폰트(유료 제외)를 동일하게 적용하여 이질감 없는 맞춤 디자인을 제공합니다."}},
+      {"@type":"Question","name":"구글 시트 연동? Tally 폼? 그게 정확히 뭔가요?",
+       "acceptedAnswer":{"@type":"Answer","text":"고객이 랜딩페이지의 버튼(Tally 폼)을 통해 정보를 제출하면, 사장님만 볼 수 있는 구글 시트(엑셀)에 고객 DB가 실시간으로 자동 저장되는 기능입니다. DB 수집을 100% 자동화합니다."}},
+      {"@type":"Question","name":"정말 30분 만에 완성되나요?",
+       "acceptedAnswer":{"@type":"Answer","text":"Standard 패키지는 광고 키워드와 업종에 맞는 PASONA 템플릿이 준비되어 있어, 로고, 문구, Tally 폼 링크만 주시면 30분 내 제작하여 즉시 광고 집행이 가능합니다."}},
+      {"@type":"Question","name":"DB 수집 후에 꼭 블로그로만 보낼 수 있나요?",
+       "acceptedAnswer":{"@type":"Answer","text":"아닙니다. 자동 리디렉션 기능으로 네이버 블로그, 스마트스토어 결제창, 인스타그램 DM, 카카오톡 채널 등 사장님이 원하는 어떤 주소로든 연결 가능합니다."}},
+      {"@type":"Question","name":"환불 정책은 어떻게 되나요?",
+       "acceptedAnswer":{"@type":"Answer","text":"업계 유일 '광고 효율 보장 환불제'를 시행합니다. 14일간 적용 후 DB 수집률/전환율 개선이 없다면 100% 전액 환불해 드립니다. 사장님의 리스크는 0원입니다."}}
+     ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "SpeedLanding Premium 패키지",
+      "description": "파워링크 광고 효율 극대화를 위한 All-In-One 랜딩페이지 제작 솔루션. PASONA 기반 설계, 자동 DB 수집, 블로그/스토어 연동, 맞춤 디자인, A/B 테스트 설정, 월간 전환율 분석 리포트, 전담 매니저, 무제한 수정(1개월) 포함.",
+      "brand": {
+        "@type": "Brand",
+        "name": "SpeedLanding"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://speedlanding.com/#packages",
+        "priceCurrency": "KRW",
+        "price": "220000",
+        "priceValidUntil": "2026-12-31", /* 유효 기간 설정 (예시) */
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition"
+      }
+      /* aggregateRating 또는 review 스키마 추가 가능 (실제 리뷰 데이터 기반) */
+    }
+    </script>
+
+</head>
+<body>
+    <div id="sampleModal" class="modal">
+        <div class="modal-content">
+            <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 rounded-t-3xl">
+                <span class="close" onclick="closeSampleModal()">&times;</span>
+                <h2 class="text-3xl font-bold mb-2" style="font-family: 'Noto Serif KR', serif;">광고 효율 10배 샘플 + 상담 신청</h2>
+                <p class="text-gray-200">선착순 20개 업체 한정 - 지금 바로 신청하세요!</p>
+            </div>
+            
+            <div id="formContainer" class="p-8">
+                <form id="sampleForm" onsubmit="submitSampleForm(event)">
+                    <input type="hidden" name="type" value="sample"> 
+                    
+                    <div class="form-group">
+                        <label>업체명/브랜드명 <span class="required">*</span></label>
+                        <input type="text" name="company" required placeholder="예: 메종드OO (스마트스토어)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>담당자명 <span class="required">*</span></label>
+                        <input type="text" name="name" required placeholder="예: 홍길동">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>연락처 <span class="required">*</span></label>
+                        <input type="tel" name="phone" required placeholder="예: 010-1234-5678" pattern="[0-9-]+">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>이메일 <span class="required">*</span></label>
+                        <input type="email" name="email" required placeholder="예: hello@company.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>업종 <span class="required">*</span></label>
+                        <select name="business_type" required>
+                             <option value="">선택해주세요</option>
+                             <option value="커피/카페사업">커피/카페사업</option>
+                             <option value="패션/잡화 스토어">패션/잡화 스토어</option>
+                             <option value="식품/건강 스토어">식품/건강 스토어</option>
+                             <option value="교육/서비스/컨설팅">교육/서비스/컨설팅</option>
+                             <option value="인테리어/가구">인테리어/가구</option>
+                             <option value="B2B/기업사업">B2B/기업사업</option>
+                             <option value="기타">기타</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>관심 패키지</label>
+                        <select name="package_interest">
+                            <option value="">선택해주세요</option>
+                            <option value="Standard">Standard (99,000원)</option>
+                            <option value="Deluxe">Deluxe (199,000원)</option>
+                            <option value="Premium">Premium (220,000원) - 추천!</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>현재 광고 연결 주소 (블로그/스토어 URL) <span class="required">*</span></label>
+                        <input type="text" name="website" required placeholder="예: https://blog.naver.com/myblog">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>문의사항</label>
+                        <textarea name="message" placeholder="궁금하신 점이나 요청사항을 자유롭게 작성해주세요"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="get_ebook" value="true">
+                            <span>📘 광고비 10배 절약 전자책도 함께 받기 (무료)</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label" style="align-items: flex-start;">
+                            <input type="checkbox" required>
+                            <span class="text-sm text-gray-600">개인정보 수집 및 이용에 동의합니다. (필수)</span>
+                        </label>
+                        <p class="text-xs text-gray-500 mt-2" style="padding-left: 26px;">
+                            수집항목: 업체명, 담당자명, 연락처, 이메일, 업종<br>
+                            이용목적: 무료 샘플 발송 및 상담, 전자책 발송(선택시)<br>
+                            보유기간: 1년 (신청일로부터)
+                        </p>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        무료 샘플 + 상담 신청하기
+                    </button>
+                    </form>
+            </div>
+            
+            <div id="successMessage" class="success-message">
+                 <div class="text-6xl mb-4">✅</div>
+                 <h3 class="text-2xl font-bold mb-4 text-gray-900">신청이 완료되었습니다!</h3>
+                 <p class="text-gray-600 mb-6">
+                     빠른 시일 내에 담당자가 연락드리겠습니다.<br>
+                     무료 샘플 페이지는 영업일 기준 1일 내 발송됩니다.<br>
+                     <span id="ebookSuccessText" style="display:none;">전자책은 입력하신 이메일로 즉시 발송됩니다.</span>
+                 </p>
+                 <button onclick="closeSampleModal()" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition">
+                     확인
+                 </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-cta" id="floatingCTA">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="text-white text-center md:text-left">
+                <p class="font-bold text-lg">사장님, 파워링크 광고비 '태우는' 일은 이제 그만하세요</p>
+                <p class="text-sm text-gray-300">광고비 10배 절약 샘플/전자책 - 선착순 <span class="text-blue-400 font-bold" id="floatingRemaining">20개 업체 남음</span></p>
+            </div>
+            <div class="flex gap-3">
+                <button 
+                    data-tally-open="<TALLY_EBOOK_FORM_ID>" /* 전자책용 Tally 폼 ID 입력 */
+                    data-tally-emoji-text="📘" 
+                    data-tally-emoji-animation="bounce" 
+                    data-tally-hidden-fields='{"cta_location":"플로팅_CTA_전자책", "offer":"ebook"}' 
+                    class="btn-ebook px-8 py-3 rounded-full font-bold whitespace-nowrap text-sm" 
+                    data-cta-variant="floating-ebook">
+                    무료 전자책 받기
+                </button>
+                 <button 
+                    onclick="openSampleModal()" /* 모달 열기 함수 호출 */
+                    class="btn-primary text-white px-8 py-3 rounded-full font-bold whitespace-nowrap text-sm" 
+                    data-cta-variant="floating-sample">
+                    무료 샘플 신청
+                </button>
+                </div>
+        </div>
+    </div>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center border-2 border-blue-400">
+                    <span class="text-white text-xl font-bold">S</span>
+                </div>
+                <div>
+                    <span class="text-xl font-bold block" style="font-family: 'Noto Serif KR', serif;">SpeedLanding</span>
+                    <span class="text-xs text-gray-600">파워링크 광고비 절감 솔루션</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                 <button 
+                     data-tally-open="<TALLY_EBOOK_FORM_ID>" 
+                     data-tally-emoji-text="📘" 
+                     data-tally-emoji-animation="bounce" 
+                     data-tally-hidden-fields='{"cta_location":"네비게이션_전자책", "offer":"ebook"}' 
+                     class="text-gray-700 hover:text-purple-600 transition-colors font-medium flex items-center gap-1 text-sm" 
+                     data-cta-variant="nav-ebook">
+                     무료 전자책
+                 </button>
+                 <a href="tel:010-4628-2048" class="text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1 text-sm">
+                    <span>📞</span> 상담: 010-4628-2048
+                </a>
+                <button 
+                    onclick="openSampleModal()"
+                    class="btn-primary text-white px-6 py-2 rounded-full font-bold text-sm" data-cta-variant="nav-sample">
+                    무료 샘플 신청
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-gradient">
+        <div class="hero-pattern"></div>
+        <div class="hero-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 pb-20 md:pt-40 md:pb-28"> /* 패딩 조정 */
+            <div class="max-w-4xl mx-auto text-center">
+                
+                <div class="fade-in-up mb-4">
+                    <span class="inline-block bg-red-600 text-white px-6 py-2 rounded-full text-sm font-bold pulse">
+                        🎁 광고비 절약 무료 샘플/전자책 <strong id="heroRemaining">선착순 제공</strong>
+                    </span>
+                </div>
+                
+                <div class="fade-in-up delay-1 mb-4">
+                    <span class="inline-block bg-white/10 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-medium border border-white/20">
+                        클릭당 2,000원짜리 고객, 혹시 '블로그'로 보내고 계신가요?
+                    </span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-6 fade-in-up delay-2" style="font-family: 'Noto Serif KR', serif;">
+                    사장님, 네이버 파워링크 광고비<br>
+                    <span class="text-red-500">매달 '태우고' 계신가요?</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-purple-300 mb-6 fade-in-up delay-3 font-semibold">
+                    📘 무료 전자책: <span class="underline">광고비 10배 절약 체크리스트</span> 지금 즉시 받기
+                </p>
+                
+                <div class="fade-in-up delay-4 mb-8">
+                    <div class="price-container">
+                        <div class="price-old" id="priceOld">
+                            2,200,000원
+                        </div>
+                        <div class="price-new" id="priceNew">
+                            220,000원
+                        </div>
+                    </div>
+                    <ul class="ebook-benefits fade-in-up delay-5">
+                        <li>파워링크 낭비 포인트 10가지 즉시 점검</li>
+                        <li>스마트플레이스 상위노출 핵심 체크리스트 포함</li>
+                        <li>다운로드 즉시 광고 효율 개선 가이드 메일 발송</li>
+                    </ul>
+                    <p class="text-lg text-gray-400 mt-2">
+                         <span class="text-blue-400 font-semibold line-through">효과 없는 외주 비용</span> → 
+                         <span class="text-red-400 font-semibold">광고비 10배 아껴주는 솔루션 비용</span>
+                    </p>
+                    <p class="text-2xl font-bold text-yellow-400 mt-3">
+                         💰 광고비 하루치도 안되는 가격으로 해결!
+                    </p>
+                </div>
+                
+                <p class="text-lg md:text-xl text-gray-300 mb-4 fade-in-up delay-5 leading-relaxed">
+                    광고 클릭을 '구매 고객'으로 바꾸는 자동 DB 수집 랜딩페이지 = SpeedLanding<br>
+                    비싼 광고 트래픽, 더 이상 블로그/스토어에서 놓치지 마세요.
+                </p>
+                
+                 <p class="text-sm text-gray-500 mb-10 fade-in-up delay-5 max-w-xl mx-auto">
+                      “클릭당 2,000원은 ‘비용’이 아니라 ‘기회’입니다. 구멍난 블로그 대신 촘촘한 매출 필터로 잡으세요.”
+                 </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up delay-6">
+                    <button 
+                        data-tally-open="<TALLY_EBOOK_FORM_ID>" 
+                        data-tally-emoji-text="📘" 
+                        data-tally-emoji-animation="bounce" 
+                        data-tally-hidden-fields='{"cta_location":"히어로_전자책", "offer":"ebook"}' 
+                        class="btn-ebook" /* 신규 스타일 */
+                        data-cta-variant="hero-ebook">
+                        무료 전자책 즉시 받기
+                    </button>
+                    <button 
+                        onclick="openSampleModal()"
+                        class="btn-hero-secondary" /* 신규 스타일 */
+                        data-cta-variant="hero-sample">
+                        무료 샘플 상담 신청
+                    </button>
+                </div>
+                
+                <div class="mt-16 grid grid-cols-3 gap-8 text-center fade-in-up delay-6">
+                    <div>
+                        <div class="counter text-4xl font-black text-blue-400 mb-2" data-target="90" data-suffix="%">90%</div>
+                        <div class="text-gray-400 text-sm">광고비 낭비율 (블로그 직결 시)</div>
+                    </div>
+                    <div>
+                        <div class="counter text-4xl font-black text-blue-400 mb-2" data-target="3" data-suffix="배">3배</div>
+                        <div class="text-gray-400 text-sm">랜딩페이지 도입 후 DB 수집률</div>
+                    </div>
+                    <div>
+                        <div class="counter text-4xl font-black text-blue-400 mb-2" data-target="150" data-suffix="+">150+</div>
+                        <div class="text-gray-400 text-sm">광고 효율 개선 완료 건수</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+             <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+             </svg>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-white" id="ebook">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 md:mb-20 reveal">
+                <span class="inline-block text-5xl md:text-6xl mb-6">📘</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900" style="font-family: 'Noto Serif KR', serif;">
+                    광고비를 '매출'로 바꾸는 실전 가이드,<br>
+                    <span class="text-purple-600">지금 무료로 드립니다</span>
+                </h2>
+                <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                    10년간 광고비 1억을 쓰며 얻은 노하우를 담았습니다.<br>
+                    SpeedLanding 솔루션 없이 이 전자책만 읽어도 광고 효율이 달라집니다.
+                </p>
+                 <p class="text-sm text-gray-500 mt-4">“다운로드와 동시에, 우리 업종에 맞춘 1페이지 전환 구조까지 알려드립니다.”</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16 md:mb-20 reveal">
+                <div class="ebook-teaser-card">
+                    <div class="icon">①</div>
+                    <h4>파워링크 낭비 체크</h4>
+                    <p>광고비 줄줄 새는 10가지 포인트 즉시 점검</p>
+                </div>
+                 <div class="ebook-teaser-card">
+                    <div class="icon">②</div>
+                    <h4>스마트플레이스 상위노출</h4>
+                    <p>리뷰·클릭률·체류시간 잡는 핵심 비법</p>
+                </div>
+                 <div class="ebook-teaser-card">
+                    <div class="icon">③</div>
+                    <h4>랜딩페이지 전환 공식</h4>
+                    <p>PASONA·앵커링·디코이 실전 적용법</p>
+                </div>
+                 <div class="ebook-teaser-card">
+                    <div class="icon">④</div>
+                    <h4>[실전] 키워드 분석 샘플</h4>
+                    <p>월 매출 1천만원 카페 실제 데이터 공개</p>
+                </div>
+            </div>
+
+            <div class="ebook-form-container max-w-2xl mx-auto reveal">
+                <h3 class="text-2xl font-bold text-center mb-6 text-gray-900">전자책 무료 다운로드 <span class="text-purple-600">(즉시 수령)</span></h3>
+                
+                <div data-tally-src="<TALLY_EBOOK_FORM_ID>?transparentBackground=1&hideTitle=1" data-tally-height="350px" data-tally-hidden-fields='{"cta_location":"ebook_section_form", "offer":"ebook"}' title="전자책 신청 폼"></div>
+                
+                <p class="text-center text-sm text-gray-500 mt-4">※ 한정 수량: <span class="font-bold text-red-600">선착순 500부</span> 배포 후 유료 전환될 수 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+     <section class="py-24 md:py-32 bg-gray-50" id="ebook-preview">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 md:mb-20 reveal">
+                 <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900" style="font-family: 'Noto Serif KR', serif;">
+                      전자책 내용 <span class="text-brand">미리보기</span>
+                 </h2>
+                 <p class="text-base md:text-lg text-gray-600">이런 실전 노하우, 어디서도 알려주지 않습니다.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 md:gap-16">
+                 <div class="reveal">
+                     <h3 class="text-2xl font-bold mb-4 text-gray-800">1. 키워드별 '매출 필터' 설계 예시</h3>
+                     <p class="text-gray-600 mb-6">동일 키워드라도, 고객의 '의도'에 맞는 랜딩페이지 '훅킹 문구'와 '미끼(오퍼)'는 달라야 합니다.</p>
+                     <div class="overflow-x-auto">
+                         <table class="keyword-table">
+                             <thead>
+                                 <tr>
+                                     <th>키워드</th>
+                                     <th>검색량</th>
+                                     <th>CPC(원)</th>
+                                     <th>제안 랜딩 훅</th>
+                                     <th class="highlight">추천 오퍼 (미끼)</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                 <tr><td>핸드드립 원두 추천</td><td>5,800</td><td>1,200</td><td>"내 취향 원두 30초 만에 찾기"</td><td class="highlight">무료 원두 샘플러</td></tr>
+                                 <tr><td>로스팅 카페</td><td>3,500</td><td>850</td><td>"오늘 로스팅한 원두 당일 발송"</td><td class="highlight">신선도 보장 쿠폰</td></tr>
+                                 <tr><td>콜드브루 원액</td><td>12,000</td><td>1,800</td><td>"카페보다 맛있는 홈 콜드브루"</td><td class="highlight">무료 레시피북</td></tr>
+                                 <tr><td>사무실 원두 구독</td><td>1,200</td><td>2,500</td><td>"매달 OO원 아끼는 원두 구독"</td><td class="highlight">첫 달 50% 할인</td></tr>
+                                 <tr><td>선물용 원두 세트</td><td>4,000</td><td>1,500</td><td>"실패 없는 커피 선물"</td><td class="highlight">고급 포장 무료</td></tr>
+                                  <tr><td>...</td><td>...</td><td>...</td><td>...</td><td class="highlight">...</td></tr>
+                             </tbody>
+                         </table>
+                     </div>
+                     <p class="text-center mt-6">
+                         <button onclick="document.getElementById('ebook').scrollIntoView({ behavior: 'smooth' });" class="btn-secondary px-6 py-2 text-sm">
+                             📘 전체 키워드 분석표는 전자책에서 확인!
+                         </button>
+                     </p>
+                 </div>
+
+                 <div class="reveal">
+                     <h3 class="text-2xl font-bold mb-4 text-gray-800">2. 스마트플레이스 상위노출 체크리스트</h3>
+                     <p class="text-gray-600 mb-6">광고 효율은 '스마트플레이스 최적화'에서 시작됩니다. 전자책의 일부 내용을 공개합니다.</p>
+                     <div class="checklist-accordion space-y-2">
+                         <details>
+                             <summary>① 상호명 & 카테고리 최적화</summary>
+                             <div class="checklist-content">
+                                 고객이 검색할 '핵심 키워드'가 상호명 또는 카테고리명에 자연스럽게 포함되어 있나요? (예: 'OO카페' 보다 'OO 로스터리 카페')
+                             </div>
+                         </details>
+                          <details>
+                             <summary>② 리뷰 관리 (키워드 & 답변)</summary>
+                             <div class="checklist-content">
+                                 고객 리뷰에 '사장님 댓글'로 핵심 키워드를 자연스럽게 반복하고 있나요? 최신 리뷰가 꾸준히 쌓이고 있나요?
+                             </div>
+                         </details>
+                          <details>
+                             <summary>③ 대표 키워드 & 메뉴 매칭</summary>
+                             <div class="checklist-content">
+                                 스마트플레이스 '대표 키워드' 설정과 실제 '메뉴' 이름이 일치하고, 고객 검색 의도와 맞나요?
+                             </div>
+                         </details>
+                         <details>
+                             <summary>④ 사진 최적화 (썸네일 & 최신성)</summary>
+                             <div class="checklist-content">
+                                 음식/제품 사진 퀄리티는 기본! 가장 매력적인 사진이 '목록 썸네イル'로 노출되도록 설정했나요? 주기적으로 새 사진을 업데이트하고 있나요?
+                             </div>
+                         </details>
+                         <details>
+                             <summary>⑤ 운영 정보 최신화</summary>
+                             <div class="checklist-content">
+                                 영업시간, 휴무일, 가격 변동 등 모든 정보가 항상 '최신' 상태로 정확하게 반영되어 있나요? (정보 불일치는 신뢰도 하락의 주범)
+                             </div>
+                         </details>
+                         <details>
+                             <summary>⑥ 상세 설명 & 스토리텔링</summary>
+                             <div class="checklist-content">
+                                 단순 정보 나열이 아닌, 우리 가게/제품만의 '차별점'과 '스토리'를 상세 설명에 담아 고객의 흥미를 유발하고 있나요?
+                             </div>
+                         </details>
+                         <details open>
+                             <summary>⑦ 광고 클릭 → '매출 필터' 연결</summary>
+                             <div class="checklist-content">
+                                 <span class="font-bold text-red-600">가장 중요!</span> 파워링크 광고 클릭 시, 스마트플레이스/블로그 '직결' 대신 <span class="font-bold">SpeedLanding '매출 필터'(DB수집 랜딩페이지)</span>를 거치도록 설정했나요?
+                                 <a href="#solution" class="speedlanding-link hover:bg-blue-200">
+                                     SpeedLanding '매출 필터' 작동 원리 보기 →
+                                 </a>
+                             </div>
+                         </details>
+                         <p class="text-center mt-4">
+                             <button onclick="document.getElementById('ebook').scrollIntoView({ behavior: 'smooth' });" class="btn-secondary px-6 py-2 text-sm">
+                                 📘 전체 체크리스트(15개 항목)는 전자책에서 확인!
+                             </button>
+                         </p>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-gradient-to-br from-slate-900 to-blue-900 text-white relative" id="story">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6" style="font-family: 'Noto Serif KR', serif;">
+                    10년간 커피 사업에 쓴 광고비,<br>
+                    <span class="text-blue-400">1억이 넘습니다</span>
+                </h2>
+                <p class="text-xl text-gray-300">
+                    SpeedLanding 대표, 저도 사장님과 똑같은 '광고주'입니다.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-12 reveal">
+                
+                <div class="flex justify-center mb-10">
+                   <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center border-4 border-blue-400 overflow-hidden">
+                       <span class="text-white text-4xl md:text-5xl font-bold">J</span> </div>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+                    <p class="text-lg leading-relaxed text-gray-200">
+                        안녕하세요. SpeedLanding 대표 조상일입니다.<br>
+                        저는 <span class="text-yellow-400 font-bold">10년 이상 커피 원두 사업</span>을 운영하며, 사장님들처럼 스마트스토어와 블로그를 키우기 위해 안 해본 마케팅이 없습니다.<br><br>
+                        <span class="text-blue-400 font-bold text-xl">"지금까지 쓴 누적 광고비만 1억이 넘습니다."</span><br><br>
+                        <span class="text-sm text-gray-400 italic">
+                        월 500, 월 1000만원씩 파워링크 광고비를 '태우면서' 고객들을 제 '네이버 블로그'로 보냈습니다.<br>
+                        '원두 내리는 법', '카페 창업 정보' 등 유용한 정보로 블로그를 가득 채웠죠.
+                        </span>
+                    </p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+                    <p class="text-lg leading-relaxed text-gray-200">
+                        하지만 결과는 처참했습니다.<br>
+                        광고비는 매일 소진되는데, '원두 구매' 문의는 오지 않았습니다.<br><br>
+                        고객들은 <span class="font-bold text-xl text-red-400">'뒤로 가기'</span>를 눌러 이탈했고, 제게 남은 건 0원이었습니다.<br>
+                        <span class="text-blue-400 font-bold text-xl">광고비 1억을 태우고 나서야 깨달았습니다.</span>
+                    </p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+                    <p class="text-lg leading-relaxed text-gray-200">
+                        문제는 '광고'나 '블로그'가 아니었습니다.<br>
+                        <span class="text-3xl font-bold text-blue-400 mt-4 mb-4" style="font-family: 'Noto Serif KR', serif;">
+                            "광고와 블로그 사이에 '필터'가 없었다."
+                        </span>
+                        <br>
+                        비싼 돈 주고 데려온 고객이 그냥 나가게 두면 안 됐습니다.<br>
+                        '구매 의사'가 있는 고객을 걸러내고, 그들의 DB(연락처)를 '먼저' 잡아야 했습니다.
+                    </p>
+                    <p class="text-sm text-gray-400 mt-3 italic">
+                        PASONA 프레임워크, 앵커링, 디코이 전략...<br>
+                        고객을 설득하는 모든 심리학적 장치를 담은 '1페이지 필터'를 직접 만들었습니다.<br>
+                        그리고 그 필터를 통과한 '진짜 고객'만 제 블로그와 스토어로 보냈습니다.
+                    </p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+                    <p class="text-lg leading-relaxed text-gray-200">
+                        결과는 즉각적이었습니다.
+                    </p>
+                    <p class="text-2xl font-bold text-blue-400 mt-4" style="font-family: 'Noto Serif KR', serif;">
+                        "광고비는 30% 줄였고, 매출은 3배 올랐습니다."
+                    </p>
+                    <p class="text-sm text-gray-400 mt-3 italic">
+                        이 경험을 '자동화'했습니다.<br>
+                        저처럼 광고비 때문에 피눈물 흘리는 사장님들을 위해 220만원짜리 맞춤 제작이 아닌, 22만원짜리 AI 자동화 솔루션 'SpeedLanding'을 만들었습니다.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="my-20 text-center reveal">
+                <div class="inline-block bg-blue-500/20 border-2 border-blue-400 rounded-2xl px-12 py-8">
+                    <p class="text-2xl md:text-3xl font-bold text-blue-400 leading-relaxed mb-4" style="font-family: 'Noto Serif KR', serif;">
+                        1억을 쓰며 배운 노하우를<br>
+                        단 22만원에 그대로 드립니다.
+                    </p>
+                    <p class="text-sm text-gray-300 italic">
+                        사장님의 비싼 '클릭'이 '매출'이 되도록<br>
+                        제가 만든 '매출 필터'를 그대로 드리겠습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-white relative" id="solution">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <span class="inline-block text-6xl mb-6">🎯</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900" style="font-family: 'Noto Serif KR', serif;">
+                    광고비를 '매출'로 바꾸는<br>
+                    <span class="text-brand">SpeedLanding의 3단계 '매출 필터'</span>
+                </h2>
+                <p class="text-lg text-gray-600">사장님은 '광고'에만 집중하세요. '매출 전환'은 SpeedLanding이 책임집니다.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-20">
+                <div class="reveal story-card bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-3xl border-2 border-blue-200 text-center">
+                    <div class="text-6xl mb-6">🗣️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">1단계: 강력한 '설득' (Hook)</h3>
+                    <p class="text-gray-700 mb-4">
+                        (블로그/스토어 대신)<br>
+                        고객을 완벽히 설득합니다.
+                    </p>
+                    <div class="text-sm text-gray-600 bg-white/50 rounded-lg p-3 text-left space-y-2">
+                        <p>✓ <b>PASONA 심리학</b> 기반 설계</p>
+                        <p>✓ 고객의 '고통'을 자극하는 카피</p>
+                        <p>✓ 시선을 끄는 '1초 문구' 적용</p>
+                        <p>✓ <b>(결과)</b> '그냥 방문자'가 '구매 희망자'로 바뀝니다.</p>
+                    </div>
+                    </div>
+                
+                <div class="reveal story-card bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-3xl border-2 border-green-200 text-center">
+                    <div class="text-6xl mb-6">📥</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">2단계: 자동 'DB 수집' (Catch)</h3>
+                    <p class="text-gray-700 mb-4">
+                        (그냥 이탈 대신)<br>
+                        고객 정보를 100% 수집합니다.
+                    </p>
+                    <div class="text-sm text-gray-600 bg-white/50 rounded-lg p-3 text-left space-y-2">
+                        <p>✓ <b>Tally 폼</b> 즉시 연동 (신청 폼)</p>
+                        <p>✓ <b>구글 시트</b> 자동 저장</p>
+                        <p>✓ '전자책/샘플/쿠폰' 미끼로 DB 확보</p>
+                        <p>✓ <b>(결과)</b> 광고비로 데려온 고객이 '자산'이 됩니다.</p>
+                    </div>
+                    </div>
+
+                <div class="reveal story-card bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-3xl border-2 border-purple-200 text-center">
+                    <div class="text-6xl mb-6">🚀</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">3단계: '본진'으로 연결 (Convert)</h3>
+                    <p class="text-gray-700 mb-4">
+                        (설득 완료 후)<br>
+                        블로그/스토어로 즉시 보냅니다.
+                    </p>
+                    <div class="text-sm text-gray-600 bg-white/50 rounded-lg p-3 text-left space-y-2">
+                        <p>✓ DB 제출 후 <b>자동 리디렉션</b></p>
+                        <p>✓ 사장님의 블로그로 연결</p>
+                        <p>✓ 혹은 스마트스토어 결제창으로 연결</p>
+                        <p>✓ <b>(결과)</b> '진짜 고객'만 본진으로 유입시켜 최종 결제!</p>
+                    </div>
+                     </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto reveal">
+                <div class="bg-gradient-to-br from-slate-900 to-blue-900 text-white p-12 md:p-16 rounded-3xl text-center">
+                    <p class="text-2xl mb-8 text-gray-300">이 '매출 필터' 하나로 사장님이 얻는 이득</p>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-12 text-blue-400" style="font-family: 'Noto Serif KR', serif;">
+                        광고비는 절반으로 줄이고,<br>
+                        '진짜 고객' DB는 3배로 늘어납니다.
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 text-left">
+                         <div>
+                            <div class="text-4xl mb-4">📉</div>
+                            <p class="text-xl font-bold mb-2">광고비(CPC) 절감</p>
+                            <p class="text-gray-300 text-sm">이탈 고객을 DB로 잡기 때문에<br>무의미한 광고 클릭이 줄어듭니다.</p>
+                        </div>
+                        <div>
+                            <div class="text-4xl mb-4">📈</div>
+                            <p class="text-xl font-bold mb-2">매출(CVR) 상승</p>
+                            <p class="text-gray-300 text-sm">이미 '설득'된 고객만 블로그/스토어로<br>유입되어 실제 구매율이 폭증합니다.</p>
+                        </div>
+                        <div>
+                            <div class="text-4xl mb-4">🗃️</div>
+                            <p class="text-xl font-bold mb-2">고객 DB 자산화</p>
+                            <p class="text-gray-300 text-sm">더 이상 광고비 안 써도<br>이벤트/신상품을 홍보할 '내 고객'이 생깁니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-gradient-to-b from-gray-50 to-white" id="industries">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900" style="font-family: 'Noto Serif KR', serif;">
+                    사장님의 '스마트스토어/블로그' 업종,<br>
+                    <span class="text-brand">이렇게 적용됩니다</span>
+                </h2>
+                <p class="text-lg text-gray-600">광고 클릭 → <span class="font-bold text-red-600">(SpeedLanding 필터)</span> → 블로그/스토어</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"> <div class="reveal industry-card bg-white p-8 rounded-3xl shadow-lg border-2 border-gray-100">
+                    <div class="text-5xl mb-4">☕</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">커피 / 원두 스토어</h3>
+                    <div class="bg-yellow-50 p-4 rounded-xl mb-4">
+                        <p class="font-bold text-yellow-900 mb-2">"블로그 '원두 정보'만 읽고 이탈하는 고객 잡기"</p>
+                        <p class="text-sm text-gray-700">파워링크 '핸드드립원두' 클릭 시</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>✓ <b>[필터]</b> "나에게 맞는 '원두 샘플러' 0원 신청"</li>
+                        <li>✓ <b>[수집]</b> Tally 폼 (이름/연락처/배송지)</li>
+                        <li>✓ <b>[연결]</b> 신청 후 → '원두 정보' 블로그 이동</li>
+                        <li>✓ <b>(효과)</b> DB 확보, 재구매 고객 전환</li>
+                    </ul>
+                </div>
+
+                <div class="reveal industry-card bg-white p-8 rounded-3xl shadow-lg border-2 border-gray-100">
+                    <div class="text-5xl mb-4">👗</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">패션/잡화 스토어</h3>
+                    <div class="bg-blue-50 p-4 rounded-xl mb-4">
+                        <p class="font-bold text-blue-900 mb-2">"블로그 '데일리룩' 포스팅 전에 DB부터!"</p>
+                        <p class="text-sm text-gray-700">파워링크 '20대여성의류' 클릭 시</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>✓ <b>[필터]</b> "신상 15% 할인쿠폰 즉시 발급"</li>
+                        <li>✓ <b>[수집]</b> Tally 폼 (이름/연락처)</li>
+                        <li>✓ <b>[연결]</b> 발급 후 → '데일리룩' 블로그 이동</li>
+                        <li>✓ <b>(효과)</b> DB 확보, 블로그 체류시간 증가</li>
+                    </ul>
+                </div>
+                
+                <div class="reveal industry-card bg-white p-8 rounded-3xl shadow-lg border-2 border-gray-100">
+                    <div class="text-5xl mb-4">🍎</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">식품/건강 스토어</h3>
+                    <div class="bg-green-50 p-4 rounded-xl mb-4">
+                        <p class="font-bold text-green-900 mb-2">"'레시피' 정보만 주고 고객을 놓치지 마세요"</p>
+                        <p class="text-sm text-gray-700">파워링크 '다이어트식단' 클릭 시</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                         <li>✓ <b>[필터]</b> "선착순 100명 1+1 체험팩 신청"</li>
+                         <li>✓ <b>[수집]</b> Tally 폼 (이름/주소)</li>
+                         <li>✓ <b>[연결]</b> 신청 후 → '활용 레시피' 블로그 이동</li>
+                         <li>✓ <b>(효과)</b> DB 확보, 재구매 유도</li>
+                    </ul>
+                </div>
+                
+                <div class="reveal industry-card bg-white p-8 rounded-3xl shadow-lg border-2 border-gray-100">
+                    <div class="text-5xl mb-4">📚</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">교육/서비스 (컨설팅, 세무 등)</h3>
+                    <div class="bg-purple-50 p-4 rounded-xl mb-4">
+                        <p class="font-bold text-purple-900 mb-2">"블로그 '무료 정보'만 읽고 가게 두실 건가요?"</p>
+                        <p class="text-sm text-gray-700">파워링크 '세무상담' 클릭 시</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                         <li>✓ <b>[필터]</b> "월 30만원 아끼는 '무료 절세 진단' 신청"</li>
+                         <li>✓ <b>[수집]</b> Tally 폼 (업체명/연락처)</li>
+                         <li>✓ <b>[연결]</b> 신청 후 → '전문가 칼럼' 블로그 이동</li>
+                         <li>✓ <b>(효과)</b> 잠재고객 DB 확보, 아웃바운드 영업</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 reveal">
+                 <p class="text-gray-600 mb-6">사장님의 업종에 딱 맞는 '광고비 절약 필터'를 지금 바로 확인하세요</p>
+                 <button 
+                     onclick="openSampleModal()"
+                     class="btn-primary text-white px-10 py-4 rounded-full font-bold text-lg" data-cta-variant="industries-sample">
+                     내 업종 맞춤 샘플 받기
+                 </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-gradient-to-br from-slate-900 to-blue-900 text-white" id="packages">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <span class="inline-block text-6xl mb-6">🎁</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6" style="font-family: 'Noto Serif KR', serif;">
+                    사장님의 '광고 효율'에 맞는<br>
+                    <span class="text-blue-400">최적의 솔루션 (전자책 포함)</span>
+                </h2>
+                <p class="text-lg text-gray-300 mt-4">
+                    단 하루치 광고비도 안되는 가격으로<br>
+                    사장님의 광고 효율을 영구적으로 개선합니다.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="reveal package-card bg-white text-gray-900 rounded-3xl overflow-hidden shadow-2xl relative">
+                    <div class="guarantee-badge" style="position: absolute; top: 12px; left: 12px; z-index: 5;">14일 효과보장 (환불)</div>
+                    <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-8 text-center">
+                        <div class="text-5xl mb-4">🚀</div>
+                        <h3 class="text-2xl font-bold mb-2" style="font-family: 'Noto Serif KR', serif;">Standard</h3>
+                        <p class="text-gray-600">즉시 적용, 빠른 A/B 테스트</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-center mb-8">
+                             <div class="text-sm text-gray-500 line-through mb-2">기존 990,000원</div>
+                             <div class="text-5xl font-black mb-2">99,000원</div>
+                             <p class="text-sm text-gray-600">부가세 포함</p>
+                             <p class="text-xs text-blue-600 font-bold mt-2">⚡ 30분 제작 (즉시 광고 투입)</p>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span>파워링크 A/B 테스트용 랜딩페이지</span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span>기본 PASONA 구조 (설득)</span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span>Tally 폼 + 구글 시트 연동 (DB 수집)</span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span>블로그/스토어 자동 연결 (전환)</span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span><span class="font-bold text-purple-600">📘 전자책 포함 (요약판)</span></span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span>1회 수정 포함</span></li>
+                             <li class="flex items-start"><span class="x-mark mr-3 flex-shrink-0">✗</span><span class="text-gray-400">커스텀 디자인</span></li>
+                             <li class="flex items-start"><span class="x-mark mr-3 flex-shrink-0">✗</span><span class="text-gray-400">키워드 리포트</span></li>
+                             <li class="flex items-start"><span class="x-mark mr-3 flex-shrink-0">✗</span><span class="text-gray-400">전환율 분석</span></li>
+                        </ul>
+                        <button 
+                            onclick="openSampleModal('standard')" /* 관심 패키지 전달 */
+                            class="block w-full bg-gray-900 text-white text-center py-4 rounded-full font-bold hover:bg-gray-800 transition" data-cta-variant="package-standard">
+                            Standard 선택하기
+                        </button>
+                         <p class="microcopy">전자책 먼저 받아보신 뒤 결정하셔도 됩니다.</p>
+                    </div>
+                </div>
+                
+                <div class="reveal package-card decoy bg-white text-gray-900 rounded-3xl overflow-hidden shadow-2xl relative">
+                     <div class="guarantee-badge" style="position: absolute; top: 12px; left: 12px; z-index: 5;">14일 효과보장 (환불)</div>
+                    <div class="limited-badge">⚠️ 디자인 특화</div>
+                    <div class="bg-gradient-to-br from-purple-100 to-purple-200 p-8 text-center">
+                        <div class="text-5xl mb-4">⭐</div>
+                        <h3 class="text-2xl font-bold mb-2" style="font-family: 'Noto Serif KR', serif;">Deluxe</h3>
+                        <p class="text-gray-600">블로그/스토어 맞춤 디자인</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-center mb-8">
+                             <div class="text-sm text-gray-500 line-through mb-2">기존 1,990,000원</div>
+                             <div class="text-5xl font-black mb-2">199,000원</div>
+                             <p class="text-sm text-gray-600">부가세 포함</p>
+                             <p class="text-xs text-purple-600 font-bold mt-2">⏱️ 커스터마이징 시간 추가</p>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span>Standard의 모든 기능</span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span><b>블로그/스토어 맞춤 디자인</b> (톤앤매너)</span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span><span class="font-bold text-purple-600">📘 전자책(완본) + 미니 키워드 리포트</span></span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span>커스텀 애니메이션 3개</span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span>고급 SEO 최적화</span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0">✓</span><span>2회 수정 포함</span></li>
+                             <li class="flex items-start"><span class="x-mark mr-3 flex-shrink-0">✗</span><span class="text-gray-400">A/B 테스트 설정</span></li>
+                             <li class="flex items-start"><span class="x-mark mr-3 flex-shrink-0">✗</span><span class="text-gray-400">전환율 분석</span></li>
+                             <li class="flex items-start"><span class="x-mark mr-3 flex-shrink-0">✗</span><span class="text-gray-400">전담 매니저</span></li>
+                        </ul>
+                        <button 
+                            onclick="openSampleModal('deluxe')"
+                            class="block w-full bg-purple-600 text-white text-center py-4 rounded-full font-bold hover:bg-purple-700 transition" data-cta-variant="package-deluxe">
+                            Deluxe 선택하기
+                        </button>
+                        <p class="microcopy">전자책 먼저 받아보신 뒤 결정하셔도 됩니다.</p>
+                    </div>
+                </div>
+                
+                <div class="reveal package-card featured bg-white text-gray-900 rounded-3xl overflow-hidden shadow-2xl relative border-4 border-blue-500 transform">
+                    <div class="guarantee-badge" style="position: absolute; top: 12px; left: 12px; z-index: 5;">14일 효과보장 (환불)</div>
+                    <div class="limited-badge bg-gradient-to-r from-yellow-400 to-yellow-600">🔥 광고 효율 극대화</div>
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20">
+                        <span class="pulse bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">⭐ 92% 광고주 선택</span>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-8 text-center pt-12 text-white">
+                        <div class="text-5xl mb-4">👑</div>
+                        <h3 class="text-2xl font-bold mb-2" style="font-family: 'Noto Serif KR', serif;">Premium</h3>
+                        <p class="text-blue-100">광고 효율 극대화 (All-In-One)</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-center mb-8">
+                             <div class="inline-block bg-green-50 px-4 py-2 rounded-full mb-3">
+                                 <p class="text-green-700 font-bold text-sm">💰 단돈 2만원 더로 광고 효율 극대화</p>
+                             </div>
+                             <div class="text-sm text-gray-500 line-through mb-2">기존 2,200,000원</div>
+                             <div class="text-5xl font-black mb-2 text-blue-600">220,000원</div>
+                             <p class="text-sm text-gray-600">부가세 포함</p>
+                             <p class="text-xs text-green-600 font-bold mt-2">Deluxe 대비 2만원 추가로 광고 분석까지!</p>
+                             <p class="text-xs text-blue-600 font-bold mt-1">⏱️ 커스터마이징에 따라 시간 추가</p>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0 font-bold">✓</span><span class="font-semibold">Deluxe의 모든 기능 포함</span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0 font-bold">✓</span><span class="font-semibold"><span class="font-bold text-purple-600">📘 전자책(완본) + 풀 키워드 리포트</span></span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0 font-bold">✓</span><span class="font-semibold"><b>파워링크 키워드별 A/B 테스트 설정</b></span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0 font-bold">✓</span><span class="font-semibold"><b>월간 광고 전환율 분석 리포트</b></span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0 font-bold">✓</span><span class="font-semibold">전담 매니저 배정 (광고 컨설팅)</span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0 font-bold">✓</span><span class="font-semibold">무제한 수정 (1개월)</span></li>
+                             <li class="flex items-start"><span class="check-mark mr-3 flex-shrink-0 font-bold">✓</span><span class="font-semibold">우선 고객 지원</span></li>
+                        </ul>
+                        <button 
+                            onclick="openSampleModal('premium')"
+                            class="block w-full btn-primary text-white text-center py-4 rounded-full font-bold" data-cta-variant="package-premium">
+                            Premium 선택하기 (추천!)
+                        </button>
+                        <div class="mt-4 p-4 bg-blue-50 rounded-xl">
+                            <p class="text-sm text-blue-900 font-bold text-center">
+                                💡 2만원만 추가하면<br>
+                                단순 제작을 넘어 '광고 효율 분석'까지!
+                            </p>
+                        </div>
+                         <p class="microcopy">전자책 먼저 받아보신 뒤 결정하셔도 됩니다.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reveal max-w-5xl mx-auto bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-3xl p-8 md:p-12 mb-16">
+                 <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-blue-400" style="font-family: 'Noto Serif KR', serif;">
+                     📊 '광고 효율' 패키지 상세 비교
+                 </h3>
+                 <div class="overflow-x-auto">
+                     <table class="comparison-table">
+                         <thead>
+                             <tr>
+                                 <th class="text-left">핵심 기능</th>
+                                 <th>Standard</th>
+                                 <th>Deluxe</th>
+                                 <th class="bg-blue-600">Premium ⭐</th>
+                             </tr>
+                         </thead>
+                         <tbody class="bg-white text-gray-900">
+                             <tr><td class="font-bold text-left">가격</td><td>99,000원</td><td>199,000원</td><td class="font-bold text-blue-600">220,000원</td></tr>
+                             <tr><td class="text-left">PASONA 구조 (설득)</td><td class="check-mark">✓</td><td class="check-mark">✓</td><td class="check-mark">✓</td></tr>
+                             <tr><td class="text-left">DB 수집 (Tally+구글시트)</td><td class="check-mark">✓</td><td class="check-mark">✓</td><td class="check-mark">✓</td></tr>
+                             <tr><td class="text-left">블로그/스토어 연결</td><td class="check-mark">✓</td><td class="check-mark">✓</td><td class="check-mark">✓</td></tr>
+                              <tr><td class="font-bold text-left text-purple-600">📘 전자책</td><td>요약판</td><td>완본</td><td class="font-bold text-blue-600">완본</td></tr>
+                              <tr><td class="font-bold text-left text-purple-600">📊 키워드 리포트</td><td class="x-mark">✗</td><td>미니</td><td class="font-bold text-blue-600">전체</td></tr>
+                             <tr><td class="font-bold text-left">블로그 맞춤 디자인</td><td class="x-mark">✗</td><td class="check-mark">✓</td><td class="check-mark">✓</td></tr>
+                             <tr><td class="font-bold text-left">광고 A/B 테스트</td><td class="x-mark">✗</td><td class="x-mark">✗</td><td class="check-mark">✓</td></tr>
+                             <tr><td class="font-bold text-left">전환율 분석 리포트</td><td class="x-mark">✗</td><td class="x-mark">✗</td><td class="check-mark">✓</td></tr>
+                             <tr><td class="font-bold text-left">전담 매니저</td><td class="x-mark">✗</td><td class="x-mark">✗</td><td class="check-mark">✓</td></tr>
+                             <tr><td class="text-left">수정 횟수</td><td>1회</td><td>2회</td><td class="font-bold text-blue-600">무제한 (1개월)</td></tr>
+                         </tbody>
+                     </table>
+                 </div>
+            </div>
+            
+            <div class="reveal max-w-5xl mx-auto bg-blue-500/20 backdrop-blur-sm border-2 border-blue-400 rounded-3xl p-8 md:p-12">
+                 <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-blue-400" style="font-family: 'Noto Serif KR', serif;">
+                     🎁 지금 신청 시 특별 혜택
+                 </h3>
+                 <div class="grid md:grid-cols-4 gap-6"> <div class="text-center bg-white/10 p-6 rounded-2xl border border-white/20">
+                         <div class="text-4xl mb-3">📘</div>
+                         <p class="font-bold mb-2">전자책 무료 증정</p>
+                         <p class="text-sm text-gray-300">광고비 절약 노하우</p>
+                     </div>
+                     <div class="text-center bg-white/10 p-6 rounded-2xl border border-white/20">
+                         <div class="text-4xl mb-3">✔</div>
+                         <p class="font-bold mb-2">무료 샘플 페이지</p>
+                         <p class="text-sm text-gray-300">선착순 <strong class="text-blue-400" id="sampleSlots">20개 업체</strong></p>
+                         <p class="text-xs text-red-300 mt-2">⚠️ 마감 임박</p>
+                     </div>
+                     <div class="text-center bg-white/10 p-6 rounded-2xl border border-white/20">
+                         <div class="text-4xl mb-3">🔄</div>
+                         <p class="font-bold mb-2">100% 환불 보장</p>
+                         <p class="text-sm text-gray-300">효과 없을 시 전액 환불</p>
+                     </div>
+                     <div class="text-center bg-white/10 p-6 rounded-2xl border border-white/20">
+                         <div class="text-4xl mb-3">📦</div>
+                         <p class="font-bold mb-2">첫 주문 시</p>
+                         <p class="text-sm text-gray-300">추가 수정 1회 무료</p>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-white">
+         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+             <div class="text-center mb-16 reveal">
+                 <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900" style="font-family: 'Noto Serif KR', serif;">
+                     이 솔루션은 <span class="text-brand">'모두'</span>를 위한 게 아닙니다.<br>
+                     <span class="text-red-600">오직, 파워링크 광고주</span>를 위해 만들었습니다.
+                 </h2>
+                 <p class="text-lg text-gray-600">다른 분들은 신청하셔도 효과를 보장할 수 없습니다.</p>
+             </div>
+             
+             <div class="reveal space-y-6 mb-16">
+                 <div class="flex items-start p-6 bg-gradient-to-r from-gray-50 to-white rounded-2xl border-2 border-gray-100 hover:border-brand transition">
+                    <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-brand" checked disabled>
+                    <div>
+                        <p class="font-bold text-lg text-gray-900">네이버 파워링크에 <span class="text-red-600">월 100만원 이상</span> 쓰고 계신 사장님</p>
+                        <p class="text-gray-600 text-sm mt-1">광고비가 '매출'이 아니라 '비용'으로만 느껴지시는 분</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-gradient-to-r from-gray-50 to-white rounded-2xl border-2 border-gray-100 hover:border-brand transition">
+                    <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-brand" checked disabled>
+                    <div>
+                        <p class="font-bold text-lg text-gray-900">광고 클릭을 <span class="text-red-600">'네이버 블로그'</span>로 받고 계신 사장님</p>
+                        <p class="text-gray-600 text-sm mt-1">블로그 방문자는 많은데 '문의'가 없어서 답답하신 분</p>
+                    </div>
+                </div>
+                 <div class="flex items-start p-6 bg-gradient-to-r from-gray-50 to-white rounded-2xl border-2 border-gray-100 hover:border-brand transition">
+                    <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-brand" checked disabled>
+                    <div>
+                        <p class="font-bold text-lg text-gray-900">광고 클릭을 <span class="text-red-600">'스마트스토어'</span>로 바로 보내는 사장님</p>
+                        <p class="text-gray-600 text-sm mt-1">'찜하기'는 늘어나는데 '구매하기'가 늘지 않아 고민이신 분</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-gradient-to-r from-gray-50 to-white rounded-2xl border-2 border-gray-100 hover:border-brand transition">
+                    <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-brand" checked disabled>
+                    <div>
+                        <p class="font-bold text-lg text-gray-900">내 광고의 <span class="text-red-600">CPC (클릭당 비용)</span>가 너무 비싸다고 느끼는 사장님</p>
+                        <p class="text-gray-600 text-sm mt-1">클릭 한 번에 2,000원~5,000원씩 쓰라린 마음을 안고 계신 분</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-gradient-to-r from-gray-50 to-white rounded-2xl border-2 border-gray-100 hover:border-brand transition">
+                    <input type="checkbox" class="mt-1.5 mr-4 w-5 h-5 accent-brand" checked disabled>
+                    <div>
+                        <p class="font-bold text-lg text-gray-900">이탈 고객의 <span class="text-red-600">DB(연락처)</span>를 단 하나도 수집하지 못하는 사장님</p>
+                        <p class="text-gray-600 text-sm mt-1">광고비를 '일회성'으로만 쓰고 있어 불안하신 분</p>
+                    </div>
+                </div>
+             </div>
+             
+             <div class="reveal text-center bg-gradient-to-br from-slate-900 to-blue-900 text-white p-12 rounded-3xl">
+                 <p class="text-2xl md:text-3xl font-bold mb-8" style="font-family: 'Noto Serif KR', serif;">
+                     단 하나라도 해당된다면,<br>
+                     <span class="text-blue-400">SpeedLanding이 사장님의 '광고비'를 '순수익'으로 바꿉니다.</span>
+                 </p>
+                 <div class="grid md:grid-cols-2 gap-6 mt-12 max-w-2xl mx-auto">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                        <div class="text-4xl mb-3">🎁</div>
+                        <p class="font-bold mb-2">광고 효율 진단 샘플</p>
+                        <p class="text-sm text-gray-300">내 광고 키워드에 맞는 샘플 제공</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                        <div class="text-4xl mb-3">💰</div>
+                        <p class="font-bold mb-2">단 하루치 광고비</p>
+                        <p class="text-sm text-gray-300">하루 광고비 22만원으로 '평생' 쓰는 매출 필터</p>
+                    </div>
+                </div>
+             </div>
+         </div>
+    </section>
+
+    <section class="py-32 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900" style="font-family: 'Noto Serif KR', serif;">
+                    광고비 절감 효과, <span class="text-brand">데이터</span>로 증명합니다
+                </h2>
+                <p class="text-lg text-gray-600">사장님과 똑같은 광고주들의 '진짜' 이야기와 '실제' 결과입니다.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12 mb-20">
+                 <div class="reveal bg-gradient-to-br from-blue-50 to-white p-8 rounded-3xl shadow-xl text-center border-2 border-blue-100">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">김</div>
+                    <p class="font-bold text-xl mb-2 text-gray-900">의류 스토어 '메종드OO' 김XX 대표님</p>
+                    <p class="text-sm text-gray-500 mb-4">"파워링크 '30대여성쇼핑몰' 키워드 광고"</p>
+                    <div class="my-6 p-4 bg-white rounded-xl"><p class="text-3xl font-black text-blue-600 mb-1">광고비 30% 절감</p><p class="text-sm text-gray-600">'쿠폰 신청 DB' 3배 증가</p></div>
+                    <p class="text-gray-700 text-sm leading-relaxed text-left">"월 200씩 광고비를 써도 블로그 유입 고객의 구매 전환율이 1%도 안 됐어요. SpeedLanding으로 '할인쿠폰' 랜딩페이지를 만들고 DB를 수집한 뒤 블로그로 보냈더니, <span class="font-bold">광고비로 데려온 고객의 구매율이 80%가 넘었습니다.</span> 이젠 광고비 줄이고 DB로 마케팅합니다."</p>
+                </div>
+                <div class="reveal bg-gradient-to-br from-purple-50 to-white p-8 rounded-3xl shadow-xl text-center border-2 border-purple-100">
+                     <div class="w-20 h-20 bg-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">박</div>
+                     <p class="font-bold text-xl mb-2 text-gray-900">건강식품 'OO농원' 박XX 대표님</p>
+                     <p class="text-sm text-gray-500 mb-4">"파워링크 '부모님선물' 키워드 광고"</p>
+                     <div class="my-6 p-4 bg-white rounded-xl"><p class="text-3xl font-black text-purple-600 mb-1">매출 5배 상승</p><p class="text-sm text-gray-600">CPC 3,000원짜리 키워드 효율 극대화</p></div>
+                     <p class="text-gray-700 text-sm leading-relaxed text-left">"클릭당 3,000원짜리 키워드... 정말 피눈물 났습니다. 고객이 블로그 '효능' 글만 읽고 나가버렸죠. SpeedLanding으로 '무료 샘플' 신청 페이지를 중간에 끼워 넣었습니다. <span class="font-bold">이탈하던 고객의 DB를 확보</span>하니, 전화 상담으로 실제 구매(50만원 패키지)까지 이어졌습니다. 매출 5배 올랐네요."</p>
+                </div>
+                 <div class="reveal bg-gradient-to-br from-green-50 to-white p-8 rounded-3xl shadow-xl text-center border-2 border-green-100">
+                     <div class="w-20 h-20 bg-green-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">이</div>
+                     <p class="font-bold text-xl mb-2 text-gray-900">세무법인 'OO택스' 이OO 세무사님</p>
+                     <p class="text-sm text-gray-500 mb-4">"파워링크 '종합소득세' 키워드 광고"</p>
+                     <div class="my-6 p-4 bg-white rounded-xl"><p class="text-3xl font-black text-green-600 mb-1">월 상담 DB 50건+</p><p class="text-sm text-gray-600">블로그 운영 시간 1/10 감소</p></div>
+                     <p class="text-gray-700 text-sm leading-relaxed text-left">"블로그 보고 '비밀댓글'로 문의하는 고객 응대하느라 하루 다 갔습니다. SpeedLanding으로 '무료 절세 진단' 신청 폼을 만들고 광고를 돌렸습니다. <span class="font-bold">이제 '진짜' 상담이 필요한 고객 DB</span>만 구글 시트에 자동으로 쌓입니다. 광고 효율은 물론이고, 제 업무 효율까지 올랐습니다."</p>
+                </div>
+            </div>
+
+             <div class="reveal mb-20">
+                 <h3 class="text-2xl font-bold text-center mb-10 text-gray-800">실제 고객 칭찬 <span class="text-brand">스크린샷</span></h3>
+                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
+                     <div class="review-screenshot"><span>[카톡 캡처 예시 1]</span></div>
+                     <div class="review-screenshot"><span>[문자 캡처 예시 2]</span></div>
+                     <div class="review-screenshot"><span>[스토어 리뷰 예시 3]</span></div>
+                      <div class="review-screenshot"><span>[구글 시트 DB 예시 4]</span></div>
+                 </div>
+            </div>
+
+            <div class="reveal mb-20">
+                 <h3 class="text-2xl font-bold text-center mb-10 text-gray-800">SpeedLanding 도입 <span class="text-brand">전 vs 후</span> (평균 전환율 변화)</h3>
+                 <div class="max-w-3xl mx-auto comparison-chart">
+                     <span>[블로그 직결 시 전환율 1% vs SpeedLanding 도입 후 전환율 5% 비교 차트 이미지]</span>
+                 </div>
+            </div>
+            
+            <div class="reveal text-center bg-gradient-to-r from-gray-50 to-white p-12 rounded-3xl border-2 border-gray-100">
+                 <p class="text-2xl font-bold text-gray-900 mb-8" style="font-family: 'Noto Serif KR', serif;">📊 현재까지의 성과</p>
+                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                     <div><p class="text-4xl font-black text-blue-600 mb-2">93%</p><p class="text-sm text-gray-600">광고주 만족도</p></div>
+                     <div><p class="text-4xl font-black text-blue-600 mb-2">150+</p><p class="text-sm text-gray-600">광고 효율 개선 건수</p></div>
+                     <div><p class="text-4xl font-black text-blue-600 mb-2">3배</p><p class="text-sm text-gray-600">평균 DB 전환율 증가</p></div>
+                     <div><p class="text-4xl font-black text-blue-600 mb-2">30분</p><p class="text-sm text-gray-600">Standard 제작 시간</p></div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900" style="font-family: 'Noto Serif KR', serif;">
+                    그래도 망설여지시나요?<br>
+                    사장님의 광고비 낭비 <span class="text-brand">'0원'</span>을 보장합니다.
+                </h2>
+                <p class="text-lg text-gray-600">SpeedLanding은 효과에 자신이 없으면 시작도 하지 않았습니다.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="reveal bg-white p-8 rounded-3xl border-2 border-red-200 text-center shadow-2xl lg:col-span-3">
+                     <div class="text-5xl mb-4">💯</div>
+                     <h3 class="text-2xl font-bold mb-3 text-red-600">"광고 효율 안 오르면 100% 환불"</h3>
+                     <p class="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                         SpeedLanding을 파워링크 광고에 적용한 후 2주(14일)간 테스트해 보세요.<br>
+                         기존(블로그/스토어 직결) 대비 DB 수집률 혹은 전환율이 단 1%도 오르지 않았다면?<br>
+                         <span class="font-bold text-gray-900">이유를 묻지도 따지지도 않고 제작비 전액(최대 22만원)을 100% 환불해 드립니다.</span><br>
+                         사장님은 광고비 낭비 0%, 그 어떤 위험도 없습니다.
+                     </p>
+                </div>
+
+                <div class="reveal bg-white p-8 rounded-3xl border-2 border-gray-100 text-center shadow-lg">
+                     <div class="text-5xl mb-4">🚀</div>
+                     <h3 class="text-xl font-bold mb-3 text-gray-900">즉시 광고 투입 (30분)</h3>
+                     <p class="text-gray-600">Standard 패키지 신청 시 30분 내 제작<br>오늘 바로 파워링크 A/B 테스트 투입</p>
+                </div>
+                
+                <div class="reveal bg-white p-8 rounded-3xl border-2 border-gray-100 text-center shadow-lg">
+                     <div class="text-5xl mb-4">🎁</div>
+                     <h3 class="text-xl font-bold mb-3 text-gray-900">무료 샘플 & 전자책</h3>
+                     <p class="text-gray-600">결정 전, 광고 효율 개선 노하우와<br>맞춤 샘플 페이지 먼저 확인</p>
+                </div>
+                
+                <div class="reveal bg-white p-8 rounded-3xl border-2 border-gray-100 text-center shadow-lg">
+                     <div class="text-5xl mb-4">🗃️</div>
+                     <h3 class="text-xl font-bold mb-3 text-gray-900">DB 100% 사장님 소유</h3>
+                     <p class="text-gray-600">Tally와 구글 시트를 통해 수집된<br>고객 DB는 100% 사장님 자산입니다.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900" style="font-family: 'Noto Serif KR', serif;">
+                    파워링크 광고주<br>자주 묻는 질문
+                </h2>
+            </div>
+            
+            <div class="space-y-6">
+                 <div class="reveal bg-gradient-to-r from-gray-50 to-white p-8 rounded-3xl border-2 border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. 스마트스토어 상품페이지로 바로 보내는 게 낫지 않나요?</h3>
+                    <p class="text-gray-700 leading-relaxed">스마트스토어는 '이미 구매를 결정한' 고객이 '결제'하는 곳입니다. 파워링크를 클릭한 고객은 아직 '고민 중'인 고객입니다. <span class="font-bold text-red-600">고민 중인 고객을 결제창에 보내면 99% 이탈합니다.</span> SpeedLanding은 그 중간에서 고객을 '설득'하고 'DB를 수집'하는 '매출 필터' 역할을 합니다. 설득된 고객만 스토어로 보내야 구매율이 오릅니다.</p>
+                </div>
+                 <div class="reveal bg-gradient-to-r from-gray-50 to-white p-8 rounded-3xl border-2 border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. 제 네이버 블로그/스토어와 디자인을 똑같이 맞출 수 있나요?</h3>
+                    <p class="text-gray-700 leading-relaxed">네, 가능합니다. 고객이 광고 클릭-랜딩페이지-블로그 이동 시 이질감을 느끼지 않도록, 사장님의 블로그/스토어의 메인 컬러와 로고, 폰트(유료 폰트 제외)를 동일하게 적용해 드립니다. <span class="font-bold text-blue-600">Deluxe (199,000원) 또는 Premium (220,000원) 패키지</span>를 선택하시면 맞춤 디자인을 제공합니다.</p>
+                </div>
+                 <div class="reveal bg-gradient-to-r from-gray-50 to-white p-8 rounded-3xl border-2 border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. 구글 시트 연동? Tally 폼? 그게 정확히 뭔가요?</h3>
+                    <p class="text-gray-700 leading-relaxed">사장님이 따로 개발할 필요 없이, 저희가 '무료 샘플 신청', '할인쿠폰 받기' 등의 버튼(Tally 폼)을 랜딩페이지에 심어드립니다. 고객이 이 버튼을 눌러 정보를 제출하면, <span class="font-bold text-blue-600">사장님만 볼 수 있는 '구글 시트(엑셀)'에 고객 DB(연락처, 이름 등)가 실시간으로 자동 저장</span>됩니다. DB 수집을 100% 자동화하는 것입니다.</p>
+                </div>
+                 <div class="reveal bg-gradient-to-r from-gray-50 to-white p-8 rounded-3xl border-2 border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. 정말 30분 만에 완성되나요?</h3>
+                    <p class="text-gray-700 leading-relaxed">Standard 패키지의 경우, 사장님의 광고 키워드와 업종에 맞는 'PASONA 템플릿'이 이미 준비되어 있습니다. 사장님의 로고와 문구, Tally 폼 링크만 받으면 30분 내에 제작하여 즉시 광고를 돌릴 수 있습니다.</p>
+                </div>
+                <div class="reveal bg-gradient-to-r from-gray-50 to-white p-8 rounded-3xl border-2 border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. DB 수집 후에 꼭 블로그로만 보낼 수 있나요?</h3>
+                    <p class="text-gray-700 leading-relaxed">아닙니다. '자동 리디렉션' 기능은 사장님이 원하는 어떤 주소로든 설정 가능합니다. <span class="font-bold text-blue-600">① 네이버 블로그, ② 스마트스토어 상품 결제창, ③ 인스타그램 DM 링크, ④ 카카오톡 채널</span> 등 사장님이 최종적으로 고객을 유도하고 싶은 '본진' 주소를 알려주시면 그대로 연결해 드립니다.</p>
+                </div>
+                 <div class="reveal bg-gradient-to-r from-gray-50 to-white p-8 rounded-3xl border-2 border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. 환불 정책은 어떻게 되나요?</h3>
+                    <p class="text-gray-700 leading-relaxed">업계 유일 <span class="font-bold text-red-600">'광고 효율 보장 환불제'</span>를 시행합니다. 파워링크 광고에 14일간 적용 후, 기존(블로그 직결) 대비 DB 수집률/전환율 개선이 전혀 없다면 100% 전액 환불해 드립니다. 사장님의 리스크는 0원입니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden" id="cta">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center reveal">
+                <span class="inline-block text-7xl mb-8">💸</span>
+                <h2 class="text-4xl md:text-6xl font-bold mb-8" style="font-family: 'Noto Serif KR', serif;">
+                    내일 아침에도<br>
+                    <span class="text-blue-400">똑같은 광고비를 '태우시겠습니까'?</span>
+                </h2>
+                
+                <div class="max-w-3xl mx-auto mb-12">
+                     <p class="text-xl md:text-2xl leading-relaxed text-gray-300 mb-8">
+                         파워링크 광고는 '돈'이 아니라 '기회'를 사는 것입니다.<br>
+                         클릭당 2,000원은 비싼 비용이 아니라, 내 고객이 될 수 있는 2,000원짜리 '기회'입니다.<br><br>
+                         하지만 그 기회를 '블로그'라는 구멍 난 그물로 잡으시겠습니까?<br>
+                         아니면 'SpeedLanding'이라는 촘촘한 그물로 잡으시겠습니까?
+                     </p>
+                    
+                    <p class="text-3xl md:text-4xl font-bold text-blue-400 mb-12" style="font-family: 'Noto Serif KR', serif;">
+                         오늘 22만원 투자로,<br>
+                         내일의 광고비 220만원을 아끼세요.
+                    </p>
+                    
+                    <p class="text-xl text-gray-300 mb-8">
+                         10년간 1억을 쓰며 배운 노하우,<br>
+                         전자책과 SpeedLanding 솔루션으로 증명하겠습니다.
+                    </p>
+                    
+                    <div class="bg-red-900/30 border-2 border-red-500 rounded-2xl p-6 mb-12">
+                         <p class="text-lg text-white mb-2 font-bold pulse">🎁 선착순 마감 임박!</p>
+                         <p class="text-sm text-red-200">광고 효율 진단 무료 샘플(20개 업체) + 무료 전자책(500부)</p>
+                         <p class="text-xs text-yellow-300 mt-2">※ 조기 마감 시 혜택이 종료됩니다!</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-4">
+                     <button 
+                        data-tally-open="<TALLY_EBOOK_FORM_ID>" 
+                        data-tally-emoji-text="📘" 
+                        data-tally-emoji-animation="bounce" 
+                        data-tally-hidden-fields='{"cta_location":"최종CTA_전자책", "offer":"ebook"}' 
+                        class="btn-ebook px-12 py-6 text-xl" /* 크기 키움 */
+                        data-cta-variant="final-ebook">
+                        무료 전자책 즉시 받기
+                    </button>
+                     <button 
+                         onclick="openSampleModal()"
+                         class="btn-primary text-white px-12 py-6 rounded-full font-bold text-xl inline-block transform hover:scale-105 transition" 
+                         data-cta-variant="final-sample">
+                         무료 샘플 상담 신청
+                    </button>
+                </div>
+                 <p class="text-center text-sm text-gray-400 mb-12">※ 100% 환불 보장! 지금 바로 신청하세요.</p>
+                 
+                 <p class="microcopy text-gray-500">“전자책 먼저 읽고, 필요하면 22만원만 투자하세요. 14일 내 효과 없으면 100% 환불.”</p>
+                
+                <div class="grid md:grid-cols-3 gap-8 mt-16">
+                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20"><div class="text-3xl mb-3">📱</div><p class="font-bold mb-2">전화 문의</p><a href="tel:010-4628-2048" class="text-blue-400 hover:underline">010-4628-2048</a></div>
+                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20"><div class="text-3xl mb-3">✉️</div><p class="font-bold mb-2">이메일</p><a href="mailto:brandforyou_@naver.com" class="text-blue-400 hover:underline">brandforyou_@naver.com</a></div>
+                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20"><div class="text-3xl mb-3">⏰</div><p class="font-bold mb-2">운영 시간</p><p class="text-gray-300">평일 10:00 - 18:00</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-16">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center border-2 border-blue-400"><span class="text-white text-xl font-bold">S</span></div>
+                        <div><span class="text-xl font-bold text-white block" style="font-family: 'Noto Serif KR', serif;">SpeedLanding</span><span class="text-xs text-gray-500">파워링크 광고비 절감 솔루션</span></div>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">비싼 파워링크 광고 클릭, '매출'로 전환하세요.<br>사장님의 광고 효율을 위한 최고의 파트너</p>
+                    <div class="text-sm space-y-1"><p>회사명: 너를위한브랜드</p><p>사업자등록번호: 303-33-01037</p><p>주소: 경기도 군포시 산본천로 214번길 30, 203호</p><p>대표: 조상일</p></div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">서비스</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#story" class="hover:text-blue-400 transition">대표 스토리</a></li>
+                        <li><a href="#solution" class="hover:text-blue-400 transition">매출 필터 솔루션</a></li>
+                        <li><a href="#ebook" class="hover:text-purple-400 transition">무료 전자책</a></li>
+                        <li><a href="#industries" class="hover:text-blue-400 transition">업종별 적용사례</a></li>
+                        <li><a href="#packages" class="hover:text-blue-400 transition">광고 효율 패키지</a></li>
+                        <li><button onclick="openSampleModal()" class="hover:text-blue-400 transition">무료 샘플</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">문의</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li>📞 010-4628-2048</li>
+                        <li>✉️ brandforyou_@naver.com</li>
+                        <li>⏰ 평일 10:00 - 18:00</li>
+                        <li>🏢 경기도 군포시</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2025 너를위한브랜드. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0"><a href="#" class="hover:text-blue-400 transition">이용약관</a><a href="#" class="hover:text-blue-400 transition">개인정보처리방침</a><a href="#" class="hover:text-blue-400 transition">사업자정보</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========== Google Apps Script URL (원본 유지) ==========
+        const GOOGLE_SCRIPT_URL ='https://script.google.com/macros/s/AKfycbzqlJo0dNv5UKw28sObAyt9w3637UfrnVc6c8ofQJokchfbDh4-fpf2aXlwKDsbVuNIbg/exec';
+
+        // ========== ★ 신규: UTM 파라미터 및 CTA 정보 수집 ==========
+        const urlParams = new URLSearchParams(location.search);
+        const utmKeys = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','n_media'];
+        const trackingParams = {};
+        utmKeys.forEach(k => {
+            const val = urlParams.get(k);
+            if (val) trackingParams[k] = val;
+        });
+
+        // 모든 폼에 Hidden 필드로 UTM 및 추적 정보 추가하는 함수
+        function appendHiddenTrackingFields(form, ctaLocation = '', ctaVariant = '') {
+            // UTM 파라미터 추가
+            for (const key in trackingParams) {
+                appendHidden(form, key, trackingParams[key]);
+            }
+            // CTA 정보 추가
+            if (ctaLocation) appendHidden(form, 'cta_location', ctaLocation);
+            if (ctaVariant) appendHidden(form, 'cta_variant', ctaVariant);
+            // 페이지 경로 추가 (어떤 페이지에서 제출했는지)
+            appendHidden(form, 'page_path', window.location.pathname);
+        }
+
+        // Helper function to append hidden input
+        function appendHidden(form, name, val){
+          if(!val || form.querySelector(`input[name="${name}"]`)) return; // 값 없거나 이미 있으면 추가 안함
+          const i=document.createElement('input');
+          i.type='hidden'; i.name=name; i.value=val; 
+          form.appendChild(i);
+        }
+
+        // 페이지 로드 시 모든 폼에 적용 (Tally는 data-tally-hidden-fields 사용)
+        document.addEventListener('DOMContentLoaded', () => {
+             document.querySelectorAll('form').forEach(f => {
+                 // 여기서는 초기 로드 시 기본 추적 필드만 추가 (CTA 정보는 버튼 클릭 시점에 추가)
+                 appendHiddenTrackingFields(f); 
+             });
+        });
+
+        // ========== 기존 Price Animation (원본 유지) ==========
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('priceOld')?.classList.add('fade-out'); // Optional chaining 추가
+                document.getElementById('priceNew')?.classList.add('fade-in'); // Optional chaining 추가
+            }, 2000);
+        });
+        
+        // ========== 기존 Modal Functions (수정: 관심 패키지 자동 선택) ==========
+        function openSampleModal(packageName = '') { // 패키지 이름 인자 추가
+            const modal = document.getElementById('sampleModal');
+            if (!modal) return;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // 관심 패키지 자동 선택
+            const packageSelect = modal.querySelector('select[name="package_interest"]');
+            if (packageSelect && packageName) {
+                // 패키지 이름으로 값 찾기 (대소문자 무시, 공백 제거)
+                const targetValue = Array.from(packageSelect.options).find(opt => 
+                    opt.textContent.toLowerCase().replace(/\s+/g, '').includes(packageName.toLowerCase())
+                )?.value;
+                 if (targetValue) {
+                     packageSelect.value = targetValue;
+                 }
+            }
+        }
+        
+        function closeSampleModal() {
+            const modal = document.getElementById('sampleModal');
+             if (!modal) return;
+            modal.classList.remove('active');
+            document.getElementById('formContainer').style.display = 'block'; // 폼 다시 보이게
+            document.getElementById('successMessage').classList.remove('active'); // 성공 메시지 숨김
+            document.getElementById('ebookSuccessText').style.display = 'none'; // 전자책 문구 숨김
+            const form = document.getElementById('sampleForm');
+            if (form) form.reset(); // 폼 리셋
+            document.body.style.overflow = 'auto';
+        }
+
+        // ========== ★ 신규: 전자책 폼 여닫기 (옵션 B: 자체 폼 사용 시) ==========
+        let ebookFormCtaLocation = ''; // 전자책 폼 열 때 CTA 위치 저장용
+        let ebookFormCtaVariant = '';  // 전자책 폼 열 때 CTA 변형 저장용
+
+        function openEbookForm(ctaLocation, ctaVariant = 'ebook-download') {
+             // Tally 폼이 아닌 자체 전자책 폼(<div id="ebookModal"> 같은)을 만들 경우 사용
+             // 예: const ebookModal = document.getElementById('ebookModal');
+             // ebookModal.classList.add('active');
+             // document.body.style.overflow = 'hidden';
+             
+             // CTA 정보 저장
+             ebookFormCtaLocation = ctaLocation;
+             ebookFormCtaVariant = ctaVariant;
+
+             console.log(`Opening Ebook Form from ${ctaLocation}`);
+        }
+        function closeEbookForm() {
+             // 예: const ebookModal = document.getElementById('ebookModal');
+             // ebookModal.classList.remove('active');
+             // ... 폼 리셋 및 스크롤 복구 로직 ...
+        }
+
+        // ========== 기존 Hidden iframe (원본 유지) ==========
+        let iframeCreated = false;
+        function createHiddenIframe() {
+             // ... (이전과 동일) ...
+            if (iframeCreated) return;
+            const iframe = document.createElement('iframe');
+            iframe.name = 'hidden_iframe';
+            iframe.id = 'hidden_iframe';
+            iframe.style.display = 'none';
+            iframe.onload = function() { console.log('✅ Form submitted successfully via iframe'); };
+            document.body.appendChild(iframe);
+            iframeCreated = true;
+        }
+        
+        // ========== ★ 수정: 샘플 신청 폼 제출 (전자책 체크박스, 추적 정보 추가) ==========
+        function submitSampleForm(event) {
+            event.preventDefault();
+            const form = event.target;
+            const submitBtn = form.querySelector('#submitBtn');
+            
+            // 웹사이트 URL 정규화 (원본 유지)
+            const websiteInput = form.querySelector('input[name="website"]');
+            if (websiteInput && websiteInput.value) {
+                let url = websiteInput.value.trim();
+                if (url && !url.startsWith('http://') && !url.startsWith('https://')) {
+                    websiteInput.value = 'https://' + url;
+                }
+            }
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = '전송 중...';
+            
+            const formData = new FormData(form);
+            const params = new URLSearchParams();
+            
+            // 폼 데이터 추가
+            for (let [key, value] of formData.entries()) {
+                params.append(key, value);
+            }
+            
+            // 전자책 체크박스 확인 및 type 변경
+            const getEbookChecked = form.querySelector('input[name="get_ebook"]').checked;
+            if (getEbookChecked) {
+                params.set('type', 'sample+ebook'); // type을 변경
+                params.append('ebook_title', '광고비10배절약_가이드'); // 전자책 제목 추가
+            } else {
+                 params.set('type', 'sample'); // 기본값 sample
+            }
+            params.delete('get_ebook'); // 체크박스 자체는 전송 X
+            
+            // 타임스탬프 추가
+            params.append('timestamp', new Date().toISOString());
+
+            // ★ CTA 추적 정보 추가 (버튼에 data-cta-variant가 있다고 가정)
+            // 실제로는 openSampleModal을 호출한 버튼의 variant를 가져와야 함 (구현 필요)
+             const clickedButtonVariant = form.dataset.ctaVariant || 'unknown_sample_cta'; // 임시값
+             params.append('cta_location', form.dataset.ctaLocation || 'sample_modal'); // 임시값
+             params.append('cta_variant', clickedButtonVariant);
+
+            // ★ UTM 파라미터 추가
+             for (const key in trackingParams) {
+                 params.append(key, trackingParams[key]);
+             }
+             params.append('page_path', window.location.pathname);
+            
+            console.log('=== 샘플 폼 데이터 전송 시작 ===');
+            console.log('전송할 데이터:', Object.fromEntries(params));
+            
+            createHiddenIframe();
+            const tempForm = document.createElement('form');
+            // ... (iframe 타겟팅 및 hidden input 생성 로직은 원본과 동일) ...
+            tempForm.method = 'POST';
+            tempForm.action = GOOGLE_SCRIPT_URL;
+            tempForm.target = 'hidden_iframe';
+            tempForm.style.display = 'none';
+            for (let [key, value] of params.entries()) {
+                appendHidden(tempForm, key, value);
+            }
+            document.body.appendChild(tempForm);
+            
+            try {
+                tempForm.submit();
+                setTimeout(() => {
+                    document.getElementById('formContainer').style.display = 'none';
+                    document.getElementById('successMessage').classList.add('active');
+                    // 전자책 신청 시 성공 메시지 변경
+                    if (getEbookChecked) {
+                         document.getElementById('ebookSuccessText').style.display = 'inline';
+                    }
+                    console.log('✅ Sample Form Submitted Successfully');
+                    // GA 이벤트 전송 등 추가 가능
+                    
+                    document.body.removeChild(tempForm);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = '무료 샘플 + 상담 신청하기';
+                    // 성공 후 3초 뒤 모달 닫기 (선택 사항)
+                    // setTimeout(closeSampleModal, 3000); 
+                }, 1500); // 시간 단축
+                
+            } catch (error) {
+                 // ... (에러 처리 로직 원본과 동일) ...
+                console.error('❌ 샘플 폼 전송 오류:', error);
+                alert('신청서 전송에 실패했습니다. 직접 연락 주세요. 오류: ' + error.message);
+                if (document.body.contains(tempForm)) document.body.removeChild(tempForm);
+                submitBtn.disabled = false;
+                submitBtn.textContent = '무료 샘플 + 상담 신청하기';
+            }
+            
+            return false;
+        }
+
+         // ========== ★ 신규: 전자책 폼 제출 (옵션 B: 자체 폼 사용 시) ==========
+         function submitEbookForm(event) {
+             event.preventDefault();
+             const form = event.target;
+             const submitBtn = form.querySelector('#ebookSubmitBtn');
+             
+             submitBtn.disabled = true;
+             submitBtn.textContent = '전송 중...';
+
+             const formData = new FormData(form);
+             const params = new URLSearchParams();
+             
+             for (let [key, value] of formData.entries()) {
+                 params.append(key, value);
+             }
+             
+             // 타임스탬프 추가
+             params.append('timestamp', new Date().toISOString());
+
+             // ★ CTA 추적 정보 추가 (openEbookForm에서 저장한 값 사용)
+             params.append('cta_location', ebookFormCtaLocation);
+             params.append('cta_variant', ebookFormCtaVariant);
+
+             // ★ UTM 파라미터 추가
+             for (const key in trackingParams) {
+                 params.append(key, trackingParams[key]);
+             }
+              params.append('page_path', window.location.pathname);
+
+             console.log('=== 전자책 폼 데이터 전송 시작 ===');
+             console.log('전송할 데이터:', Object.fromEntries(params));
+             
+             createHiddenIframe();
+             const tempForm = document.createElement('form');
+             // ... (iframe 타겟팅 및 hidden input 생성 로직) ...
+             tempForm.method = 'POST';
+             tempForm.action = GOOGLE_SCRIPT_URL;
+             tempForm.target = 'hidden_iframe';
+             tempForm.style.display = 'none';
+             for (let [key, value] of params.entries()) {
+                 appendHidden(tempForm, key, value);
+             }
+             document.body.appendChild(tempForm);
+
+             try {
+                 tempForm.submit();
+                 setTimeout(() => {
+                     // 폼 숨기고 성공 메시지 표시
+                     form.style.display = 'none';
+                     const successMsg = document.getElementById('ebookSuccessMessage');
+                     successMsg.classList.add('active');
+                     // 이메일 주소 표시
+                     document.getElementById('submittedEmail').textContent = params.get('email');
+                     
+                     console.log('✅ Ebook Form Submitted Successfully');
+                     // GA 이벤트 전송 등 추가 가능
+
+                     document.body.removeChild(tempForm);
+                     // 버튼 상태 복구 (필요 시)
+                     // submitBtn.disabled = false;
+                     // submitBtn.textContent = '📘 전자책 무료 다운로드';
+
+                     // ★ 성공 후 패키지 섹션으로 스크롤
+                     setTimeout(() => {
+                        const packageSection = document.getElementById('packages');
+                        if (packageSection) {
+                            packageSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                        // 자체 폼 모달 사용 시 닫기
+                        // closeEbookForm(); 
+                     }, 3000); // 3초 후 스크롤
+
+                 }, 1500); // 시간 단축
+             } catch (error) {
+                 console.error('❌ 전자책 폼 전송 오류:', error);
+                 alert('전자책 신청에 실패했습니다. 오류: ' + error.message);
+                 if (document.body.contains(tempForm)) document.body.removeChild(tempForm);
+                 submitBtn.disabled = false;
+                 submitBtn.textContent = '📘 전자책 무료 다운로드';
+             }
+             return false;
+         }
+
+        // ========== 기존 Modal 외부 클릭 닫기 (원본 유지) ==========
+        window.onclick = function(event) {
+            const sampleModal = document.getElementById('sampleModal');
+            if (event.target == sampleModal) {
+                closeSampleModal();
+            }
+             // 자체 전자책 폼 모달 사용 시 추가
+             // const ebookModal = document.getElementById('ebookModal');
+             // if (event.target == ebookModal) {
+             //    closeEbookForm();
+             // }
+        }
+
+        // ========== 기존 Smooth scroll (원본 유지) ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+             // ... (이전과 동일) ...
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                 // #ebook 링크 처리 추가
+                 if (targetId === '#ebook' && window.location.hash !== '#ebook') {
+                     // Tally 폼 버튼 클릭 시 스크롤만 하고 폼은 열지 않도록 처리 (옵션)
+                     // Tally 자체 기능으로 폼이 열리므로 preventDefault만 유지
+                 }
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                     // URL 해시 업데이트 (선택 사항)
+                     // history.pushState(null, null, targetId); 
+                }
+            });
+        });
+
+        // ========== 기존 Scroll reveal (원본 유지) ==========
+        const reveals = document.querySelectorAll('.reveal');
+        function checkScroll() {
+             // ... (이전과 동일) ...
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', checkScroll);
+        checkScroll(); // 초기 로드 시 체크
+
+        // ========== 기존 Floating CTA (원본 유지) ==========
+        const floatingCTA = document.getElementById('floatingCTA');
+        const heroSection = document.querySelector('.hero-gradient');
+        window.addEventListener('scroll', () => {
+             // ... (이전과 동일) ...
+             if (!heroSection || !floatingCTA) return; // 요소 없으면 중단
+             const heroBottom = heroSection.offsetHeight;
+             if (window.scrollY > heroBottom) {
+                 floatingCTA.classList.add('visible');
+             } else {
+                 floatingCTA.classList.remove('visible');
+             }
+        });
+
+        // ========== 기존 Counter animation (원본 유지) ==========
+        const counters = document.querySelectorAll('.counter');
+        const animatedCounters = new Set();
+        function animateCounter(counter) {
+             // ... (이전과 동일) ...
+             if (animatedCounters.has(counter) || !counter) return;
+             animatedCounters.add(counter);
+             const target = parseFloat(counter.getAttribute('data-target') || '0');
+             const suffix = counter.getAttribute('data-suffix') || '';
+             const isDecimal = target % 1 !== 0;
+             const duration = 1500; // 애니메이션 시간 (ms)
+             const frameRate = 60; // 초당 프레임
+             const totalFrames = Math.round((duration / 1000) * frameRate);
+             const increment = target / totalFrames;
+             let current = 0;
+             let frame = 0;
+             
+             const updateCounter = () => {
+                 frame++;
+                 current += increment;
+                 
+                 let displayValue;
+                 if (current >= target) {
+                     displayValue = isDecimal ? target.toFixed(1) : target.toLocaleString();
+                     counter.textContent = displayValue + suffix;
+                     return; // 애니메이션 종료
+                 } else {
+                     displayValue = isDecimal ? current.toFixed(1) : Math.ceil(current).toLocaleString();
+                     counter.textContent = displayValue + suffix;
+                 }
+                 
+                 if (frame < totalFrames) {
+                     requestAnimationFrame(updateCounter); // 다음 프레임 요청
+                 } else {
+                      // 마지막 프레임에서 목표값 정확히 표시
+                     displayValue = isDecimal ? target.toFixed(1) : target.toLocaleString();
+                     counter.textContent = displayValue + suffix;
+                 }
+             };
+             requestAnimationFrame(updateCounter); // 애니메이션 시작
+        }
+        // Intersection Observer for counters (원본 유지)
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target); // 한 번만 실행되도록 unobserve
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // ========== 기존 Navbar scroll effect (원본 유지) ==========
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+             // ... (이전과 동일) ...
+             if (!navbar) return;
+             if (window.scrollY > 50) {
+                 navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                 navbar.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+             } else {
+                 navbar.style.background = 'rgba(255, 255, 255, 0.9)';
+                 navbar.style.boxShadow = 'none';
+             }
+        });
+
+        // ========== 기존 한정성 수량 동기화 (수정: 전자책 수량 추가) ==========
+        const remainingSampleSlots = 20;
+        const remainingEbookSlots = 500; // 전자책 수량
+        document.querySelectorAll('#heroRemaining, #floatingRemaining, #sampleSlots').forEach(el => {
+            if (!el) return;
+             // 히어로: 샘플 + 전자책 문구 통합 (혹은 별도 요소 추가)
+            if (el.id === 'heroRemaining') {
+                el.innerHTML = `무료 샘플 ${remainingSampleSlots}개 / 전자책 ${remainingEbookSlots}부 한정`; 
+            } 
+            // 플로팅: 샘플 기준 유지 또는 전자책 기준 추가
+            else if (el.id === 'floatingRemaining') {
+                 el.textContent = `${remainingSampleSlots}개 업체 남음`; // 샘플 기준 유지
+            } 
+            // 특별 혜택: 샘플 기준 유지
+            else if (el.id === 'sampleSlots') {
+                 el.textContent = `${remainingSampleSlots}개 업체`;
+            }
+        });
+
+        // ========== 기존 CTA 클릭 추적 (수정: 정보 로깅 강화) ==========
+        document.querySelectorAll('[data-cta-variant]').forEach(cta => {
+            cta.addEventListener('click', function(e) {
+                const variant = this.getAttribute('data-cta-variant') || 'unknown';
+                const location = this.closest('[id]')?.id || this.closest('section')?.id || 'unknown_location'; // 가장 가까운 ID 요소 찾기
+                const text = this.textContent.trim();
+                
+                console.log(`CTA Clicked: Variant='${variant}', Location='${location}', Text='${text}'`);
+
+                // 자체 폼 버튼 클릭 시, 폼에 CTA 정보 데이터 속성 설정
+                 if (this.onclick && (this.onclick.toString().includes('openSampleModal') || this.onclick.toString().includes('openEbookForm'))) {
+                     const formId = this.onclick.toString().includes('openSampleModal') ? 'sampleForm' : 'ebookForm';
+                     const form = document.getElementById(formId);
+                     if (form) {
+                         form.dataset.ctaVariant = variant;
+                         form.dataset.ctaLocation = location;
+                     }
+                 }
+
+                // Tally 폼 버튼 클릭 시, data-tally-hidden-fields 업데이트 (동적 업데이트 어려움 - 초기 설정 권장)
+                 // 만약 Tally 폼을 동적으로 생성/수정한다면 여기서 hidden fields 업데이트 가능
+                 
+                 // A/B 테스트용 로깅: URL 파라미터나 data 속성으로 버전 확인
+                 const version = urlParams.get('v') || this.dataset.abVersion || 'default';
+                 console.log(`A/B Test Version: ${version}`);
+
+                 // GA 이벤트 전송 등 추가 가능
+                 /*
+                 if (typeof gtag !== 'undefined') {
+                    gtag('event', 'cta_click', {
+                        'event_category': location,
+                        'event_label': variant,
+                        'value': text, // 버튼 텍스트
+                        'ab_version': version
+                    });
+                 }
+                 */
+            });
+        });
+
+        // ========== 기존 페이지 성능 모니터링 (원본 유지) ==========
+        window.addEventListener('load', function() {
+            if (performance && performance.timing) {
+                const loadTime = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
+                console.log('Page Load Time:', loadTime + 'ms');
+            }
+        });
+    </script>
+</body>
+</html>
