@@ -1,0 +1,27 @@
+https://github.com/sangiljo88-crypto/kofood.git
+
+
+# 1. D 드라이브로 이동
+D:
+
+# 2. 'speedlanding' 프로젝트 폴더로 이동 (띄어쓰기가 있으니 큰따옴표 필수)
+cd "D:\OneDrive\바탕 화면\kofood"
+
+# 3. 이 폴더를 Git 저장소로 초기화
+git init
+
+# 4. 이 폴더 안의 모든 파일 추가
+git add .
+
+# 5. '첫 버전'이라고 저장 (커밋)
+git commit -m "코오푸드 첫 버전 업로드"
+
+# 6. '새로운' GitHub 저장소 주소 연결
+git remote add origin https://github.com/sangiljo88-crypto/kofood.git
+
+# 7. GitHub으로 업로드!
+git push -u origin main
+
+git branch -M main
+
+git push -u origin main

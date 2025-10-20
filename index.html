@@ -13,9 +13,7 @@
     <meta property="og:image" content="/images/og-speedlanding-ebook.jpg">
     <meta property="og:url" content="https://speedlanding.com">
     
-    <!-- Tally.so Embed -->
     <script src="https://tally.so/widgets/embed.js"></script>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +28,7 @@
         
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            line-height: 1.8;
+            line-height: 1.9;
             color: #1a1f2e;
             overflow-x: hidden;
         }
@@ -38,7 +36,7 @@
         h1, h2, h3 {
             font-family: 'Noto Serif KR', serif;
             font-weight: 700;
-            line-height: 1.3;
+            line-height: 1.5;
         }
         
         /* Hero Section */
@@ -49,6 +47,7 @@
             display: flex;
             align-items: center;
             overflow: hidden;
+            padding-top: 80px;
         }
         
         .hero-pattern {
@@ -65,7 +64,7 @@
             50% { transform: translateY(-20px) scale(1.02); }
         }
         
-        /* Price Animation - Ebook Focus */
+        /* Price Animation */
         .price-container {
             position: relative;
             height: 140px;
@@ -81,8 +80,6 @@
             color: #60a5fa;
             font-weight: 700;
             margin-bottom: 1rem;
-            opacity: 1;
-            transition: all 0.5s ease;
         }
 
         .ebook-benefits {
@@ -113,7 +110,6 @@
             font-weight: 900;
             color: #3b82f6;
             text-decoration: line-through;
-            opacity: 1;
             transition: all 1s ease;
         }
         
@@ -138,7 +134,7 @@
             transform: scale(1) translateY(0);
         }
         
-        /* Real-time Ad Spend Counter */
+        /* Ad Burn Counter */
         .ad-burn-container {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border: 2px solid #ef4444;
@@ -201,45 +197,43 @@
             text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
         }
         
-        .text-brand-purple {
-            color: #8b5cf6;
-        }
-        
         .bg-brand {
             background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
         }
         
-        /* Card Hover Effects */
+        /* Card Hover */
         .story-card {
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .story-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
-        }
-        
-        /* Package Cards */
-        .package-card {
-            transition: all 0.4s ease;
-            position: relative;
-        }
-        
-        .package-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         
-        .package-card.featured {
-            transform: scale(1.08);
-            z-index: 10;
+        /* CTA Buttons */
+        .cta-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
         }
         
-        .package-card.featured:hover {
-            transform: scale(1.1) translateY(-8px);
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
         }
         
-        /* Scroll Reveal */
+        /* Floating CTA */
+        
+        /* Reveal Animation */
         .reveal {
             opacity: 0;
             transform: translateY(50px);
@@ -251,13 +245,189 @@
             transform: translateY(0);
         }
         
+        /* Package Cards */
+        .package-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .package-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(139, 92, 246, 0.3);
+        }
+        
+        .package-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .package-card.featured:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+        
+        /* Enhanced Comparison Visual */
+        .modern-comparison {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin: 3rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .modern-comparison {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .comparison-arrow-modern {
+                transform: rotate(90deg);
+            }
+        }
+        
+        .comparison-card-modern {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .comparison-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+        }
+        
+        .comparison-card-modern.bad::before {
+            background: linear-gradient(90deg, #ef4444, #dc2626);
+        }
+        
+        .comparison-card-modern.good::before {
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+        
+        .comparison-card-modern:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .comparison-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+        }
+        
+        .comparison-icon.bad {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            color: #dc2626;
+        }
+        
+        .comparison-icon.good {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            color: #059669;
+        }
+        
+        .comparison-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .comparison-rate {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin: 1.5rem 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .comparison-rate.bad {
+            color: #dc2626;
+        }
+        
+        .comparison-rate.good {
+            color: #059669;
+        }
+        
+        .comparison-subtitle {
+            text-align: center;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .comparison-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .comparison-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.8;
+        }
+        
+        .comparison-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-features li::before {
+            content: '•';
+            margin-right: 0.75rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .comparison-features.bad li::before {
+            color: #ef4444;
+        }
+        
+        .comparison-features.good li::before {
+            color: #10b981;
+        }
+        
+        .comparison-arrow-modern {
+            font-size: 3rem;
+            color: #3b82f6;
+            font-weight: bold;
+            animation: bounceX 2s infinite;
+            text-align: center;
+        }
+        
+        @keyframes bounceX {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+        
         /* Comparison Table */
         .comparison-table {
             width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            overflow: hidden;
+            border-collapse: collapse;
+            background: white;
             border-radius: 16px;
+            overflow: hidden;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
         
@@ -265,227 +435,23 @@
             background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
             color: white;
             padding: 1.5rem;
-            font-weight: 700;
             text-align: center;
-            border-bottom: 3px solid #3b82f6;
+            font-weight: 700;
         }
         
         .comparison-table td {
-            padding: 1.25rem;
-            text-align: center;
+            padding: 1rem 1.5rem;
             border-bottom: 1px solid #e2e8f0;
-            background: white;
-            transition: all 0.3s ease;
+            text-align: center;
         }
         
-        .comparison-table tr:hover td {
+        .comparison-table tr:hover {
             background: #f8fafc;
-        }
-        
-        .comparison-table td:first-child {
-            font-weight: 600;
-            text-align: left;
-            background: #f8fafc;
-            border-right: 2px solid #e2e8f0;
-        }
-        
-        .comparison-table tr:hover td:first-child {
-            background: #f1f5f9;
-        }
-        
-        .feature-check {
-            color: #10b981;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .feature-cross {
-            color: #ef4444;
-            font-size: 1.5rem;
-            font-weight: bold;
         }
         
         .featured-column {
-            background: linear-gradient(180deg, #faf5ff 0%, #f3e8ff 100%) !important;
-            font-weight: 600;
-        }
-        
-        /* CTA Buttons */
-        .cta-primary {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: white;
-            padding: 1.25rem 2.5rem;
-            border-radius: 50px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(124, 58, 237, 0.1));
             font-weight: 700;
-            font-size: 1.125rem;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-            position: relative;
-            overflow: hidden;
-            border: none;
-            cursor: pointer;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        
-        .cta-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
-        }
-        
-        .cta-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.6s ease;
-        }
-        
-        .cta-primary:hover::before {
-            left: 100%;
-        }
-        
-        /* Floating CTA */
-        .floating-cta {
-            position: fixed;
-            bottom: -100px;
-            left: 0;
-            right: 0;
-            background: white;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
-            padding: 1rem;
-            z-index: 1000;
-            transition: bottom 0.4s ease;
-        }
-        
-        .floating-cta.visible {
-            bottom: 0;
-        }
-        
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.6);
-            backdrop-filter: blur(5px);
-        }
-        
-        .modal-content {
-            background-color: white;
-            margin: 5% auto;
-            padding: 2.5rem;
-            border-radius: 24px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            animation: slideDown 0.4s ease;
-        }
-        
-        @keyframes slideDown {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        
-        .close {
-            color: #94a3b8;
-            float: right;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        .close:hover {
-            color: #1e293b;
-        }
-        
-        /* Form Styles */
-        .form-input {
-            width: 100%;
-            padding: 1rem;
-            margin: 0.75rem 0;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        
-        .form-input:focus {
-            outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-        
-        .form-textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        .form-submit {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: white;
-            padding: 1.25rem;
-            border: none;
-            border-radius: 12px;
-            font-size: 1.125rem;
-            font-weight: 700;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s ease;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        
-        .form-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-        }
-        
-        .form-submit:disabled {
-            background: #cbd5e1;
-            cursor: not-allowed;
-            transform: none;
-        }
-        
-        /* Badge Styles */
-        .badge {
-            display: inline-block;
-            padding: 0.5rem 1.25rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        
-        .badge-primary {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: white;
-        }
-        
-        .badge-warning {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            color: white;
-        }
-        
-        .badge-success {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
         }
         
         /* Stats Counter */
@@ -498,7 +464,7 @@
             background-clip: text;
         }
         
-        /* Message Bubble Style Testimonials */
+        /* Message Bubbles */
         .message-container {
             display: flex;
             flex-direction: column;
@@ -560,8 +526,7 @@
             padding: 1rem 1.25rem;
             border-radius: 20px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: relative;
-            line-height: 1.6;
+            line-height: 1.9;
         }
         
         .message-bubble.left .message-text {
@@ -586,100 +551,77 @@
             color: rgba(255,255,255,0.7);
         }
         
-        /* Before/After Comparison */
-        .comparison-visual {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            justify-content: center;
-            margin: 3rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .comparison-box {
-            flex: 1;
-            min-width: 280px;
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            transition: all 0.4s ease;
-        }
-        
-        .comparison-box.before {
-            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
-            border: 3px solid #ef4444;
-        }
-        
-        .comparison-box.after {
-            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-            border: 3px solid #10b981;
-        }
-        
-        .comparison-box:hover {
-            transform: scale(1.05);
-        }
-        
-        .comparison-percentage {
-            font-size: 4rem;
-            font-weight: 900;
-            margin: 1rem 0;
-        }
-        
-        .comparison-box.before .comparison-percentage {
-            color: #dc2626;
-        }
-        
-        .comparison-box.after .comparison-percentage {
-            color: #059669;
-        }
-        
-        /* Arrow between comparison boxes */
-        .comparison-arrow {
-            font-size: 3rem;
-            color: #3b82f6;
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(10px); }
-        }
-        
-        /* Screenshot Cards */
-        .screenshot-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .screenshot-card {
+        /* FAQ Accordion */
+        .faq-item {
             background: white;
             border-radius: 16px;
-            padding: 1.5rem;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .screenshot-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-        
-        .screenshot-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
             margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
         }
         
-        .screenshot-label {
-            font-size: 0.875rem;
-            color: #64748b;
-            text-align: center;
-            font-style: italic;
+        .faq-item:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        .faq-question {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1e293b;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question {
+            border-left-color: #3b82f6;
+            background: #f8fafc;
+        }
+        
+        .faq-question-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+        
+        .faq-question-text {
+            flex: 1;
+        }
+        
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #3b82f6;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 2rem;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 2rem 1.5rem 2rem;
+        }
+        
+        .faq-answer-content {
+            color: #475569;
+            line-height: 2;
+            padding-left: 3rem;
+        }
+        
+        .faq-answer-content strong {
+            color: #1e293b;
         }
         
         /* Countdown Timer */
@@ -767,229 +709,30 @@
             display: inline-block;
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body { font-size: 14px; line-height: 1.5; }
-            .section-padding { padding: 2.5rem 0 !important; }
-            .container { padding: 0 0.9rem !important; }
-            body {
-                font-size: 14px;
-            }
-            
-            .hero-gradient {
-                min-height: auto;
-                padding: 3rem 0;
-            }
-            
-            .hero-gradient h1 {
-                font-size: 2rem !important;
-                line-height: 1.4 !important;
-                margin-bottom: 1rem !important;
-                word-break: keep-all;
-            }
-            
-            .hero-gradient p {
-                font-size: 1rem !important;
-                line-height: 1.6 !important;
-                margin-bottom: 1rem !important;
-            }
-            
-            .ebook-title {
-                font-size: 1.1rem !important;
-                line-height: 1.4 !important;
-            }
-            
-            .ebook-benefits {
-                font-size: 0.85rem !important;
-                padding: 0 1rem;
-            }
-            
-            .price-container {
-                height: auto;
-                margin-bottom: 1rem;
-            }
-            
-            .price-old {
-                font-size: 2rem !important;
-            }
-            
-            .price-new {
-                font-size: 2.5rem !important;
-            }
-            
-            .badge {
-                font-size: 0.75rem !important;
-                padding: 0.4rem 1rem !important;
-            }
-            
-            .cta-primary {
-                font-size: 0.95rem !important;
-                padding: 1rem 1.5rem !important;
-                width: 100%;
-                max-width: 100%;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
-            }
-            
-            .comparison-table {
-                font-size: 0.75rem;
-            }
-            
-            .comparison-table th,
-            .comparison-table td {
-                padding: 0.5rem 0.25rem;
-            }
-            
-            .package-card {
-                margin-bottom: 1.5rem;
-            }
-            
-            .package-card.featured {
-                transform: scale(1);
-            }
-            
-            .package-card h3 {
-                font-size: 1.5rem !important;
-            }
-            
-            .package-card .text-5xl {
-                font-size: 2.5rem !important;
-            }
-            
-            .comparison-visual {
-                flex-direction: column;
-            }
-            
-            .comparison-box {
-                min-width: 100%;
-            }
-            
-            .comparison-percentage {
-                font-size: 3rem !important;
-            }
-            
-            .comparison-arrow {
-                transform: rotate(90deg);
-                margin: 1rem 0;
-            }
-            
-            .ad-counter {
-                font-size: 1.75rem !important;
-            }
-            
-            .countdown-digit {
-                font-size: 1.5rem;
-                padding: 0.6rem 0.75rem;
-                min-width: 45px;
-            }
-            
-            .countdown-separator {
-                font-size: 1.5rem;
-            }
-            
-            .countdown-label {
-                gap: 2rem;
-                font-size: 0.7rem;
-            }
-            
-            .countdown-label span {
-                min-width: 45px;
-            }
-            
-            .remaining-count {
-                font-size: 1.75rem;
-            }
-            
-            .urgency-text {
-                font-size: 1.1rem;
-            }
-            
-            .message-bubble {
-                font-size: 0.9rem;
-            }
-            
-            .message-text {
-                padding: 0.75rem 1rem;
-                font-size: 0.85rem;
-            }
-            
-            .story-card h3 {
-                font-size: 1.25rem;
-            }
-            
-            .story-card p {
-                font-size: 0.9rem;
-            }
-            
-            .container {
-                padding: 0 1rem;
-            }
-            
-            .section-padding {
-                padding: 3rem 0;
-            }
-            
-            h2 {
-                font-size: 1.75rem !important;
-                line-height: 1.4 !important;
-                word-break: keep-all;
-            }
-            
-            h3 {
-                font-size: 1.25rem !important;
-            }
-            
-            .text-xl {
-                font-size: 1rem !important;
-            }
-            
-            .text-2xl {
-                font-size: 1.25rem !important;
-            }
-            
-            .text-3xl {
-                font-size: 1.5rem !important;
-            }
-            
-            .text-4xl {
-                font-size: 1.75rem !important;
-            }
-            
-            .text-5xl {
-                font-size: 2rem !important;
-            }
+        /* Badge Styles */
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
         
-        /* Extra Small Mobile */
-        @media (max-width: 375px) {
-            .hero-gradient h1 {
-                font-size: 1.75rem !important;
-            }
-            
-            .price-old {
-                font-size: 1.75rem !important;
-            }
-            
-            .price-new {
-                font-size: 2rem !important;
-            }
-            
-            .cta-primary {
-                font-size: 0.85rem !important;
-                padding: 0.875rem 1.25rem !important;
-            }
-            
-            .countdown-digit {
-                font-size: 1.25rem;
-                padding: 0.5rem 0.6rem;
-                min-width: 38px;
-            }
-            
-            .ad-counter {
-                font-size: 1.5rem !important;
-            }
+        .badge-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+        }
+        
+        .badge-warning {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+        }
+        
+        .badge-success {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
         }
         
         /* Navbar */
@@ -1000,7 +743,7 @@
             right: 0;
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             z-index: 999;
             transition: all 0.3s ease;
         }
@@ -1022,37 +765,159 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        /* 모바일 초강력 최적화 */
+        
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            body { font-size: 14px !important; line-height: 1.5 !important; }
-            .hero-gradient { padding: 2rem 0 1.5rem !important; }
-            .hero-gradient h1 { font-size: 1.5rem !important; line-height: 1.3 !important; margin-bottom: 0.8rem !important; }
-            .hero-gradient p { font-size: 0.85rem !important; margin-bottom: 0.8rem !important; }
-            .ebook-title { font-size: 0.9rem !important; line-height: 1.3 !important; }
-            .ebook-benefits { font-size: 0.75rem !important; margin: 0.8rem auto 1.2rem !important; }
-            .price-old { font-size: 1.8rem !important; }
-            .price-new { font-size: 2.2rem !important; }
-            .badge { font-size: 0.65rem !important; padding: 0.3rem 0.8rem !important; }
-            .cta-primary { font-size: 0.85rem !important; padding: 0.85rem 1.2rem !important; }
-            .section-padding { padding: 2rem 0 !important; }
-            .container { padding: 0 0.9rem !important; }
-            h2 { font-size: 1.4rem !important; line-height: 1.3 !important; margin-bottom: 0.8rem !important; }
-            h3 { font-size: 1.1rem !important; }
-            .story-card { padding: 1.2rem !important; }
-            .story-card p { font-size: 0.8rem !important; }
-            .package-card { padding: 1.2rem !important; }
-            .package-card h3 { font-size: 1.3rem !important; }
-            .package-card ul { font-size: 0.75rem !important; }
-            .ad-burn-container { padding: 1.2rem !important; }
-            .ad-burn-container h3 { font-size: 1.2rem !important; line-height: 1.3 !important; }
-            .ad-counter { font-size: 1.6rem !important; }
-            .countdown-digit { font-size: 1.3rem !important; padding: 0.45rem 0.65rem !important; min-width: 40px !important; }
-            .countdown-separator { font-size: 1.3rem !important; }
-            .countdown-label { gap: 2rem !important; font-size: 0.65rem !important; }
-            .urgency-text { font-size: 0.95rem !important; line-height: 1.3 !important; }
-            .remaining-count { font-size: 1.5rem !important; }
-            .comparison-percentage { font-size: 2.3rem !important; }
-            .message-text { padding: 0.65rem 0.9rem !important; font-size: 0.75rem !important; }
+            body { 
+                font-size: 14px !important; 
+                line-height: 1.5 !important; 
+            }
+            
+            .hero-gradient { 
+                padding: 5rem 0 1.5rem !important; 
+                min-height: auto;
+            }
+            
+            .hero-gradient h1 { 
+                font-size: 1.5rem !important; 
+                line-height: 1.3 !important; 
+                margin-bottom: 0.8rem !important; 
+            }
+            
+            .hero-gradient p { 
+                font-size: 0.85rem !important; 
+                margin-bottom: 0.8rem !important; 
+            }
+            
+            .ebook-title { 
+                font-size: 0.9rem !important; 
+                line-height: 1.3 !important; 
+            }
+            
+            .ebook-benefits { 
+                font-size: 0.75rem !important; 
+                margin: 0.8rem auto 1.2rem !important; 
+            }
+            
+            .price-old { 
+                font-size: 1.8rem !important; 
+            }
+            
+            .price-new { 
+                font-size: 2.2rem !important; 
+            }
+            
+            .badge { 
+                font-size: 0.65rem !important; 
+                padding: 0.3rem 0.8rem !important; 
+            }
+            
+            .cta-primary { 
+                font-size: 0.85rem !important; 
+                padding: 0.85rem 1.2rem !important; 
+            }
+            
+            .section-padding { 
+                padding: 2rem 0 !important; 
+            }
+            
+            .container { 
+                padding: 0 0.9rem !important; 
+            }
+            
+            h2 { 
+                font-size: 1.4rem !important; 
+                line-height: 1.3 !important; 
+                margin-bottom: 0.8rem !important; 
+            }
+            
+            h3 { 
+                font-size: 1.1rem !important; 
+            }
+            
+            .story-card { 
+                padding: 1.2rem !important; 
+            }
+            
+            .story-card p { 
+                font-size: 0.8rem !important; 
+            }
+            
+            .package-card { 
+                padding: 1.2rem !important; 
+            }
+            
+            .package-card h3 { 
+                font-size: 1.3rem !important; 
+            }
+            
+            .package-card ul { 
+                font-size: 0.75rem !important; 
+            }
+            
+            .ad-burn-container { 
+                padding: 1.2rem !important; 
+            }
+            
+            .ad-burn-container h3 { 
+                font-size: 1.2rem !important; 
+                line-height: 1.3 !important; 
+            }
+            
+            .ad-counter { 
+                font-size: 1.6rem !important; 
+            }
+            
+            .countdown-digit { 
+                font-size: 1.3rem !important; 
+                padding: 0.45rem 0.65rem !important; 
+                min-width: 40px !important; 
+            }
+            
+            .countdown-separator { 
+                font-size: 1.3rem !important; 
+            }
+            
+            .countdown-label { 
+                gap: 2rem !important; 
+                font-size: 0.65rem !important; 
+            }
+            
+            .urgency-text { 
+                font-size: 0.95rem !important; 
+                line-height: 1.3 !important; 
+            }
+            
+            .remaining-count { 
+                font-size: 1.5rem !important; 
+            }
+            
+            .comparison-rate { 
+                font-size: 2.3rem !important; 
+            }
+            
+            .message-text { 
+                padding: 0.65rem 0.9rem !important; 
+                font-size: 0.75rem !important; 
+            }
+            
+            .comparison-card-modern {
+                padding: 1.5rem !important;
+            }
+            
+            .comparison-title {
+                font-size: 1.2rem !important;
+            }
+            
+            .faq-question {
+                padding: 1rem 1.2rem !important;
+                font-size: 0.95rem !important;
+            }
+            
+            .faq-answer-content {
+                padding-left: 1.5rem !important;
+                font-size: 0.85rem !important;
+            }
         }
     </style>
 </head>
@@ -1067,7 +932,14 @@
                     <a href="#packages" class="text-gray-700 hover:text-blue-600 transition">패키지</a>
                     <a href="#comparison" class="text-gray-700 hover:text-blue-600 transition">비교</a>
                     <a href="#faq" class="text-gray-700 hover:text-blue-600 transition">FAQ</a>
-                    <a href="#ebook" class="cta-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">📘 무료 전자책</a>
+                    <button onclick="openTallyWithData('전자책', 'navbar-ebook')" 
+                        data-tally-emoji-text="📘" 
+                        data-tally-emoji-animation="wave"
+                        class="cta-primary" 
+                        style="padding: 0.5rem 1.5rem; font-size: 0.9rem; border: none; cursor: pointer;"
+                        data-cta-variant="navbar-ebook">
+                        📘 무료 전자책
+                    </button>
                 </div>
             </div>
         </div>
@@ -1081,13 +953,13 @@
                 <span class="badge badge-warning mb-4">⚡ 월 30만원 이상 광고하시는 사장님 필독</span>
             </div>
             
-            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 fade-in-up delay-2">
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 fade-in-up delay-2" style="line-height: 1.4;">
                 파워링크 <span class="text-brand">광고비</span>,<br>
                 아직도 블로그로<br class="md:hidden">
                 <span class="text-red-400">'태우고'</span> 계신가요?
             </h1>
             
-            <p class="text-xl md:text-2xl text-gray-300 mb-8 fade-in-up delay-3">
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 fade-in-up delay-3" style="line-height: 1.9;">
                 광고 클릭을 <strong class="text-white">'매출'</strong>로 바꾸는<br class="md:hidden"> 전환 최적화 랜딩페이지<br>
                 <span class="text-brand">전환율 5배 UP</span> · <span class="text-brand">광고비 절감</span> · <span class="text-brand">DB 자동수집</span>
             </p>
@@ -1097,43 +969,41 @@
                 <div class="ebook-title" id="ebookTitle">
                     📘 파워링크 광고비<br class="md:hidden"> 10배 효율화 실전 매뉴얼
                 </div>
-                <div class="price-old" id="priceOld">전자책 59,000원</div>
+                <div class="price-old" id="priceOld">59,000원</div>
                 <div class="price-new" id="priceNew">무료</div>
             </div>
             
-            <p class="text-gray-300 text-lg mb-6 fade-in-up delay-5">
+            <p class="text-gray-300 text-lg mb-6 fade-in-up delay-5" style="line-height: 1.9;">
                 <strong class="text-white" id="heroRemaining">무료 샘플 20개 / 전자책 500부 한정</strong>
             </p>
 
-            <!-- 전자책 혜택 리스트 -->
-            <ul class="ebook-benefits fade-in-up delay-5">
-                <li>파워링크 전환율 5배 높이는<br class="md:hidden"> 실전 노하우</li>
-                <li>광고비 절감 체크리스트<br class="md:hidden"> (월 50만원 이상 절약)</li>
-                <li>고객 DB 수집 자동화<br class="md:hidden"> 시스템 구축법</li>
-                <li>실제 고객 성공 사례 &<br class="md:hidden"> 매출 데이터</li>
+            <!-- 전자책 혜택 리스트 (실제 목차 반영) -->
+            <ul class="ebook-benefits fade-in-up delay-5" style="line-height: 2;">
+                <li>파워링크 기초부터 실전까지 완전정복</li>
+                <li>대행사 없이 직접 운영하는 5가지 장점</li>
+                <li>광고비 월 50만원 이상 절약 체크리스트</li>
+                <li>키워드 전략과 품질지수 올리는 법</li>
+                <li>실제 고객 사례 분석 & 매출 증대 전략</li>
             </ul>
             
             <div class="flex flex-col gap-3 justify-center items-stretch md:flex-row md:items-center fade-in-up delay-6" style="max-width: 600px; margin: 0 auto;">
                 <button 
-                    data-tally-open="3xegv5" 
+                    onclick="openTallyWithData('전자책', 'hero-ebook')"
                     data-tally-emoji-text="📘" 
                     data-tally-emoji-animation="wave"
-                    class="cta-primary" 
-                    data-cta-variant="hero-ebook">
+                    class="cta-primary">
                     📘 무료 전자책 즉시 다운로드
                 </button>
-                <button 
-                    data-tally-open="3xegv5" 
+                <button onclick="openTallyWithData('샘플', 'hero-sample')" 
                     data-tally-emoji-text="✨" 
                     data-tally-emoji-animation="wave"
                     class="cta-primary" 
-                    style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);" 
-                    data-cta-variant="hero-sample">
+                    style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
                     ✨ 무료 샘플 신청
                 </button>
             </div>
             
-            <p class="text-gray-400 text-sm mt-6 fade-in-up delay-6">
+            <p class="text-gray-400 text-sm mt-6 fade-in-up delay-6" style="line-height: 1.9;">
                 💳 카드 정보 불필요 · 즉시 다운로드 · 100% 무료
             </p>
         </div>
@@ -1144,114 +1014,158 @@
         <div class="container">
             <div class="text-center mb-16">
                 <span class="badge badge-primary mb-4">💡 대표의 스토리</span>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6" style="line-height: 1.5;">
                     저도 한때<br class="md:hidden"> <span class="text-gradient">광고비를 '태우는'</span><br>
                     사장이었습니다
                 </h2>
-                <p class="text-xl text-gray-600">
+                <p class="text-xl text-gray-600" style="line-height: 1.9;">
                     파워링크에 월 200만원을 쓰면서도<br class="md:hidden"> 전환율 1%에 허덕이던 그때...
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="story-card reveal bg-white p-8 rounded-3xl shadow-xl">
-                    <div class="text-5xl mb-4">😰</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">문제 인식</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        커피 사업으로 월 <strong>200만원</strong>을 파워링크에 쏟아부었지만,
-                        블로그 페이지의 전환율은 고작 <strong class="text-red-600">1%</strong>.
-                        클릭 1번에 500원씩 '태우는' 느낌이었습니다.
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="story-card reveal bg-white rounded-3xl p-8 shadow-xl">
+                    <div class="text-6xl mb-4">😰</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">월 200만원 광고비</h3>
+                    <p class="text-gray-700" style="line-height: 1.8;">
+                        네이버 파워링크에 월 200만원을 쏟아부었습니다. 
+                        클릭은 많았지만 실제 문의는 손에 꼽을 정도...
+                        <strong class="text-red-600">전환율 1%</strong>에 불과했습니다.
                     </p>
                 </div>
 
-                <div class="story-card reveal bg-white p-8 rounded-3xl shadow-xl">
-                    <div class="text-5xl mb-4">💡</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">해결책 발견</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        마케팅 심리학을 공부하고, <strong>PASONA 법칙</strong>을 적용한 
-                        전문 랜딩페이지를 제작했습니다. 
-                        결과는 놀라웠습니다 - 전환율이 <strong class="text-green-600">5배</strong> 상승!
+                <div class="story-card reveal bg-white rounded-3xl p-8 shadow-xl">
+                    <div class="text-6xl mb-4">💡</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">랜딩페이지 발견</h3>
+                    <p class="text-gray-700" style="line-height: 1.8;">
+                        블로그 대신 <strong class="text-blue-600">전문 랜딩페이지</strong>를 
+                        적용했더니... 같은 광고비로 전환율이 
+                        <strong class="text-blue-600">5배</strong>로 증가했습니다!
                     </p>
                 </div>
 
-                <div class="story-card reveal bg-white p-8 rounded-3xl shadow-xl">
-                    <div class="text-5xl mb-4">🚀</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">솔루션 탄생</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        같은 고민을 하는 사장님들을 위해 <strong>SpeedLanding</strong>을 만들었습니다.
-                        이제 누구나 <strong>30분 만에</strong> 전환 최적화된 랜딩페이지를 가질 수 있습니다.
+                <div class="story-card reveal bg-white rounded-3xl p-8 shadow-xl">
+                    <div class="text-6xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">SpeedLanding 탄생</h3>
+                    <p class="text-gray-700" style="line-height: 1.8;">
+                        저처럼 고민하는 사장님들을 위해 
+                        <strong class="text-purple-600">SpeedLanding</strong>을 만들었습니다. 
+                        이제 여러분도 광고비를 절약하세요!
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Results Comparison -->
+    <!-- Modern Comparison Section -->
     <section class="section-padding bg-white">
         <div class="container">
             <div class="text-center mb-16">
-                <span class="badge badge-primary mb-4">📊 실제 데이터</span>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-                    SpeedLanding 도입<br class="md:hidden"> <span class="text-gradient">전 vs 후</span><br>
-                    <span class="text-xl text-gray-600 font-normal">(평균 전환율 변화)</span>
+                <span class="badge badge-warning mb-4">🔥 핵심 비교</span>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6" style="line-height: 1.5;">
+                    블로그 vs 랜딩페이지<br>
+                    <span class="text-gradient">왜 차이가 날까요?</span>
                 </h2>
             </div>
 
-            <div class="comparison-visual reveal">
-                <div class="comparison-box before">
-                    <div class="text-2xl font-bold text-gray-700 mb-2">블로그로 바로 전환 시</div>
-                    <div class="comparison-percentage">1%</div>
-                    <p class="text-gray-600 text-sm">전환율</p>
-                    <p class="mt-4 text-gray-700">
-                        💸 클릭당 평균 500원<br>
-                        📉 100명 방문 → 1명 전환
-                    </p>
+            <!-- Modern Comparison Cards -->
+            <div class="modern-comparison reveal">
+                <!-- Blog Card -->
+                <div class="comparison-card-modern bad">
+                    <div class="comparison-icon bad">❌</div>
+                    <div class="comparison-title">블로그</div>
+                    <div class="comparison-rate bad">1%</div>
+                    <div class="comparison-subtitle">평균 전환율</div>
+                    <ul class="comparison-features bad" style="line-height: 1.8;">
+                        <li>이탈률 70-80%</li>
+                        <li>관련 없는 글 노출</li>
+                        <li>DB 수집 불가</li>
+                        <li>느린 로딩 속도</li>
+                        <li>모바일 최적화 미흡</li>
+                    </ul>
                 </div>
 
-                <div class="comparison-arrow">→</div>
+                <!-- Arrow -->
+                <div class="comparison-arrow-modern">→</div>
 
-                <div class="comparison-box after">
-                    <div class="text-2xl font-bold text-gray-700 mb-2">랜딩페이지 도입 후</div>
-                    <div class="comparison-percentage">5%</div>
-                    <p class="text-gray-600 text-sm">전환율</p>
-                    <p class="mt-4 text-gray-700">
-                        💰 광고비 5배 효율화<br>
-                        📈 100명 방문 → 5명 전환
-                    </p>
+                <!-- Landing Page Card -->
+                <div class="comparison-card-modern good">
+                    <div class="comparison-icon good">✅</div>
+                    <div class="comparison-title">랜딩페이지</div>
+                    <div class="comparison-rate good">5%</div>
+                    <div class="comparison-subtitle">평균 전환율</div>
+                    <ul class="comparison-features good" style="line-height: 1.8;">
+                        <li>이탈률 10-20%</li>
+                        <li>단일 목적 집중</li>
+                        <li>자동 DB 수집</li>
+                        <li>빠른 로딩 속도</li>
+                        <li>완벽한 반응형</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="text-center mt-12 max-w-3xl mx-auto">
-                <p class="text-2xl font-bold text-gray-900 mb-6">
-                    동일한 광고비로 <span class="text-gradient">5배 더 많은 고객</span>을 확보하세요
-                </p>
-                
-                <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-6 text-left">
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                        <span class="text-3xl mr-3">🎯</span>
-                        왜 랜딩페이지는 전환율이 5배 높을까요?
-                    </h4>
-                    <div class="space-y-3 text-gray-700">
-                        <p>
-                            <strong>블로그는 단순히 정보만 전달</strong>합니다. 고객이 유입되자마자 바로 제품/서비스를 마주하게 되죠.
-                        </p>
-                        <p>
-                            <strong>하지만 랜딩페이지는 다릅니다.</strong> 고객이 우리 제품을 보기 전에, 
-                            <span class="text-blue-600 font-bold">PASONA 전략</span>을 통해 고객의 고민을 자극하고, 
-                            문제를 인식시키며, 해결책을 제시합니다.
-                        </p>
-                        <p>
-                            이렇게 <strong>심리적 준비가 완료된 상태</strong>에서 제품을 보게 되면, 
-                            구매 전환 확률이 자연스럽게 높아집니다.
-                        </p>
-                        <p class="pt-2 border-t border-blue-200">
-                            💡 <strong>마지막 결제는</strong> 실제 운영 중인 제품과 고객 리뷰로 완성됩니다. 
+            <!-- PASONA Framework Explanation -->
+            <div class="reveal max-w-4xl mx-auto mt-16">
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 border-2 border-blue-200">
+                    <h3 class="text-3xl font-black text-gray-900 mb-6 text-center" style="line-height: 1.5;">
+                        🎯 PASONA 법칙 적용으로<br class="md:hidden"> 전환율 5배 달성
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">📢</span>
+                                <h4 class="text-xl font-bold text-blue-600">P - Problem (문제)</h4>
+                            </div>
+                            <p class="text-gray-700" style="line-height: 1.8;">
+                                고객의 고통을 정확히 짚어냅니다.<br>
+                                "광고비만 태우고 계신가요?"
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">🔍</span>
+                                <h4 class="text-xl font-bold text-purple-600">A - Affinity (친밀감)</h4>
+                            </div>
+                            <p class="text-gray-700" style="line-height: 1.8;">
+                                "저도 그랬어요"<br>
+                                공감으로 신뢰를 구축합니다
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">💡</span>
+                                <h4 class="text-xl font-bold text-green-600">S - Solution (해결책)</h4>
+                            </div>
+                            <p class="text-gray-700" style="line-height: 1.8;">
+                                명확한 솔루션 제시<br>
+                                "랜딩페이지로 전환율 5배!"
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">⚡</span>
+                                <h4 class="text-xl font-bold text-orange-600">NA - Narrowing & Action</h4>
+                            </div>
+                            <p class="text-gray-700" style="line-height: 1.8;">
+                                긴급성 + 즉시 행동 유도<br>
+                                "선착순 500명 한정"
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-600" style="line-height: 1.9;">
+                            💡 <strong>마지막 O(Offer)는</strong> 실제 운영 중인 제품과 고객 리뷰로 완성됩니다. 
                             신뢰를 구축하고, 최종 전환까지 이끄는 완벽한 여정입니다.
                         </p>
                     </div>
                 </div>
                 
-                <p class="text-gray-600 mt-6 text-sm">
+                <p class="text-gray-600 mt-6 text-sm text-center" style="line-height: 1.9;">
                     * 2024년 하반기 SpeedLanding 이용 고객 50개사 평균 데이터 (자체 조사)
                 </p>
             </div>
@@ -1262,9 +1176,11 @@
     <section class="section-padding" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
         <div class="container">
             <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
-                    이 솔루션은<br class="md:hidden"> <br> <span class="text-brand">'모두'</span>를 위한 게<br class="md:hidden"> 아닙니다.<br>
-                    <span class="text-red-400">오직,<br class="md:hidden"> 파워링크 광고주</span>를<br class="md:hidden"> 위해 만들었습니다.
+                <h2 class="text-4xl md:text-6xl font-black text-white mb-8" style="line-height: 1.6;">
+                    이 솔루션은<br>
+                    <span class="text-brand">'모두'</span>를 위한 게<br class="md:hidden"> 아닙니다.<br>
+                    <span class="text-red-400">오직,<br class="md:hidden"> 파워링크 광고주만</span>을<br class="md:hidden"> 위해<br>
+                    전략적으로 만들었습니다.
                 </h2>
                 
                 <p class="text-xl text-gray-300 mb-12">
@@ -1275,21 +1191,34 @@
                     <div class="flex items-start gap-4 text-left">
                         <div class="text-4xl">✅</div>
                         <div>
-                            <h3 class="text-2xl font-bold text-white mb-3">
+                            <h3 class="text-2xl font-bold text-white mb-4">
                                 네이버 파워링크에 <span class="text-brand">월 30만원 이상</span> 쓰고 계신 사장님
                             </h3>
-                            <p class="text-gray-300 text-lg leading-relaxed">
-                                광고비가 '매출'이 아니라 '비용'으로 느껴지시는 분<br>
-                                광고 클릭은 많은데 실제 문의/구매는 적은 분<br>
-                                블로그로 광고를 연결하고 계신 분
-                            </p>
+                            <ul class="text-gray-300 text-lg leading-relaxed space-y-3">
+                                <li class="flex items-start">
+                                    <span class="text-green-400 mr-3 mt-1">✓</span>
+                                    <span>광고비가 '매출'이 아니라 '비용'으로 느껴지시는 분</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-400 mr-3 mt-1">✓</span>
+                                    <span>광고 클릭은 많은데 실제 문의/구매는 적은 분</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-400 mr-3 mt-1">✓</span>
+                                    <span>블로그로 광고를 연결하고 계신 분</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-400 mr-3 mt-1">✓</span>
+                                    <span>체계적인 DB 관리가 필요하신 분</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="mt-8 text-gray-400 text-sm">
-                    <p>
-                        ⚠️ 월 30만원 미만 광고 집행 시, 전환 데이터가 부족해 <br> 최적화 효과가 제한적일 수 있습니다.<br>
+                    <p style="line-height: 1.9;">
+                        ⚠️ 월 30만원 미만 광고 집행 시, 전환 데이터가 부족해 최적화 효과가 제한적일 수 있습니다.<br>
                         충분한 트래픽이 있어야 랜딩페이지의 진가가 발휘됩니다.
                     </p>
                 </div>
@@ -1297,12 +1226,12 @@
         </div>
     </section>
 
-    <!-- Real Customer Messages (Kakao Style) -->
+    <!-- Real Customer Messages -->
     <section class="section-padding bg-gray-50">
         <div class="container">
             <div class="text-center mb-16">
-                <span class="badge badge-success mb-4">✨ 솔직한 리뷰</span>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                <span class="badge badge-success mb-4">✨ 실제 고객 채팅 스크린샷</span>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6" style="line-height: 1.5;">
                     "이거 진짜 효과 있나요?"<br>
                     <span class="text-gradient">실제 고객님들의 반응</span>입니다
                 </h2>
@@ -1400,168 +1329,43 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Message Thread 3 -->
-                <div class="reveal bg-white rounded-3xl p-6 shadow-xl">
-                    <div class="text-center mb-6">
-                        <div class="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
-                            2025년 1월 3일
-                        </div>
-                    </div>
-                    
-                    <div class="message-container">
-                        <div class="message-bubble left" style="animation-delay: 0.1s">
-                            <div class="message-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">박</div>
-                            <div class="message-content">
-                                <div class="message-sender">박준호 실장 (인테리어)</div>
-                                <div class="message-text">
-                                    처음엔 반신반의했는데...
-                                </div>
-                                <div class="message-time">오후 3:20</div>
-                            </div>
-                        </div>
-
-                        <div class="message-bubble left" style="animation-delay: 0.3s">
-                            <div class="message-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">박</div>
-                            <div class="message-content">
-                                <div class="message-text">
-                                    정말 <strong>30분 만에</strong> 완성됐어요!<br>
-                                    디자인도 전문적이고, 무엇보다<br>
-                                    전환율이 확 올라서 만족합니다 🔥
-                                </div>
-                                <div class="message-time">오후 3:21</div>
-                            </div>
-                        </div>
-
-                        <div class="message-bubble right" style="animation-delay: 0.5s">
-                            <div class="message-content">
-                                <div class="message-sender text-right">SpeedLanding</div>
-                                <div class="message-text">
-                                    빠른 제작과 효과 모두 만족하셨다니<br>
-                                    감사합니다! 계속 좋은 성과 있으시길! 💪
-                                </div>
-                                <div class="message-time">오후 3:25</div>
-                            </div>
-                            <div class="message-avatar" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">S</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Message Thread 4 -->
-                <div class="reveal bg-white rounded-3xl p-6 shadow-xl">
-                    <div class="text-center mb-6">
-                        <div class="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
-                            2025년 1월 8일
-                        </div>
-                    </div>
-                    
-                    <div class="message-container">
-                        <div class="message-bubble left" style="animation-delay: 0.1s">
-                            <div class="message-avatar" style="background: linear-gradient(135deg, #ec4899, #db2777);">최</div>
-                            <div class="message-content">
-                                <div class="message-sender">최지현 대표 (학원)</div>
-                                <div class="message-text">
-                                    와... 이거 진짜 대박이네요
-                                </div>
-                                <div class="message-time">오후 5:10</div>
-                            </div>
-                        </div>
-
-                        <div class="message-bubble left" style="animation-delay: 0.3s">
-                            <div class="message-avatar" style="background: linear-gradient(135deg, #ec4899, #db2777);">최</div>
-                            <div class="message-content">
-                                <div class="message-text">
-                                    이번 달 상담 신청이<br>
-                                    <strong>전월 대비 3배</strong> 늘었어요!<br>
-                                    파워링크 광고비는 그대로인데 말이죠 😍
-                                </div>
-                                <div class="message-time">오후 5:11</div>
-                            </div>
-                        </div>
-
-                        <div class="message-bubble right" style="animation-delay: 0.5s">
-                            <div class="message-content">
-                                <div class="message-sender text-right">SpeedLanding</div>
-                                <div class="message-text">
-                                    동일 광고비로 3배 성과! 정말 대단하십니다!<br>
-                                    계속해서 우수 사례 만들어가시길 응원합니다 🎊
-                                </div>
-                                <div class="message-time">오후 5:15</div>
-                            </div>
-                            <div class="message-avatar" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">S</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <p class="text-center text-gray-500 text-sm mt-8">
-                * 고객 개인정보 보호를 위해 일부 내용은 각색되었습니다
-            </p>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="section-padding bg-white">
-        <div class="container">
-            <div class="grid md:grid-cols-4 gap-8 text-center">
-                <div class="reveal">
-                    <div class="stat-number counter" data-target="150" data-suffix="+">0+</div>
-                    <p class="text-gray-600 text-lg font-semibold mt-2">누적 제작 건수</p>
-                </div>
-                <div class="reveal">
-                    <div class="stat-number counter" data-target="5" data-suffix="배">0배</div>
-                    <p class="text-gray-600 text-lg font-semibold mt-2">평균 전환율 증가</p>
-                </div>
-                <div class="reveal">
-                    <div class="stat-number counter" data-target="98" data-suffix="%">0%</div>
-                    <p class="text-gray-600 text-lg font-semibold mt-2">고객 만족도</p>
-                </div>
-                <div class="reveal">
-                    <div class="stat-number counter" data-target="4.9" data-suffix="/5.0">0/5.0</div>
-                    <p class="text-gray-600 text-lg font-semibold mt-2">고객 평점</p>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Packages Section -->
-    <section id="packages" class="section-padding" style="background: linear-gradient(180deg, #f8fafc 0%, #e0e7ff 100%);">
+    <section id="packages" class="section-padding bg-white">
         <div class="container">
             <div class="text-center mb-16">
-                <span class="badge badge-primary mb-4">💎 맞춤형 패키지</span>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-                    당신의 비즈니스에 딱 맞는<br>
-                    <span class="text-gradient">광고 효율 패키지</span>
+                <span class="badge badge-primary mb-4">💎 맞춤 패키지</span>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6" style="line-height: 1.5;">
+                    <span class="text-gradient">광고 효율 극대화</span> 패키지
                 </h2>
-                <p class="text-xl text-gray-600">
-                    제작 30분 → 적용 1일 → 효과는 평생
+                <p class="text-xl text-gray-600" style="line-height: 1.9;">
+                    업체 규모와 필요에 맞는 최적의 솔루션을 선택하세요
                 </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Standard Package -->
-                <div class="package-card reveal bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-200">
+                <div class="package-card reveal">
                     <div class="text-center mb-6">
                         <h3 class="text-2xl font-bold text-gray-900 mb-2">Standard</h3>
-                        <p class="text-gray-600 mb-4">시작하는 분들께</p>
-                        <div class="text-5xl font-black text-gray-900 mb-2">
+                        <p class="text-gray-600 mb-4">시작하시는 분께</p>
+                        <div class="text-5xl font-black text-blue-600 mb-2">
                             99,000<span class="text-2xl">원</span>
                         </div>
-                        <p class="text-sm text-gray-500">1회 제작 / 1년 호스팅</p>
+                        <p class="text-sm text-gray-600">1회 제작 / 1년 호스팅</p>
                     </div>
 
-                    <ul class="space-y-3 mb-8 text-left">
+                    <ul class="space-y-4 mb-8 text-left" style="line-height: 1.8;">
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">PASONA 기본 템플릿</span>
+                            <span class="text-gray-700 font-semibold">맞춤형 디자인 1회 수정</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">디자인 수정 1회</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">DB 수집 (이메일)</span>
+                            <span class="text-gray-700 font-semibold">DB 수집 (이메일)</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
@@ -1569,40 +1373,42 @@
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">웹호스팅 1년 제공</span>
+                            <span class="text-gray-700 font-semibold">웹호스팅 1년</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">전자책 요약본</span>
+                            <span class="text-gray-700 font-semibold">전자책 완본</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">제작 1일 이내</span>
+                            <span class="text-gray-700 font-semibold">제작 1일 이내</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 text-xl">✓</span>
+                            <span class="text-gray-700">스마트플레이스 최적화</span>
                         </li>
                     </ul>
 
-                    <button 
-                        data-tally-open="3xegv5" 
-                        data-tally-emoji-text="💎" 
+                    <button onclick="openTallyWithData('패키지(Standard)', 'package-standard')" 
+                        data-tally-emoji-text="🚀" 
                         data-tally-emoji-animation="wave"
-                        class="w-full cta-primary" 
-                        data-cta-variant="package-standard">
+                        class="w-full cta-primary">
                         Standard 선택하기
                     </button>
                 </div>
 
-                <!-- Deluxe Package (Decoy) -->
-                <div class="package-card reveal bg-white rounded-3xl p-8 shadow-xl border-2 border-blue-200">
+                <!-- Deluxe Package -->
+                <div class="package-card reveal">
                     <div class="text-center mb-6">
                         <h3 class="text-2xl font-bold text-gray-900 mb-2">Deluxe</h3>
-                        <p class="text-gray-600 mb-4">진심인 사장님께</p>
-                        <div class="text-5xl font-black text-blue-600 mb-2">
+                        <p class="text-gray-600 mb-4">제대로 하시는 분께</p>
+                        <div class="text-5xl font-black text-green-600 mb-2">
                             259,000<span class="text-2xl">원</span>
                         </div>
                         <p class="text-sm text-gray-600">1회 제작 / 평생 호스팅</p>
                     </div>
 
-                    <ul class="space-y-3 mb-8 text-left">
+                    <ul class="space-y-4 mb-8 text-left" style="line-height: 1.8;">
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
                             <span class="text-gray-700 font-semibold">맞춤형 디자인 2회 수정</span>
@@ -1633,17 +1439,15 @@
                         </li>
                     </ul>
 
-                    <button 
-                        data-tally-open="3xegv5" 
+                    <button onclick="openTallyWithData('패키지(Deluxe)', 'package-deluxe')" 
                         data-tally-emoji-text="💎" 
                         data-tally-emoji-animation="wave"
-                        class="w-full cta-primary" 
-                        data-cta-variant="package-deluxe">
+                        class="w-full cta-primary">
                         Deluxe 선택하기
                     </button>
                 </div>
 
-                <!-- Premium Package (Featured - Most Popular) -->
+                <!-- Premium Package (Featured) -->
                 <div class="package-card featured reveal bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 shadow-2xl border-4 border-purple-500 relative">
                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span class="badge badge-warning">🔥 가장 인기</span>
@@ -1658,10 +1462,10 @@
                         <p class="text-sm text-gray-600">1회 제작 / 평생 호스팅</p>
                     </div>
 
-                    <ul class="space-y-3 mb-8 text-left">
+                    <ul class="space-y-4 mb-8 text-left" style="line-height: 1.8;">
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700 font-semibold">1개월간 무제한 수정</span>
+                            <span class="text-gray-700 font-semibold"><span class="text-red-600 font-black">1개월간 무제한 수정</span></span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
@@ -1669,7 +1473,7 @@
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700 font-semibold">도메인 1년 제공</span>
+                            <span class="text-gray-700 font-semibold"><span class="text-red-600 font-black">도메인 1년 무료 제공</span></span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
@@ -1693,38 +1497,36 @@
                         </li>
                     </ul>
 
-                    <button 
-                        data-tally-open="3xegv5" 
+                    <button onclick="openTallyWithData('패키지(Premium)', 'package-premium')" 
                         data-tally-emoji-text="🔥" 
                         data-tally-emoji-animation="wave"
                         class="w-full cta-primary" 
-                        style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);" 
-                        data-cta-variant="package-premium">
+                        style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);">
                         Premium 선택하기
                     </button>
                 </div>
             </div>
 
             <div class="text-center mt-12">
-                <p class="text-gray-600 text-lg">
+                <p class="text-gray-600 text-lg" style="line-height: 1.9;">
                     🎁 <strong>특별 혜택:</strong> 모든 패키지에 <strong class="text-brand">광고비 절약 노하우 전자책</strong> 포함!
                 </p>
-                <p class="text-gray-500 text-sm mt-2">
+                <p class="text-gray-500 text-sm mt-2" style="line-height: 1.9;">
                     * 제작은 30분 내 완료되나, 실제 적용 및 테스트는 최대 1일 소요될 수 있습니다
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Detailed Comparison Table -->
+    <!-- Comparison Table Section -->
     <section id="comparison" class="section-padding bg-white">
         <div class="container">
             <div class="text-center mb-16">
                 <span class="badge badge-primary mb-4">📋 상세 비교</span>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6" style="line-height: 1.5;">
                     <span class="text-gradient">광고 효율 패키지</span> 상세 비교
                 </h2>
-                <p class="text-xl text-gray-600">
+                <p class="text-xl text-gray-600" style="line-height: 1.9;">
                     나에게 꼭 맞는 패키지를 선택하세요
                 </p>
             </div>
@@ -1750,11 +1552,11 @@
                             <td>디자인 수정</td>
                             <td>1회 수정</td>
                             <td>2회 수정</td>
-                            <td class="featured-column">1개월 무제한</td>
+                            <td class="featured-column"><span class="text-red-600 font-black">1개월 무제한</span></td>
                         </tr>
                         <tr>
                             <td>DB 수집 방식</td>
-                            <td>이메일 연동</td>
+                            <td>이메일</td>
                             <td>이메일 + 구글시트</td>
                             <td class="featured-column">이메일 + 구글시트</td>
                         </tr>
@@ -1762,163 +1564,175 @@
                             <td>도메인</td>
                             <td>개별 구매</td>
                             <td>개별 구매</td>
-                            <td class="featured-column">1년 무료 제공</td>
+                            <td class="featured-column"><span class="text-red-600 font-black">1년 무료 제공</span></td>
                         </tr>
                         <tr>
                             <td>웹호스팅</td>
-                            <td>1년 제공</td>
-                            <td>평생 제공</td>
-                            <td class="featured-column">평생 제공</td>
+                            <td>1년</td>
+                            <td>평생</td>
+                            <td class="featured-column">평생</td>
                         </tr>
                         <tr>
-                            <td>전자책</td>
-                            <td>요약본</td>
-                            <td>완본</td>
-                            <td class="featured-column">완본</td>
-                        </tr>
-                        <tr>
-                            <td>제작 기간</td>
+                            <td>제작 소요시간</td>
                             <td>1일 이내</td>
                             <td>2일 이내</td>
                             <td class="featured-column">3일 이내</td>
                         </tr>
                         <tr>
                             <td>스마트플레이스 최적화</td>
-                            <td><span class="feature-cross">✗</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td class="featured-column"><span class="feature-check">✓</span></td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td class="featured-column">✓</td>
                         </tr>
                         <tr>
-                            <td>Tally 폼 연동</td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td class="featured-column"><span class="feature-check">✓</span></td>
+                            <td>전자책 완본</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td class="featured-column">✓</td>
                         </tr>
                         <tr>
-                            <td>모바일 최적화</td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td class="featured-column"><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td>우선 고객 지원</td>
-                            <td><span class="feature-cross">✗</span></td>
-                            <td><span class="feature-cross">✗</span></td>
-                            <td class="featured-column"><span class="feature-check">✓</span></td>
+                            <td>우선 지원</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="featured-column">✓</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
-            <div class="text-center mt-12">
-                <p class="text-lg text-gray-700 mb-4">
-                    💡 <strong>추천:</strong> 월 50만원 이상 광고 집행 시 <strong class="text-purple-600">Premium</strong>을 권장합니다
-                </p>
-                <p class="text-gray-600">
-                    도메인 1년 무료 + 1개월 무제한 수정으로 최고의 ROI를 경험하세요
-                </p>
-            </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Accordion Section -->
     <section id="faq" class="section-padding bg-gray-50">
         <div class="container">
             <div class="text-center mb-16">
                 <span class="badge badge-primary mb-4">❓ 자주 묻는 질문</span>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-                    <span class="text-gradient">궁금한 점</span>이 있으신가요?
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6" style="line-height: 1.5;">
+                    <span class="text-gradient">FAQ</span>
                 </h2>
+                <p class="text-lg text-gray-600" style="line-height: 1.9;">궁금하신 질문을 클릭해보세요</p>
             </div>
 
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="reveal bg-white rounded-2xl p-6 border-l-4 border-blue-500 shadow-lg">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. 정말 30분 만에 완성되나요?</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Standard 패키지의 경우, 사장님의 로고와 문구, Tally 폼 링크만 입력하시면 
-                        <strong>PASONA 템플릿</strong>이 이미 준비되어 있습니다. 
-                        사장님의 로고와 문구를 입력하시면 <strong>즉시 광고를 돌릴 수 있는 랜딩페이지가 완성</strong>됩니다.
-                        <br><br>
-                        단, <strong>제작은 30분이지만 실제 적용 및 최종 테스트는 최대 1일 정도</strong> 소요될 수 있습니다.
-                    </p>
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <div class="faq-question-icon">📈</div>
+                        <div class="faq-question-text">정말 전환율이 5배나 올라가나요?</div>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            네, 실제 고객사 평균 데이터입니다. 블로그는 다른 글로 이탈하기 쉽지만, 
+                            랜딩페이지는 <strong>단일 목적에 집중</strong>하도록 설계되어 있습니다. 
+                            PASONA 법칙을 적용한 심리적 설득 구조로 방문자를 고객으로 전환시킵니다.
+                        </div>
+                    </div>
                 </div>
 
-                <div class="reveal bg-white rounded-2xl p-6 border-l-4 border-green-500 shadow-lg">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. DB는 어떻게 수집되나요?</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Standard는 <strong>이메일로만</strong> DB가 전송됩니다.
-                        <br>
-                        Deluxe와 Premium은 <strong>이메일 + 구글시트 연동</strong>으로 
-                        실시간으로 고객 정보가 자동으로 저장됩니다. 
-                        별도의 수작업 없이 언제든지 구글시트에서 리드를 확인하고 관리할 수 있습니다.
-                    </p>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <div class="faq-question-icon">💾</div>
+                        <div class="faq-question-text">DB 수집은 어떻게 되나요?</div>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <strong>Standard:</strong> 이메일로만 DB가 전송됩니다.<br><br>
+                            <strong>Deluxe & Premium:</strong> 이메일 + 구글시트 연동으로 
+                            실시간 자동 저장됩니다. 별도의 수작업 없이 언제든지 구글시트에서 리드를 확인하고 관리할 수 있습니다.
+                        </div>
+                    </div>
                 </div>
 
-                <div class="reveal bg-white rounded-2xl p-6 border-l-4 border-purple-500 shadow-lg">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. 광고비가 정말 절감되나요?</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        네, 확실히 절감됩니다. 블로그는 <strong>전환율이 평균 1%</strong>인 반면, 
-                        SpeedLanding의 최적화된 랜딩페이지는 <strong>평균 5%</strong>입니다. 
-                        동일한 광고비로 5배 더 많은 고객을 확보할 수 있다는 뜻입니다.
-                        <br><br>
-                        예를 들어, 월 100만원 광고비로 블로그는 20명의 고객을 얻었다면, 
-                        SpeedLanding으로는 <strong>100명의 고객</strong>을 얻을 수 있습니다.
-                    </p>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <div class="faq-question-icon">💰</div>
+                        <div class="faq-question-text">광고비가 정말 절감되나요?</div>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            네, 확실히 절감됩니다. 블로그는 <strong>전환율 평균 1%</strong>인 반면, 
+                            SpeedLanding의 최적화된 랜딩페이지는 <strong>평균 5%</strong>입니다. 
+                            동일한 광고비로 5배 더 많은 고객을 확보할 수 있습니다.<br><br>
+                            예: 월 100만원 광고비로 블로그는 20명, SpeedLanding으로는 <strong>100명</strong>의 고객 확보!
+                        </div>
+                    </div>
                 </div>
 
-                <div class="reveal bg-white rounded-2xl p-6 border-l-4 border-red-500 shadow-lg">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. 환불 정책이 어떻게 되나요?</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        랜딩페이지 <strong>제작 완료 전</strong>까지는 100% 환불이 가능합니다. 
-                        제작 완료 후에는 디지털 상품의 특성상 환불이 어려우니, 
-                        사전에 <strong>무료 샘플 랜딩페이지</strong>를 신청하시어 확인해보시길 권장합니다.
-                    </p>
+                <!-- FAQ Item 4 -->
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <div class="faq-question-icon">🔄</div>
+                        <div class="faq-question-text">환불 정책이 어떻게 되나요?</div>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            랜딩페이지 <strong>제작 완료 전</strong>까지는 100% 환불 가능합니다. 
+                            제작 완료 후에는 디지털 상품 특성상 환불이 어려우니, 
+                            사전에 <strong>무료 샘플 랜딩페이지</strong>를 신청하시어 확인해보시길 권장합니다.
+                        </div>
+                    </div>
                 </div>
 
-                <div class="reveal bg-white rounded-2xl p-6 border-l-4 border-yellow-500 shadow-lg">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. 도메인과 호스팅은 어떻게 되나요?</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        <strong>Standard와 Deluxe:</strong> 도메인은 개별 구매하셔야 하며, 
-                        호스팅은 Standard(1년), Deluxe(평생) 제공됩니다.
-                        <br>
-                        <strong>Premium:</strong> 도메인 1년 무료 제공 + 평생 호스팅이 포함됩니다.
-                        <br><br>
-                        도메인 구매는 <strong>가비아, 카페24</strong> 등에서 연 1~2만원 정도로 가능합니다.
-                    </p>
+                <!-- FAQ Item 5 -->
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <div class="faq-question-icon">🌐</div>
+                        <div class="faq-question-text">도메인과 호스팅은 어떻게 되나요?</div>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <strong>Standard & Deluxe:</strong> 도메인은 개별 구매 필요, 
+                            호스팅은 Standard(1년) / Deluxe(평생) 제공<br><br>
+                            <strong>Premium:</strong> 도메인 1년 무료 + 평생 호스팅 포함<br><br>
+                            도메인은 가비아, 카페24 등에서 연 1~2만원에 구매 가능합니다.
+                        </div>
+                    </div>
                 </div>
 
-                <div class="reveal bg-white rounded-2xl p-6 border-l-4 border-blue-500 shadow-lg">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Q. 추가 비용이 발생하나요?</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        패키지에 명시된 내용 외에는 <strong>추가 비용이 없습니다</strong>. 
-                        단, Premium 패키지의 경우 <strong>1개월 무제한 수정 기간 이후</strong> 추가 수정을 원하실 경우 
-                        별도의 수정 비용(회당 3만원)이 발생할 수 있습니다.
-                    </p>
+                <!-- FAQ Item 6 -->
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <div class="faq-question-icon">💳</div>
+                        <div class="faq-question-text">추가 비용이 발생하나요?</div>
+                        <div class="faq-toggle">▼</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            패키지에 명시된 내용 외에는 <strong>추가 비용이 없습니다</strong>.<br><br>
+                            단, Premium 패키지의 경우 <strong>1개월 무제한 수정 기간 이후</strong> 
+                            추가 수정을 원하실 경우 별도의 수정 비용(회당 3만원)이 발생할 수 있습니다.
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="text-center mt-12">
-                <p class="text-gray-600 mb-6">
+                <p class="text-gray-600 mb-6" style="line-height: 1.9;">
                     더 궁금한 사항이 있으신가요?
                 </p>
-                <button 
-                    data-tally-open="3xegv5" 
+                <button onclick="openTallyWithData('상담', 'faq-contact')" 
                     data-tally-emoji-text="💬" 
                     data-tally-emoji-animation="wave"
-                    class="cta-primary" 
-                    data-cta-variant="faq-contact">
+                    class="cta-primary">
                     무료 상담 신청하기
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Free Ebook CTA Section with Tally Integration -->
+    <!-- Free Ebook CTA Section -->
     <section id="ebook" class="section-padding" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
         <div class="container">
             <div class="max-w-4xl mx-auto text-center text-white">
                 <span class="badge badge-warning mb-6">🎁 특별 무료 혜택</span>
-                <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">
+                <h2 class="text-4xl md:text-6xl font-black mb-8" style="line-height: 1.5;">
                     광고비를<br class="md:hidden"> 10배 효율화하는<br>
                     <span class="text-yellow-300">실전 노하우 전자책</span><br>
                     지금 무료로 받아가세요!
@@ -1926,127 +1740,103 @@
 
                 <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 mb-8">
                     <h3 class="text-2xl font-bold mb-6">📘 "파워링크 광고비 10배 효율화 실전 매뉴얼"</h3>
-                    <ul class="text-left text-lg space-y-3 max-w-2xl mx-auto">
+                    <ul class="text-left text-lg space-y-4 max-w-2xl mx-auto">
                         <li class="flex items-start">
                             <span class="mr-3 text-yellow-300 text-2xl">✓</span>
-                            <span>파워링크 전환율을 5배 높이는 랜딩페이지 구조</span>
+                            <span><strong>Chapter 1:</strong> 파워링크 기초부터 계정 구조까지</span>
                         </li>
                         <li class="flex items-start">
                             <span class="mr-3 text-yellow-300 text-2xl">✓</span>
-                            <span>PASONA 법칙을 활용한 고객 설득 심리학</span>
+                            <span><strong>Chapter 2:</strong> 첫 캠페인 만들기와 키워드 등록 실전</span>
                         </li>
                         <li class="flex items-start">
                             <span class="mr-3 text-yellow-300 text-2xl">✓</span>
-                            <span>광고비 월 50만원 이상 절약하는 체크리스트</span>
+                            <span><strong>Chapter 3:</strong> 키워드 전략과 품질지수 올리는 법</span>
                         </li>
                         <li class="flex items-start">
                             <span class="mr-3 text-yellow-300 text-2xl">✓</span>
-                            <span>DB 수집 자동화로 영업 효율 10배 높이기</span>
+                            <span>대행사 없이 직접 운영하는 5가지 장점</span>
                         </li>
                         <li class="flex items-start">
                             <span class="mr-3 text-yellow-300 text-2xl">✓</span>
-                            <span>실제 고객 사례 분석 & 매출 증대 전략</span>
+                            <span>광고비 월 50만원 이상 절약하는 실전 체크리스트</span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="mb-8">
-                    <p class="text-3xl font-bold mb-2">
+                    <p class="text-3xl font-bold mb-2" style="line-height: 1.9;">
                         <span class="line-through opacity-70">59,000원</span>
                         <span class="mx-4">→</span>
                         <span class="text-yellow-300 text-5xl">무료</span>
                     </p>
-                    <p class="text-xl opacity-90">
+                    <p class="text-xl opacity-90" style="line-height: 1.9;">
                         ⏰ 선착순 <strong id="ebookRemaining">500부</strong> 한정
                     </p>
                 </div>
 
-                <!-- Tally Form Button -->
                 <div class="flex justify-center mb-4">
-                    <button 
-                        data-tally-open="3xegv5" 
+                    <button onclick="openTallyWithData('전자책', 'ebook-main')" 
                         data-tally-emoji-text="📘" 
                         data-tally-emoji-animation="wave"
                         data-tally-auto-close="3000"
                         class="cta-primary" 
-                        style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #1f2937; font-size: 1.25rem; padding: 1.5rem 3rem;"
-                        data-cta-variant="ebook-main">
+                        style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #1f2937; font-size: 1.25rem; padding: 1.5rem 3rem;">
                         📥 무료 전자책 즉시 다운로드
                     </button>
                 </div>
 
-                <p class="text-sm opacity-80">
+                <p class="text-sm opacity-80" style="line-height: 1.9;">
                     💳 카드 정보 불필요 · 이메일만 입력 · 즉시 다운로드
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Real-time Ad Burn Section -->
+    <!-- Ad Burn Counter Section -->
     <section class="section-padding bg-gray-900">
         <div class="container">
             <div class="max-w-4xl mx-auto">
                 <div class="ad-burn-container reveal">
                     <div class="text-center text-white relative z-10">
-                        <h3 class="text-4xl md:text-6xl font-black mb-6">
-                            
+                        <h3 class="text-3xl md:text-4xl font-black mb-6" style="line-height: 1.5;">
                             <span class="text-red-400">지금 이 순간에도</span><br>
                             당신의<br class="md:hidden"> <span class="text-yellow-400">광고비는<br class="md:hidden"> 타들어가고</span><br class="md:hidden"> 있습니다
                         </h3>
                         
-                        <p class="text-xl text-gray-300 mb-8">
-                            실시간으로 사라지는 광고비<br>(월 100만원 기준, 블로그 전환율 1% 가정)
-                        </p>
-                        
                         <div class="flex justify-center items-center gap-4 mb-6">
-                            <div class="flex items-center gap-3">
-                                <span class="text-gray-300 text-3xl md:text-4xl font-bold">잔액 :</span>
-                                <div class="ad-counter" id="adBurnCounter">1,000,000</div>
-                                <span class="text-gray-300 text-3xl md:text-4xl font-bold"> 원</span>
+                            <div>
+                                <div class="ad-counter" id="adSpendCounter">₩1,000,000</div>
+                                <p class="text-gray-400 text-sm mt-2">지금까지 소진된 광고비</p>
                             </div>
-                            <div class="text-4xl text-red-500 animate-pulse">🔥</div>
                         </div>
-                        <p class="text-gray-400 text-sm mb-8">(남은 광고비)</p>
-                        
-                        <p class="text-gray-400 text-sm mb-8">
-                            * 월 100만원 광고비를 전환율 1% 블로그로 낭비 시, 실시간으로 차감되는 금액<br>
-                            (초당 900~5000원 차감)
-                        </p>
-                        
-                        <div class="bg-white/5 backdrop-blur rounded-2xl p-6 mb-8">
-                            <p class="text-2xl font-bold mb-4">
-                                SpeedLanding으로 전환 시?
+
+                        <div class="countdown-container mt-8">
+                            <p class="urgency-text text-center">⏰ 무료 혜택 종료까지</p>
+                            <div class="countdown-timer">
+                                <div class="countdown-digit" id="hoursLeft">00</div>
+                                <div class="countdown-separator">:</div>
+                                <div class="countdown-digit" id="minutesLeft">00</div>
+                                <div class="countdown-separator">:</div>
+                                <div class="countdown-digit" id="secondsLeft">00</div>
+                            </div>
+                            <div class="countdown-label">
+                                <span>시간</span>
+                                <span>분</span>
+                                <span>초</span>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-8">
+                            <p class="text-yellow-300 text-2xl font-bold mb-4" style="line-height: 1.9;">
+                                남은 인원: <span class="remaining-count" id="remainingSlots">13</span>명
                             </p>
-                            <div class="flex justify-center items-center gap-8 flex-wrap">
-                                <div>
-                                    <div class="text-4xl font-black text-red-400">-80%</div>
-                                    <p class="text-gray-300 text-sm">광고비 낭비</p>
-                                </div>
-                                <div class="text-3xl">→</div>
-                                <div>
-                                    <div class="text-4xl font-black text-green-400">+400%</div>
-                                    <p class="text-gray-300 text-sm">매출 증가</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-col md:flex-row gap-4 justify-center">
-                            <button 
-                                data-tally-open="3xegv5" 
-                                data-tally-emoji-text="📘" 
+                            <button onclick="openTallyWithData('긴급버튼', 'urgency-cta')" 
+                                data-tally-emoji-text="🚀" 
                                 data-tally-emoji-animation="wave"
                                 class="cta-primary" 
-                                data-cta-variant="burn-ebook">
-                                📘 무료 전자책으로 배우기
-                            </button>
-                            <button 
-                                data-tally-open="3xegv5" 
-                                data-tally-emoji-text="🚨" 
-                                data-tally-emoji-animation="wave"
-                                class="cta-primary" 
-                                style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);" 
-                                data-cta-variant="burn-sample">
-                                🚨 지금 바로 해결하기
+                                style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); font-size: 1.25rem; padding: 1.25rem 3rem;">
+                                지금 바로 신청하기
                             </button>
                         </div>
                     </div>
@@ -2056,97 +1846,37 @@
     </section>
 
     <!-- Final CTA Section -->
-    <section class="section-padding bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <section class="section-padding" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
         <div class="container">
             <div class="max-w-4xl mx-auto text-center text-white">
-                <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">
-                    이제 선택은<br>
-                    <span class="text-brand">당신의 몫</span>입니다
+                <h2 class="text-4xl md:text-6xl font-black mb-8" style="line-height: 1.5;">
+                    더 이상<br class="md:hidden"> <span class="text-gray-400">의미 없이</span><br class="md:hidden"> 광고비를<br>
+                    <span class="text-red-400">태우지 마세요</span>
                 </h2>
                 
-                <div class="grid md:grid-cols-2 gap-8 mb-12">
-                    <div class="bg-red-900/30 border-2 border-red-500 rounded-2xl p-8">
-                        <h3 class="text-2xl font-bold mb-4 text-red-400">❌ 아무것도 하지 않으면</h3>
-                        <ul class="text-left space-y-2 text-gray-300">
-                            <li>✗ 광고비는 계속 '타들어가고'</li>
-                            <li>✗ 전환율 1%에 머무르며</li>
-                            <li>✗ 경쟁사는 앞서나가고</li>
-                            <li>✗ 매출은 제자리걸음</li>
-                        </ul>
-                    </div>
+                <p class="text-xl text-gray-300 mb-12" style="line-height: 1.9;">
+                    지금 신청하시면 <strong class="text-brand">무료 전자책 + 맞춤 샘플</strong>까지!
+                </p>
 
-                    <div class="bg-green-900/30 border-2 border-green-500 rounded-2xl p-8">
-                        <h3 class="text-2xl font-bold mb-4 text-green-400">✅ SpeedLanding을 선택하면</h3>
-                        <ul class="text-left space-y-2 text-gray-300">
-                            <li>✓ 광고비 효율 5배 증가</li>
-                            <li>✓ 전환율 5%로 상승</li>
-                            <li>✓ DB 자동 수집으로 영업 효율화</li>
-                            <li>✓ 매출 지속 성장</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 mb-8">
-                    <p class="text-2xl md:text-3xl font-bold mb-4">
-                        <span class="text-yellow-400">고민은 매출 성장만 늦출 뿐</span><br>
-                        결정은 수익을 만듭니다
-                    </p>
-                    <p class="text-xl text-gray-300 mt-4">
-                        지금 이 순간에도 경쟁사는 랜딩페이지로 고객을 모으고 있습니다
-                    </p>
-                </div>
-
-                <div class="flex flex-col md:flex-row gap-4 justify-center">
-                    <button 
-                        data-tally-open="3xegv5" 
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
+                    <button onclick="openTallyWithData('전자책', 'final-ebook')" 
                         data-tally-emoji-text="📘" 
                         data-tally-emoji-animation="wave"
                         class="cta-primary" 
-                        style="font-size: 1.25rem; padding: 1.5rem 3rem;" 
-                        data-cta-variant="final-ebook">
-                        📘 무료 전자책 먼저 받기
+                        style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); font-size: 1.125rem; padding: 1.25rem 3rem;">
+                        📘 무료 전자책 다운로드
                     </button>
-                    <button 
-                        data-tally-open="3xegv5" 
+                    <button onclick="openTallyWithData('샘플', 'final-sample')" 
                         data-tally-emoji-text="✨" 
                         data-tally-emoji-animation="wave"
                         class="cta-primary" 
-                        style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); font-size: 1.25rem; padding: 1.5rem 3rem;" 
-                        data-cta-variant="final-sample">
-                        ✨ 무료 샘플 랜딩페이지 신청
+                        style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); font-size: 1.125rem; padding: 1.25rem 3rem;">
+                        ✨ 무료 샘플 신청
                     </button>
                 </div>
 
-                <!-- Countdown Timer & Urgency -->
-                <div class="countdown-container mt-12">
-                    <div class="urgency-text">
-                        ⚠️ 인원마감<br class="md:hidden"> <span class="remaining-count" id="remainingSlots">13</span>명<br class="md:hidden"> 남았습니다.
-                    </div>
-                    
-                    <div class="countdown-timer">
-                        <div class="countdown-digit" id="hours1">0</div>
-                        <div class="countdown-digit" id="hours2">0</div>
-                        <div class="countdown-separator">:</div>
-                        <div class="countdown-digit" id="minutes1">0</div>
-                        <div class="countdown-digit" id="minutes2">0</div>
-                        <div class="countdown-separator">:</div>
-                        <div class="countdown-digit" id="seconds1">0</div>
-                        <div class="countdown-digit" id="seconds2">0</div>
-                    </div>
-                    
-                    <div class="countdown-label">
-                        <span>시간</span>
-                        <span>분</span>
-                        <span>초</span>
-                    </div>
-                    
-                    <p class="text-red-400 text-sm mt-4 font-semibold">
-                        ⚠️ 마감 시 무료 혜택이 종료될 수 있습니다.
-                    </p>
-                </div>
-
-                <p class="text-gray-400 mt-8" id="finalRemaining">
-                    ⚡ 선착순 <strong>20개 업체</strong> 한정 · 지금 바로 시작하세요
+                <p class="text-gray-400" style="line-height: 1.9;">
+                    🎁 오늘 신청하시는 <strong id="finalRemaining" class="text-yellow-400">500</strong>명께만 특별 제공
                 </p>
             </div>
         </div>
@@ -2155,243 +1885,281 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-12">
         <div class="container">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="text-2xl font-bold text-white mb-4">SpeedLanding</div>
-                    <p class="text-sm">
-                        파워링크 광고주를 위한<br>
-                        전환 최적화 랜딩페이지 솔루션
-                    </p>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <!-- Brand Info -->
+                    <div>
+                        <div class="text-3xl font-black text-gradient mb-4">SpeedLanding</div>
+                        <p class="text-sm mb-4" style="line-height: 1.9;">빠르고 효과적인 랜딩페이지 제작 솔루션</p>
+                        <p class="text-sm" style="line-height: 1.9;">파워링크 광고비를 절감하고<br>전환율을 5배 높이는 전문 랜딩페이지</p>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div>
+                        <h4 class="text-white font-bold mb-4">서비스</h4>
+                        <ul class="space-y-2 text-sm" style="line-height: 1.9;">
+                            <li><a href="#packages" class="hover:text-blue-400 transition">랜딩페이지 제작</a></li>
+                            <li><a href="#ebook" class="hover:text-blue-400 transition">무료 전자책</a></li>
+                            <li><a href="#comparison" class="hover:text-blue-400 transition">블로그 vs 랜딩페이지</a></li>
+                            <li><a href="#faq" class="hover:text-blue-400 transition">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-white font-bold mb-4">문의</h4>
+                        <ul class="space-y-2 text-sm" style="line-height: 1.9;">
+                            <li>📞 대표번호: 031-395-3335</li>
+                            <li>⏰ 운영시간: 평일 09:00-18:00</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">서비스</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#packages" class="hover:text-white transition">패키지 안내</a></li>
-                        <li><a href="#comparison" class="hover:text-white transition">상세 비교</a></li>
-                        <li><a href="#ebook" class="hover:text-white transition">무료 전자책</a></li>
-                        <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
-                    </ul>
+                
+                <div class="border-t border-gray-800 pt-8">
+                    <div class="text-center mb-4">
+                        <p class="text-sm font-bold text-white mb-3">상호명·너를위한브랜드 | 대표명: 조상일 | 사업자번호: 303-33-01037</p>
+                        <p class="text-sm mb-2">주소: 경기도 군포시 산본천로24번길 30, 203호 | 대표번호: 031-395-3335</p>
+                    </div>
+                    <p class="text-center text-sm" style="line-height: 1.9;">© Copyright 2021 너를위한브랜드. All Rights Reserved</p>
                 </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">고객지원</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li>이메일: brandforyou_@naver.com</li>
-                        <li>카카오톡: @너를위한브랜드</li>
-                        <li>전화:010-4628-2048</li>
-                        <li>평일 10:00 - 18:00</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">법적 고지</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white transition">이용약관</a></li>
-                        <li><a href="#" class="hover:text-white transition">개인정보처리방침</a></li>
-                        <li><a href="#" class="hover:text-white transition">환불정책</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-sm">
-                <p>&copy; 2025 너를위한브랜드. All rights reserved.</p>
-                <p class="mt-2">사업자등록번호: 303-33-01037 | 대표: 조상일</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating CTA -->
-    <div id="floatingCTA" class="floating-cta">
-        <div class="container">
-            <div class="flex items-center justify-between">
-                <div class="hidden md:block">
-                    <div class="font-bold text-gray-900">🔥 광고비 절감 기회를 놓치지 마세요!</div>
-                    <div class="text-sm text-gray-600">
-                        무료 전자책 · 샘플 랜딩페이지 <span class="font-bold text-red-600" id="floatingRemaining">20개 업체</span> 한정
-                    </div>
-                </div>
-                <div class="flex gap-3">
-                    <button 
-                        data-tally-open="3xegv5" 
-                        data-tally-emoji-text="📘" 
-                        data-tally-emoji-animation="wave"
-                        class="cta-primary" 
-                        style="padding: 0.75rem 1.5rem; font-size: 0.9rem;" 
-                        data-cta-variant="floating-ebook">
-                        📘 무료 전자책
-                    </button>
-                    <button 
-                        data-tally-open="3xegv5" 
-                        data-tally-emoji-text="✨" 
-                        data-tally-emoji-animation="wave"
-                        class="cta-primary" 
-                        style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 0.75rem 1.5rem; font-size: 0.9rem;" 
-                        data-cta-variant="floating-sample">
-                        ✨ 무료 샘플 신청
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sample Modal -->
-    <div id="sampleModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeSampleModal()">&times;</span>
-            <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">
-                🎁 무료 샘플 랜딩페이지 신청
-            </h2>
-            <p class="text-gray-600 text-center mb-6">
-                파워링크 광고 효율을 확인해보세요!<br>
-                아래 정보를 입력하시면 24시간 내 샘플 페이지를 보내드립니다.
-            </p>
-            
-            <form id="sampleForm" onsubmit="return submitSampleForm(event)">
-                <input type="text" name="name" class="form-input" placeholder="이름" required>
-                <input type="email" name="email" class="form-input" placeholder="이메일" required>
-                <input type="tel" name="phone" class="form-input" placeholder="연락처" required>
-                <input type="text" name="business" class="form-input" placeholder="업종 (예: 부동산, 피부과, 인테리어 등)" required>
-                <input type="text" name="ad_budget" class="form-input" placeholder="월 광고비 (예: 50만원)" required>
-                <textarea name="message" class="form-input form-textarea" placeholder="간단한 요청사항 (선택)"></textarea>
-                
-                <div class="text-sm text-gray-500 mb-4">
-                    <label class="flex items-center">
-                        <input type="checkbox" required class="mr-2">
-                        <span>개인정보 수집 및 이용에 동의합니다 <a href="#" class="text-blue-600">(약관 보기)</a></span>
-                    </label>
-                </div>
-                
-                <button type="submit" class="form-submit" id="sampleSubmitBtn">
-                    ✨ 무료 샘플 신청하기
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Scripts -->
     <script>
-        // URL 파라미터 읽기
+        // URL Parameters for A/B testing
         const urlParams = new URLSearchParams(window.location.search);
 
+        // Tally 폼을 Hidden fields와 함께 여는 함수
+        function openTallyWithData(applicationType, ctaName) {
+            // 현재 URL의 UTM 파라미터 가져오기
+            const utmSource = urlParams.get('utm_source') || '';
+            const utmCampaign = urlParams.get('utm_campaign') || '';
+            const utmContent = urlParams.get('utm_content') || '';
+            
+            // Hidden fields 파라미터 생성
+            const params = new URLSearchParams({
+                application_type: applicationType,
+                CTA: ctaName,
+                UTM_Source: utmSource,
+                UTM_Campaign: utmCampaign,
+                UTM_Content: utmContent
+            });
+            
+            // Tally embed URL 생성
+            const tallyUrl = `https://tally.so/embed/3xegv5?${params.toString()}`;
+            
+            // 콘솔에 로그
+            console.log('✅ Opening Tally popup with data:');
+            console.log('   - 신청유형:', applicationType);
+            console.log('   - CTA:', ctaName);
+            console.log('   - UTM_Source:', utmSource || '(없음)');
+            console.log('   - URL:', tallyUrl);
+            
+            // 모달 오버레이 생성
+            const overlay = document.createElement('div');
+            overlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999999;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            `;
+            
+            // iframe 컨테이너 생성
+            const container = document.createElement('div');
+            container.style.cssText = `
+                position: relative;
+                width: 100%;
+                max-width: 600px;
+                height: 90vh;
+                max-height: 800px;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                overflow: hidden;
+            `;
+            
+            // 닫기 버튼 생성
+            const closeBtn = document.createElement('button');
+            closeBtn.innerHTML = '✕';
+            closeBtn.style.cssText = `
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 32px;
+                height: 32px;
+                border: none;
+                background: rgba(0,0,0,0.1);
+                color: #666;
+                font-size: 20px;
+                cursor: pointer;
+                border-radius: 50%;
+                z-index: 10;
+                transition: all 0.2s;
+            `;
+            closeBtn.onmouseover = () => {
+                closeBtn.style.background = 'rgba(0,0,0,0.2)';
+            };
+            closeBtn.onmouseout = () => {
+                closeBtn.style.background = 'rgba(0,0,0,0.1)';
+            };
+            closeBtn.onclick = () => {
+                document.body.removeChild(overlay);
+                document.body.style.overflow = '';
+            };
+            
+            // iframe 생성
+            const iframe = document.createElement('iframe');
+            iframe.src = tallyUrl;
+            iframe.style.cssText = `
+                width: 100%;
+                height: 100%;
+                border: none;
+            `;
+            
+            // 요소 조립
+            container.appendChild(closeBtn);
+            container.appendChild(iframe);
+            overlay.appendChild(container);
+            
+            // 오버레이 클릭 시 닫기
+            overlay.onclick = (e) => {
+                if (e.target === overlay) {
+                    document.body.removeChild(overlay);
+                    document.body.style.overflow = '';
+                }
+            };
+            
+            // body 스크롤 방지 및 모달 추가
+            document.body.style.overflow = 'hidden';
+            document.body.appendChild(overlay);
+        }
+
         // Price Animation
-        window.addEventListener('load', () => {
-            setTimeout(() => {
+        window.addEventListener('load', function() {
+            setTimeout(function() {
                 document.getElementById('priceOld').classList.add('fade-out');
                 document.getElementById('priceNew').classList.add('fade-in');
-            }, 1500);
+            }, 2000);
         });
 
-        // Real-time Ad Burn Counter (월 100만원에서 차감)
-        let adBurnAmount = 1000000; // 시작 금액: 100만원
-        const adBurnCounter = document.getElementById('adBurnCounter');
+        // Ad Spend Counter (100만원에서 시작해서 0.5초마다 500~3000원씩 감소)
+        let adSpend = 1000000; // 초기값 100만원
+        const adSpendEl = document.getElementById('adSpendCounter');
         
-        function updateAdBurnCounter() {
-            // 900원~5000원 사이 랜덤 차감
-            const decrease = Math.floor(Math.random() * (5000 - 900 + 1)) + 900;
-            adBurnAmount -= decrease;
+        function updateAdSpend() {
+            // 500~3000원 사이의 랜덤 값만큼 감소
+            const randomDecrease = Math.floor(Math.random() * 2501) + 500;
+            adSpend -= randomDecrease;
             
-            // 0원 이하로 내려가면 100만원으로 리셋
-            if (adBurnAmount <= 0) {
-                adBurnAmount = 1000000;
+            // 0원 이하로 내려가지 않도록
+            if (adSpend < 0) {
+                adSpend = 0;
             }
             
-            if (adBurnCounter) {
-                adBurnCounter.textContent = adBurnAmount.toLocaleString();
+            if (adSpendEl) {
+                adSpendEl.textContent = '₩' + adSpend.toLocaleString();
             }
         }
         
-        // 0.5초마다 광고비 빠르게 차감 (더 빠른 속도)
-        setInterval(updateAdBurnCounter, 500);
+        // 0.5초(500ms)마다 업데이트
+        setInterval(updateAdSpend, 500);
 
         // Countdown Timer
-        let countdownTime = 24 * 60 * 60; // 24시간 (초 단위)
-        
         function updateCountdown() {
-            if (countdownTime <= 0) {
-                countdownTime = 24 * 60 * 60; // 리셋
-            }
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999);
             
-            const hours = Math.floor(countdownTime / 3600);
-            const minutes = Math.floor((countdownTime % 3600) / 60);
-            const seconds = countdownTime % 60;
+            const diff = endOfDay - now;
             
-            // 각 자릿수 업데이트
-            document.getElementById('hours1').textContent = Math.floor(hours / 10);
-            document.getElementById('hours2').textContent = hours % 10;
-            document.getElementById('minutes1').textContent = Math.floor(minutes / 10);
-            document.getElementById('minutes2').textContent = minutes % 10;
-            document.getElementById('seconds1').textContent = Math.floor(seconds / 10);
-            document.getElementById('seconds2').textContent = seconds % 10;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
             
-            countdownTime--;
+            document.getElementById('hoursLeft').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutesLeft').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('secondsLeft').textContent = String(seconds).padStart(2, '0');
         }
         
-        // 1초마다 카운트다운 업데이트
-        updateCountdown(); // 초기 실행
+        updateCountdown();
         setInterval(updateCountdown, 1000);
         
-        // Remaining Slots Counter (랜덤하게 감소)
-        let remainingSlots = 13;
+        // Remaining Slots Counter (3~13명 사이에서 3시간마다 랜덤 변경)
+        function getRandomSlots() {
+            // 3~13 사이의 랜덤 숫자
+            return Math.floor(Math.random() * 11) + 3;
+        }
+        
+        // 현재 시간을 기준으로 3시간 블록 ID 계산 (하루를 8개 블록으로 나눔)
+        function getTimeBlockId() {
+            const now = new Date();
+            const hours = now.getHours();
+            return Math.floor(hours / 3); // 0~7 사이의 값
+        }
+        
+        // localStorage에 저장된 값 가져오기 또는 새로 생성
+        function getCurrentSlots() {
+            const currentBlockId = getTimeBlockId();
+            const storedBlockId = localStorage.getItem('slotBlockId');
+            const storedSlots = localStorage.getItem('remainingSlots');
+            
+            // 같은 3시간 블록이면 저장된 값 사용
+            if (storedBlockId === String(currentBlockId) && storedSlots) {
+                return parseInt(storedSlots);
+            }
+            
+            // 새로운 블록이면 새로운 랜덤 값 생성
+            const newSlots = getRandomSlots();
+            localStorage.setItem('slotBlockId', String(currentBlockId));
+            localStorage.setItem('remainingSlots', String(newSlots));
+            return newSlots;
+        }
+        
+        let remainingSlots = getCurrentSlots();
         const remainingSlotsElement = document.getElementById('remainingSlots');
         
-        function updateRemainingSlots() {
-            // 30% 확률로 1명 감소
-            if (Math.random() < 0.3 && remainingSlots > 3) {
-                remainingSlots--;
+        if (remainingSlotsElement) {
+            remainingSlotsElement.textContent = remainingSlots;
+        }
+        
+        // 1분마다 블록 체크 (3시간이 지났는지 확인)
+        setInterval(function() {
+            const newSlots = getCurrentSlots();
+            if (newSlots !== remainingSlots) {
+                remainingSlots = newSlots;
                 if (remainingSlotsElement) {
                     remainingSlotsElement.textContent = remainingSlots;
                 }
             }
-        }
-        
-        // 5분마다 인원 감소 체크
-        setInterval(updateRemainingSlots, 5 * 60 * 1000);
+        }, 60 * 1000);
 
-        // Sample Modal Functions
-        function openSampleModal() {
-            document.getElementById('sampleModal').style.display = 'block';
-        }
-
-        function closeSampleModal() {
-            document.getElementById('sampleModal').style.display = 'none';
-        }
-
-        function submitSampleForm(e) {
-            e.preventDefault();
-            const submitBtn = document.getElementById('sampleSubmitBtn');
-            const form = document.getElementById('sampleForm');
-            
-            const ctaVariant = form.dataset.ctaVariant || 'unknown';
-            const ctaLocation = form.dataset.ctaLocation || 'unknown';
-            
-            submitBtn.disabled = true;
-            submitBtn.textContent = '전송 중...';
-            
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-            data.cta_variant = ctaVariant;
-            data.cta_location = ctaLocation;
-            
-            console.log('Sample Form Submitted:', data);
-            
-            // 실제 구현 시 API 호출
-            // fetch('/api/sample-request', { method: 'POST', body: JSON.stringify(data) })
-            
-            setTimeout(() => {
-                alert('신청이 완료되었습니다! 24시간 내에 샘플 페이지를 보내드리겠습니다.');
-                closeSampleModal();
-                form.reset();
-                submitBtn.disabled = false;
-                submitBtn.textContent = '✨ 무료 샘플 신청하기';
-            }, 1500);
-            
-            return false;
-        }
-
-        // Modal outside click
-        window.onclick = function(event) {
-            const sampleModal = document.getElementById('sampleModal');
-            if (event.target == sampleModal) {
-                closeSampleModal();
-            }
-        }
+        // FAQ Toggle Function
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // 현재 항목이 이미 열려있는지 확인
+                    const isCurrentlyActive = this.classList.contains('active');
+                    
+                    // 모든 FAQ 닫기
+                    document.querySelectorAll('.faq-item').forEach(faq => {
+                        faq.classList.remove('active');
+                    });
+                    
+                    // 현재 항목이 닫혀있었다면 열기
+                    if (!isCurrentlyActive) {
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2418,19 +2186,6 @@
         }
         window.addEventListener('scroll', checkScroll);
         checkScroll();
-
-        // Floating CTA
-        const floatingCTA = document.getElementById('floatingCTA');
-        const heroSection = document.querySelector('.hero-gradient');
-        window.addEventListener('scroll', () => {
-            if (!heroSection || !floatingCTA) return;
-            const heroBottom = heroSection.offsetHeight;
-            if (window.scrollY > heroBottom) {
-                floatingCTA.classList.add('visible');
-            } else {
-                floatingCTA.classList.remove('visible');
-            }
-        });
 
         // Counter animation
         const counters = document.querySelectorAll('.counter');
@@ -2498,36 +2253,34 @@
         // 한정성 수량 동기화
         const remainingSampleSlots = 20;
         const remainingEbookSlots = 500;
-        document.querySelectorAll('#heroRemaining, #floatingRemaining, #finalRemaining, #ebookRemaining').forEach(el => {
+        document.querySelectorAll('#heroRemaining, #finalRemaining, #ebookRemaining').forEach(el => {
             if (!el) return;
             if (el.id === 'heroRemaining') {
                 el.innerHTML = `무료 샘플 ${remainingSampleSlots}개 / 전자책 ${remainingEbookSlots}부 한정`;
-            } else if (el.id === 'floatingRemaining' || el.id === 'finalRemaining') {
-                el.textContent = `${remainingSampleSlots}개 업체`;
+            } else if (el.id === 'finalRemaining') {
+                el.textContent = `${remainingEbookSlots}`;
             } else if (el.id === 'ebookRemaining') {
                 el.textContent = `${remainingEbookSlots}부`;
             }
         });
 
-        // CTA 클릭 추적
-        document.querySelectorAll('[data-cta-variant]').forEach(cta => {
+        // CTA 클릭 추적 (data-tally-open 버튼)
+        document.querySelectorAll('[data-tally-open]').forEach(cta => {
             cta.addEventListener('click', function(e) {
-                const variant = this.getAttribute('data-cta-variant') || 'unknown';
-                const location = this.closest('[id]')?.id || this.closest('section')?.id || 'unknown_location';
-                const text = this.textContent.trim();
+                const hiddenFieldsStr = this.getAttribute('data-tally-hidden-fields');
                 
-                console.log(`CTA Clicked: Variant='${variant}', Location='${location}', Text='${text}'`);
-
-                if (this.onclick && this.onclick.toString().includes('openSampleModal')) {
-                    const form = document.getElementById('sampleForm');
-                    if (form) {
-                        form.dataset.ctaVariant = variant;
-                        form.dataset.ctaLocation = location;
+                if (hiddenFieldsStr) {
+                    try {
+                        const hiddenFields = JSON.parse(hiddenFieldsStr);
+                        console.log('✅ CTA Clicked:', hiddenFields);
+                        console.log('   - 신청유형:', hiddenFields.application_type);
+                        console.log('   - CTA:', hiddenFields.CTA);
+                    } catch (e) {
+                        console.error('Hidden fields parse error:', e);
                     }
+                } else {
+                    console.log('⚠️ CTA Clicked (no hidden fields):', this.textContent.trim());
                 }
-
-                const version = urlParams.get('v') || this.dataset.abVersion || 'default';
-                console.log(`A/B Test Version: ${version}`);
             });
         });
 
