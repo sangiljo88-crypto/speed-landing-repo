@@ -2264,22 +2264,26 @@
             }
         });
 
-        // CTA 클릭 추적 (콘솔 확인용)
-            document.querySelectorAll('[data-cta-variant]').forEach(cta => {
-                cta.addEventListener('click', function(e) {
+        // CTA 클릭 추적 (data-tally-open 버튼)
+        document.querySelectorAll('[data-tally-open]').forEach(cta => {
+            cta.addEventListener('click', function(e) {
+                const hiddenFieldsStr = this.getAttribute('data-tally-hidden-fields');
+                
+                if (hiddenFieldsStr) {
                     try {
-                        const variant = this.getAttribute('data-cta-variant') || 'unknown';
-                        const locationElement = this.closest('section') || this.closest('nav') || this.closest('.floating-cta');
-                        const location = locationElement ? (locationElement.id || locationElement.className.split(' ')[0]) : 'unknown_location';
-                        const text = this.textContent.trim();
-                        // getReferralCode 함수가 없으므로 URL 직접 확인
-                        const urlParams = new URLSearchParams(window.location.search);
-                        const refCode = urlParams.get('ref') || 'direct';
-                        console.log(`CTA Clicked: Variant='${variant}', Location='${location}', Text='${text}', Ref='${refCode}'`);
-                    } catch(err) { console.error("Error in CTA click tracking:", err); }
-                });
+                        const hiddenFields = JSON.parse(hiddenFieldsStr);
+                        console.log('✅ CTA Clicked:', hiddenFields);
+                        console.log('   - 신청유형:', hiddenFields.application_type);
+                        console.log('   - CTA:', hiddenFields.CTA);
+                    } catch (e) {
+                        console.error('Hidden fields parse error:', e);
+                    }
+                } else {
+                    console.log('⚠️ CTA Clicked (no hidden fields):', this.textContent.trim());
+                }
             });
-            
+        });
+
         // 페이지 성능 모니터링
         window.addEventListener('load', function() {
             if (performance && performance.timing) {
