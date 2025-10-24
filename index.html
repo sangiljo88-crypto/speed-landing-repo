@@ -1936,6 +1936,7 @@
             const utmSource = urlParams.get('utm_source') || '';
             const utmCampaign = urlParams.get('utm_campaign') || '';
             const utmContent = urlParams.get('utm_content') || '';
+            const referralCode = urlParams.get('ref') || '';  // 🔥 Referral Code 추가
             
             // Hidden fields 파라미터 생성
             const params = new URLSearchParams({
@@ -1943,7 +1944,8 @@
                 CTA: ctaName,
                 UTM_Source: utmSource,
                 UTM_Campaign: utmCampaign,
-                UTM_Content: utmContent
+                UTM_Content: utmContent,
+                referral_code: referralCode  // 🔥 Referral Code 추가
             });
             
             // Tally embed URL 생성
@@ -1954,6 +1956,7 @@
             console.log('   - 신청유형:', applicationType);
             console.log('   - CTA:', ctaName);
             console.log('   - UTM_Source:', utmSource || '(없음)');
+            console.log('   - Referral Code:', referralCode || '(없음)');  // 🔥 로그 추가
             console.log('   - URL:', tallyUrl);
             
             // 모달 오버레이 생성
@@ -2264,63 +2267,11 @@
             }
         });
 
-        // ========== REFERRAL CODE 기능 추가 ==========
-        // URL에서 ref 파라미터 읽기 (예: ?ref=droinka)
-        function getReferralCode() {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('ref') || '';
-        }
-
-        // 모든 Tally 버튼에 referral_code 추가
-        function addReferralCodeToButtons() {
-            const referralCode = getReferralCode();
-            
-            if (referralCode) {
-                console.log('🎯 Referral Code 감지:', referralCode);
-                
-                document.querySelectorAll('[data-tally-open]').forEach(button => {
-                    const hiddenFieldsStr = button.getAttribute('data-tally-hidden-fields');
-                    
-                    if (hiddenFieldsStr) {
-                        try {
-                            const hiddenFields = JSON.parse(hiddenFieldsStr);
-                            // referral_code 필드 추가
-                            hiddenFields.referral_code = referralCode;
-                            // 업데이트된 데이터를 다시 설정
-                            button.setAttribute('data-tally-hidden-fields', JSON.stringify(hiddenFields));
-                            console.log('✅ Referral Code 추가됨:', button.textContent.trim(), '→', referralCode);
-                        } catch (e) {
-                            console.error('Hidden fields parse error:', e);
-                        }
-                    }
-                });
-            } else {
-                console.log('ℹ️ Referral Code 없음 (일반 유입)');
-            }
-        }
-
-        // 페이지 로드 시 referral code 처리
-        addReferralCodeToButtons();
-        // ========== REFERRAL CODE 기능 끝 ==========
-
-        // CTA 클릭 추적 (data-tally-open 버튼)
-        document.querySelectorAll('[data-tally-open]').forEach(cta => {
+        // CTA 클릭 추적
+        document.querySelectorAll('button[onclick*="openTallyWithData"]').forEach(cta => {
             cta.addEventListener('click', function(e) {
-                const hiddenFieldsStr = this.getAttribute('data-tally-hidden-fields');
-                
-                if (hiddenFieldsStr) {
-                    try {
-                        const hiddenFields = JSON.parse(hiddenFieldsStr);
-                        console.log('✅ CTA Clicked:', hiddenFields);
-                        console.log('   - 신청유형:', hiddenFields.application_type);
-                        console.log('   - CTA:', hiddenFields.CTA);
-                        console.log('   - Referral Code:', hiddenFields.referral_code || '없음');
-                    } catch (e) {
-                        console.error('Hidden fields parse error:', e);
-                    }
-                } else {
-                    console.log('⚠️ CTA Clicked (no hidden fields):', this.textContent.trim());
-                }
+                const onclickAttr = this.getAttribute('onclick');
+                console.log('🎯 CTA Clicked:', onclickAttr);
             });
         });
 
