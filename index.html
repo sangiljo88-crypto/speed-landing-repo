@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>SpeedLanding | 파워링크 광고비를 매출로 바꾸는 전환 최적화 솔루션</title>
-    <meta name="description" content="네이버 파워링크 광고비, 아직도 블로그로 '태우고' 계신가요? 전환율 5배 UP! 월 30만원 이상 광고하시는 사장님을 위한 전문 랜딩페이지 솔루션.">
-    <meta name="keywords" content="랜딩페이지 제작, 네이버 파워링크, 광고비 절감, 전환율 최적화, DB 수집, PASONA">
+    <title>광고 전용 홈페이지 | 문의가 5배 늘어나는 홈페이지 제작</title>
+    <meta name="description" content="파워링크 광고하는데 블로그나 일반 홈페이지 쓰시나요? 광고 전용 홈페이지로 바꾸면 같은 광고비로 문의가 5배 늘어납니다.">
+    <meta name="keywords" content="광고용 홈페이지, 네이버 파워링크, 문의 늘리기, 매출 증대, 고객정보 수집, 소상공인 홈페이지">
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="SpeedLanding | 파워링크 광고비 절감 솔루션">
-    <meta property="og:description" content="광고 클릭을 '매출'로! 자동 DB 수집 랜딩페이지 + 광고비 절약 노하우 전자책 즉시 다운로드.">
+    <meta property="og:title" content="광고 전용 홈페이지 | 문의 5배 증가 보장">
+    <meta property="og:description" content="일반 홈페이지와 다릅니다. 광고비는 그대로, 문의는 5배! 자동 고객정보 수집까지.">
     <meta property="og:url" content="https://brandforyou.kr">
     
     <!-- Tally Script -->
@@ -95,68 +95,43 @@
             font-family: 'Courier New', monospace;
         }
         
-        /* Price Animation Enhanced */
-        .price-container {
-            position: relative;
-            height: 160px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
+        /* Comparison Table */
+        .comparison-table {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
         }
         
-        .ebook-title {
-            font-size: 1.8rem;
-            color: #60a5fa;
+        .comparison-table th {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 1.5rem;
+            font-size: 1.125rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 30px rgba(96, 165, 250, 0.5);
-            animation: glow 2s ease-in-out infinite;
         }
         
-        @keyframes glow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+        .comparison-table td {
+            padding: 1.25rem;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 1rem;
+            line-height: 1.8;
         }
         
-        .price-old {
-            font-size: 4rem;
-            font-weight: 900;
-            color: #64748b;
-            text-decoration: line-through;
-            transition: all 1s ease;
+        .comparison-table tr:hover {
+            background: #f9fafb;
         }
         
-        .price-old.fade-out {
-            opacity: 0;
-            transform: scale(0.8) translateY(-30px);
+        .check-mark {
+            color: #10b981;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
         
-        .price-new {
-            position: absolute;
-            bottom: 0;
-            font-size: 5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            opacity: 0;
-            transform: scale(0.8) translateY(30px);
-            transition: all 1s ease;
-            text-shadow: 0 0 40px rgba(239, 68, 68, 0.4);
-        }
-        
-        .price-new.fade-in {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        .x-mark {
+            color: #ef4444;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
         
         /* Typography Animations */
@@ -438,59 +413,6 @@
             transform: rotate(180deg);
         }
         
-        /* Ad Burn Counter Enhanced */
-        .ad-burn-container {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 2px solid transparent;
-            background-clip: padding-box;
-            border-image: linear-gradient(45deg, #ef4444, #f59e0b) 1;
-            border-radius: 24px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 50px rgba(239, 68, 68, 0.2);
-        }
-        
-        .ad-counter {
-            font-size: 3.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #ef4444 0%, #f59e0b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-family: 'Courier New', monospace;
-            letter-spacing: 0.05em;
-            text-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
-        }
-        
-        /* Countdown Enhanced */
-        .countdown-container {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 2px solid #ef4444;
-            border-radius: 24px;
-            padding: 2.5rem;
-            margin: 2rem auto;
-            max-width: 700px;
-            box-shadow: 0 20px 60px rgba(239, 68, 68, 0.2);
-        }
-        
-        .countdown-digit {
-            background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
-            border: 2px solid #475569;
-            border-radius: 16px;
-            padding: 1.25rem 1.5rem;
-            font-size: 3.5rem;
-            font-weight: 900;
-            color: white;
-            font-family: 'Courier New', monospace;
-            min-width: 80px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-            position: relative;
-            overflow: hidden;
-        }
-        
         /* Premium Card */
         .premium-card {
             background: white;
@@ -536,6 +458,33 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+        
+        /* Countdown Enhanced */
+        .countdown-container {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 2px solid #ef4444;
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin: 2rem auto;
+            max-width: 700px;
+            box-shadow: 0 20px 60px rgba(239, 68, 68, 0.2);
+        }
+        
+        .countdown-digit {
+            background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+            border: 2px solid #475569;
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: white;
+            font-family: 'Courier New', monospace;
+            min-width: 80px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
         }
         
         /* Reveal Animation */
@@ -603,19 +552,6 @@
                 margin-bottom: 1rem;
             }
             
-            .ebook-title { 
-                font-size: 1.1rem;
-                line-height: 1.4;
-            }
-            
-            .price-old { 
-                font-size: 2.5rem;
-            }
-            
-            .price-new { 
-                font-size: 3rem;
-            }
-            
             .cta-premium { 
                 font-size: 0.95rem;
                 padding: 1rem 2rem;
@@ -647,10 +583,6 @@
                 padding: 1.5rem;
             }
             
-            .ad-counter { 
-                font-size: 2rem;
-            }
-            
             .countdown-digit { 
                 font-size: 2rem;
                 padding: 0.75rem 1rem;
@@ -664,6 +596,15 @@
             .stats-card {
                 padding: 1.5rem;
             }
+            
+            .comparison-table {
+                font-size: 0.875rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem;
+            }
         }
     </style>
 </head>
@@ -672,135 +613,205 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-gradient">SpeedLanding</div>
+                <div class="text-2xl font-bold text-gradient">너를위한브랜드</div>
                 <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#difference" class="text-gray-700 hover:text-blue-600 transition font-semibold">차이점</a>
                     <a href="#story" class="text-gray-700 hover:text-blue-600 transition font-semibold">스토리</a>
-                    <a href="#packages" class="text-gray-700 hover:text-blue-600 transition font-semibold">패키지</a>
-                    <a href="#comparison" class="text-gray-700 hover:text-blue-600 transition font-semibold">비교</a>
-                    <a href="#faq" class="text-gray-700 hover:text-blue-600 transition font-semibold">FAQ</a>
-                    <button onclick="openTallyWithData('전자책', 'navbar-ebook')" 
+                    <a href="#packages" class="text-gray-700 hover:text-blue-600 transition font-semibold">가격</a>
+                    <a href="#faq" class="text-gray-700 hover:text-blue-600 transition font-semibold">질문</a>
+                    <button onclick="openTallyWithData('무료가이드북', 'navbar-ebook')" 
                         class="cta-premium" 
                         style="padding: 0.75rem 2rem; font-size: 0.95rem;">
-                        📘 무료 전자책
+                        📘 무료 가이드북
                     </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section with Updated Stats -->
+    <!-- Hero Section -->
     <section class="hero-gradient">
         <div class="hero-pattern"></div>
         <div class="container relative z-10 text-center">
             <div class="fade-in-up delay-1">
                 <span class="inline-block px-6 py-3 bg-red-500 text-white rounded-full font-bold mb-6">
-                    ⚠️ 긴급 경고
+                    ⚠️ 중요한 사실
                 </span>
             </div>
             
             <!-- Main Stats Display -->
             <div class="stats-card max-w-4xl mx-auto mb-12 fade-in-up delay-2">
                 <div class="text-center text-white">
-                    <div class="text-xl md:text-2xl mb-3 text-red-400" style="line-height: 1.6;">
+                    <div class="text-xl md:text-2xl mb-4 text-red-400" style="line-height: 1.6;">
                         지금 이 순간에도
                     </div>
                     <div class="text-2xl md:text-3xl font-bold mb-6" style="line-height: 1.6;">
-                        당신의 광고비는 <span class="text-gradient-fire">타들어가고</span> 있습니다
+                        당신의 광고비가 <span class="text-gradient-fire">허공으로 사라지고</span> 있습니다
                     </div>
                     
                     <div class="text-6xl md:text-7xl font-black text-gradient-fire mb-3">
                         <span id="wasteMoney">₩749,434</span>
                     </div>
-                    <p class="text-gray-300 mb-6" style="line-height: 1.6;">오늘 낭비된 광고비</p>
+                    <p class="text-gray-300 mb-6" style="line-height: 1.6;">오늘 날린 광고비</p>
                     
                     <p class="text-xl text-yellow-400 mb-6" style="line-height: 1.6;">
-                        매일 망설이는 하루가 광고비 30만원을 날리는 하루입니다
+                        광고비만 나가고 문의는 안 오는 이유가 있습니다
                     </p>
                     
                     <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
                         <div>
                             <div class="stat-number" id="missedCustomers">270</div>
-                            <p class="text-gray-300 mt-2" style="line-height: 1.6;">놓친 고객 수 (명)</p>
+                            <p class="text-gray-300 mt-2" style="line-height: 1.6;">오늘 놓친 고객 (명)</p>
                         </div>
                         <div>
                             <div class="stat-number">1%</div>
-                            <p class="text-gray-300 mt-2" style="line-height: 1.6;">지금 운영 중인 파워링크<br>평균 전환율</p>
+                            <p class="text-gray-300 mt-2" style="line-height: 1.6;">일반 홈페이지<br>평균 문의율</p>
                         </div>
                     </div>
                     
                     <div class="mt-12 p-6 bg-gradient-to-br from-purple-900/40 to-blue-900/40 backdrop-blur-sm rounded-3xl border-2 border-purple-500/50">
                         <p class="text-2xl font-bold text-yellow-400 mb-4" style="line-height: 1.8;">
-                            🎯 마케팅의 진짜 핵심
+                            💡 광고하는데 왜 문의가 안 올까요?
                         </p>
                         <p class="text-xl text-white mb-3" style="line-height: 1.8;">
-                            잠재고객을 모으는 것보다 중요한 건<br>
-                            <span class="text-3xl font-black text-gradient-fire">구매 전환을 시키는 것</span>
+                            일반 홈페이지는 <strong class="text-red-400">정보 제공용</strong>이고<br>
+                            <span class="text-3xl font-black text-gradient-fire">광고 전용 홈페이지</span>가 따로 있습니다
                         </p>
                         <p class="text-lg text-gray-300" style="line-height: 1.8;">
-                            100명의 방문자보다<br>
-                            <strong class="text-white">5명의 실제 구매자</strong>가 더 가치있습니다
+                            100명이 클릭해도 1명만 문의하던 것이<br>
+                            <strong class="text-white text-2xl">5명이 문의</strong>하게 됩니다
                         </p>
                         <button onclick="openTallyWithData('긴급신청', 'conversion-focus')" 
                             class="mt-6 cta-premium" 
                             style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
-                            🚀 지금 바로 전환율 높이기
+                            🚀 지금 바로 문의 5배 늘리기
                         </button>
                     </div>
                 </div>
             </div>
             
             <h1 class="text-5xl md:text-7xl font-black text-white mb-8 fade-in-up delay-3" style="line-height: 1.9;">
-                파워링크 광고비,<br>
-                아직도 블로그로 <span class="text-gradient-fire">'태우고'</span> 계신가요?
+                파워링크 광고하시는데<br>
+                아직도 <span class="text-gradient-fire">블로그나 일반 홈페이지</span> 쓰시나요?
             </h1>
             
             <p class="text-xl md:text-2xl text-gray-300 mb-10 fade-in-up delay-4" style="line-height: 2.2;">
-                월 30만원 이상 광고비 쓰시는 사장님,<br>
-                지금도 당신의 광고비가 <strong class="text-white">연기처럼 사라지고</strong> 있습니다.
-            </p>
-
-            <!-- Price Animation with Ebook -->
-            <div class="price-container fade-in-up delay-5">
-                <div class="ebook-title">
-                    📘 파워링크 광고비 10배 효율화 실전 매뉴얼
-                </div>
-                <div class="price-old" id="priceOld">59,000원</div>
-                <div class="price-new" id="priceNew">무료</div>
-            </div>
-            
-            <p class="text-gray-300 text-lg mb-8 fade-in-up delay-5">
-                <strong class="text-white text-xl">선착순 500명 한정</strong><br>
-                <span class="text-yellow-400">⏰ 오늘만 특별 제공</span>
+                광고 전용 홈페이지는 <strong class="text-white">구조부터 다릅니다</strong><br>
+                같은 광고비로 문의가 <strong class="text-yellow-400">5배</strong> 늘어납니다
             </p>
 
             <div class="flex flex-col gap-4 justify-center items-stretch md:flex-row md:items-center fade-in-up delay-6" style="max-width: 700px; margin: 0 auto;">
-                <button onclick="openTallyWithData('전자책', 'hero-ebook')"
+                <button onclick="openTallyWithData('무료가이드북', 'hero-ebook')"
                     class="cta-premium">
-                    📘 무료 전자책 즉시 받기
+                    📘 무료 가이드북 받기
                 </button>
-                <button onclick="openTallyWithData('샘플', 'hero-sample')" 
+                <button onclick="openTallyWithData('무료상담', 'hero-sample')" 
                     class="cta-premium" 
-                    style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
-                    ✨ 무료 샘플 랜딩페이지 신청
+                    style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                    ✨ 무료 상담 신청하기
                 </button>
             </div>
             
             <p class="text-gray-400 text-sm mt-6 fade-in-up delay-6">
-                💳 카드 정보 불필요 · ✅ 100% 무료 · 🚀 즉시 다운로드
+                💳 신용카드 불필요 · ✅ 100% 무료 · 🚀 즉시 확인 가능
             </p>
         </div>
     </section>
 
-    <!-- Story Section -->
-    <section id="story" class="section-padding bg-gray-50">
+    <!-- Difference Section (NEW) -->
+    <section id="difference" class="section-padding bg-gray-50">
         <div class="container">
             <div class="text-center mb-16">
                 <span class="inline-block px-6 py-3 bg-blue-500 text-white rounded-full font-bold mb-6">
-                    💡 대표의 스토리
+                    📊 명확한 차이
                 </span>
                 <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8" style="line-height: 2;">
-                    저도 한때 <span class="text-gradient-fire">광고비를 태우는</span><br>
-                    사장이었습니다
+                    일반 홈페이지 vs <span class="text-gradient">광고 전용 홈페이지</span><br>
+                    뭐가 다를까요?
+                </h2>
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <div class="comparison-table reveal">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th class="text-left">비교 항목</th>
+                                <th>일반 홈페이지/블로그</th>
+                                <th class="bg-gradient-to-r from-green-500 to-emerald-500">광고 전용 홈페이지</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-semibold">목적</td>
+                                <td class="text-center text-gray-600">정보 제공</td>
+                                <td class="text-center font-bold text-green-600">즉시 구매/문의 유도</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">페이지 구조</td>
+                                <td class="text-center text-gray-600">여러 페이지로 분산</td>
+                                <td class="text-center font-bold text-green-600">한 페이지에 집중</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">메뉴/네비게이션</td>
+                                <td class="text-center"><span class="x-mark">✗</span> 복잡한 메뉴</td>
+                                <td class="text-center"><span class="check-mark">✓</span> 메뉴 없음 (집중도 UP)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">문의 버튼</td>
+                                <td class="text-center text-gray-600">1~2개</td>
+                                <td class="text-center font-bold text-green-600">5개 이상 (항상 보임)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">고객 정보 수집</td>
+                                <td class="text-center"><span class="x-mark">✗</span> 수동</td>
+                                <td class="text-center"><span class="check-mark">✓</span> 자동 저장</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">평균 문의율</td>
+                                <td class="text-center text-red-600 font-bold">1%</td>
+                                <td class="text-center text-green-600 font-bold text-2xl">5~7%</td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="font-bold text-lg">월 30만원 광고 시</td>
+                                <td class="text-center">
+                                    <div class="text-gray-600">클릭 300명</div>
+                                    <div class="text-red-600 font-bold text-xl">= 3명 문의</div>
+                                </td>
+                                <td class="text-center bg-green-50">
+                                    <div class="text-green-600">클릭 300명</div>
+                                    <div class="text-green-600 font-bold text-2xl">= 15~21명 문의</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-xl text-gray-700 mb-6" style="line-height: 2;">
+                        <strong class="text-2xl text-gradient-fire">같은 광고비</strong>로<br>
+                        <strong class="text-3xl text-gradient">5배 이상의 성과</strong>를 내는 비밀
+                    </p>
+                    <button onclick="openTallyWithData('차이점확인', 'difference-cta')" 
+                        class="cta-premium" 
+                        style="font-size: 1.25rem; padding: 1.5rem 3rem;">
+                        📞 우리 업종에 맞는 방법 알아보기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="section-padding bg-white">
+        <div class="container">
+            <div class="text-center mb-16">
+                <span class="inline-block px-6 py-3 bg-green-500 text-white rounded-full font-bold mb-6">
+                    💡 대표의 경험
+                </span>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8" style="line-height: 2;">
+                    저도 처음엔 <span class="text-gradient-fire">일반 홈페이지로</span><br>
+                    광고했었습니다
                 </h2>
             </div>
 
@@ -809,55 +820,56 @@
                     <div class="text-6xl mb-6 text-center">😰</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4" style="line-height: 1.8;">월 200만원 광고비</h3>
                     <p class="text-gray-700" style="line-height: 2.2;">
-                        네이버 파워링크에 월 200만원을 쏟아부었습니다. 
-                        클릭은 많았지만 실제 문의는 손에 꼽을 정도...
-                        <strong class="text-red-600">전환율 1%</strong>에 불과했습니다.
+                        네이버 파워링크에 월 200만원씩 썼는데... 
+                        클릭은 많았지만 실제 문의는 하루에 1~2건.
+                        <strong class="text-red-600">문의율 1%</strong>도 안 됐습니다.
                     </p>
                 </div>
 
                 <div class="premium-card reveal">
                     <div class="text-6xl mb-6 text-center">💡</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4" style="line-height: 1.8;">랜딩페이지 발견</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" style="line-height: 1.8;">광고용 홈페이지 발견</h3>
                     <p class="text-gray-700" style="line-height: 2.2;">
-                        블로그 대신 <strong class="text-blue-600">전문 랜딩페이지</strong>를 
-                        적용했더니... 같은 광고비로 전환율이 
-                        <strong class="text-blue-600">5배</strong>로 증가했습니다!
+                        <strong class="text-blue-600">광고 전용 홈페이지</strong>라는 게 
+                        따로 있다는 걸 알게 됐습니다. 바꾼 결과... 
+                        같은 광고비로 문의가 <strong class="text-blue-600">5배</strong> 늘었습니다!
                     </p>
                 </div>
 
                 <div class="premium-card reveal">
                     <div class="text-6xl mb-6 text-center">🚀</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4" style="line-height: 1.8;">SpeedLanding 탄생</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" style="line-height: 1.8;">이제 여러분 차례</h3>
                     <p class="text-gray-700" style="line-height: 2.2;">
-                        저처럼 고민하는 사장님들을 위해 
-                        <strong class="text-purple-600">SpeedLanding</strong>을 만들었습니다. 
-                        이제 여러분도 광고비를 절약하세요!
+                        제가 겪은 시행착오를 
+                        여러분은 겪지 마세요. 
+                        <strong class="text-purple-600">검증된 방법</strong>으로 
+                        바로 성과 내세요!
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Packages Section (순서 변경: Premium - Standard - Deluxe) -->
-    <section id="packages" class="section-padding bg-white">
+    <!-- Packages Section -->
+    <section id="packages" class="section-padding bg-gray-50">
         <div class="container">
             <div class="text-center mb-16">
                 <span class="inline-block px-6 py-3 bg-purple-500 text-white rounded-full font-bold mb-6">
-                    💎 맞춤 패키지
+                    💎 맞춤 제작
                 </span>
                 <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8" style="line-height: 2;">
-                    당신의 비즈니스에 맞는<br>
-                    <span class="text-gradient">패키지를 선택하세요</span>
+                    우리 업종에 딱 맞는<br>
+                    <span class="text-gradient">광고 전용 홈페이지</span>
                 </h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Premium Package (왼쪽, BEST) -->
+                <!-- 프리미엄 광고 홈페이지 (왼쪽, BEST) -->
                 <div class="package-card premium reveal">
-                    <span class="badge-icon best">★ BEST</span>
+                    <span class="badge-icon best">★ 인기</span>
                     
                     <div class="text-center mb-8 mt-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Premium</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">프리미엄 광고 홈페이지</h3>
                         <div class="text-5xl font-black text-orange-600 mb-2">
                             299,000<span class="text-2xl text-gray-600">원</span>
                         </div>
@@ -866,64 +878,64 @@
                     <ul class="space-y-3 mb-8 flex-grow">
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700"><strong class="text-red-600">업종 맞춤형 디자인 1개월 무제한 수정</strong></span>
+                            <span class="text-gray-700"><strong class="text-red-600">업종별 맞춤 디자인</strong></span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">DB 수집 - 이메일 + 구글시트</span>
+                            <span class="text-gray-700"><strong class="text-red-600">1개월 무제한 수정</strong></span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">호스팅 평생 지원</span>
+                            <span class="text-gray-700">고객정보 자동 수집 (이메일+구글시트)</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700"><strong class="text-red-600">도메인 주소 1년 제공</strong></span>
+                            <span class="text-gray-700">평생 무료 관리</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">전자책 제공</span>
+                            <span class="text-gray-700"><strong class="text-red-600">도메인 1년 무료 제공</strong></span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">반응형 디자인 고급형</span>
+                            <span class="text-gray-700">무료 가이드북 제공</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">업체 사진 등록</span>
+                            <span class="text-gray-700">모바일 최적화</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">업체 영상 등록</span>
+                            <span class="text-gray-700">사진/동영상 무제한</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">우선 지원</span>
+                            <span class="text-gray-700">최우선 지원</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">제작기간 3일 이내</span>
+                            <span class="text-gray-700">3일 이내 완성</span>
                         </li>
                     </ul>
 
-                    <button onclick="openTallyWithData('패키지(Premium)', 'package-premium')" 
+                    <button onclick="openTallyWithData('패키지(프리미엄)', 'package-premium')" 
                         class="w-full cta-premium" 
                         style="background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);">
-                        Premium 선택하기
+                        프리미엄 선택하기
                     </button>
                     
                     <a href="http://gangnamaquem.com" target="_blank" 
                         class="w-full mt-3 inline-block text-center py-3 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-lg transition">
-                        🔍 샘플 페이지 보기
+                        🔍 샘플 보기
                     </a>
                 </div>
 
-                <!-- Standard Package (가운데, HIT) -->
+                <!-- 기본형 광고 홈페이지 (가운데, HIT) -->
                 <div class="package-card standard reveal">
-                    <span class="badge-icon hit">HIT</span>
+                    <span class="badge-icon hit">실속형</span>
                     
                     <div class="text-center mb-8 mt-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Standard</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">기본형 광고 홈페이지</h3>
                         <div class="text-5xl font-black text-blue-600 mb-2">
                             99,000<span class="text-2xl text-gray-600">원</span>
                         </div>
@@ -932,45 +944,49 @@
                     <ul class="space-y-3 mb-8 flex-grow">
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">업종 맞춤형 디자인 1회 수정</span>
+                            <span class="text-gray-700">업종별 맞춤 디자인</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">DB 수집 - 이메일</span>
+                            <span class="text-gray-700">1회 수정 포함</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">호스팅 1년 무료</span>
+                            <span class="text-gray-700">고객정보 자동 수집 (이메일)</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">전자책 제공</span>
+                            <span class="text-gray-700">1년 무료 관리</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">반응형 디자인</span>
+                            <span class="text-gray-700">무료 가이드북 제공</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">제작기간 1일 이내</span>
+                            <span class="text-gray-700">모바일 최적화</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 text-xl">✓</span>
+                            <span class="text-gray-700">1일 이내 완성</span>
                         </li>
                     </ul>
 
-                    <button onclick="openTallyWithData('패키지(Standard)', 'package-standard')" 
+                    <button onclick="openTallyWithData('패키지(기본형)', 'package-standard')" 
                         class="w-full cta-premium">
-                        Standard 선택하기
+                        기본형 선택하기
                     </button>
                     
-                    <a href="https://qinghai-salt.netlify.app/" target="_blank" 
+                    <a href="https://heukwoojeong.netlify.app/" target="_blank" 
                         class="w-full mt-3 inline-block text-center py-3 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-lg transition">
-                        🔍 샘플 페이지 보기
+                        🔍 샘플 보기
                     </a>
                 </div>
 
-                <!-- Deluxe Package (오른쪽) -->
+                <!-- 맞춤형 광고 홈페이지 (오른쪽) -->
                 <div class="package-card reveal">
                     <div class="text-center mb-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Deluxe</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">맞춤형 광고 홈페이지</h3>
                         <div class="text-5xl font-black text-green-600 mb-2">
                             259,000<span class="text-2xl text-gray-600">원</span>
                         </div>
@@ -979,64 +995,68 @@
                     <ul class="space-y-3 mb-8 flex-grow">
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">업종 맞춤형 디자인 2회 수정</span>
+                            <span class="text-gray-700">업종별 맞춤 디자인</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">DB 수집 - 이메일 + 구글시트</span>
+                            <span class="text-gray-700">2회 수정 포함</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">호스팅 평생 지원</span>
+                            <span class="text-gray-700">고객정보 자동 수집 (이메일+구글시트)</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">전자책 제공</span>
+                            <span class="text-gray-700">평생 무료 관리</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">반응형 디자인 고급형</span>
+                            <span class="text-gray-700">무료 가이드북 제공</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">업체 사진 등록</span>
+                            <span class="text-gray-700">모바일 최적화</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2 text-xl">✓</span>
-                            <span class="text-gray-700">제작기간 2일 이내</span>
+                            <span class="text-gray-700">사진 무제한</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 text-xl">✓</span>
+                            <span class="text-gray-700">2일 이내 완성</span>
                         </li>
                     </ul>
 
-                    <button onclick="openTallyWithData('패키지(Deluxe)', 'package-deluxe')" 
+                    <button onclick="openTallyWithData('패키지(맞춤형)', 'package-deluxe')" 
                         class="w-full cta-premium" 
                         style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                        Deluxe 선택하기
+                        맞춤형 선택하기
                     </button>
                     
-                    <a href="https://heukwoojeong.netlify.app/" target="_blank" 
+                    <a href="https://saltritual.netlify.app/" target="_blank" 
                         class="w-full mt-3 inline-block text-center py-3 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-lg transition">
-                        🔍 샘플 페이지 보기
+                        🔍 샘플 보기
                     </a>
                 </div>
             </div>
 
             <div class="text-center mt-12">
                 <p class="text-gray-600 text-lg">
-                    🎁 <strong>모든 패키지</strong>에 <span class="text-gradient">59,000원 상당 전자책</span> 포함!
+                    🎁 <strong>모든 패키지</strong>에 <span class="text-gradient">59,000원 상당 가이드북</span> 무료 제공!
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section (문자 대화 형식) -->
-    <section class="section-padding bg-gray-50">
+    <!-- Testimonials Section -->
+    <section class="section-padding bg-white">
         <div class="container">
             <div class="text-center mb-16">
                 <span class="inline-block px-6 py-3 bg-green-500 text-white rounded-full font-bold mb-6">
-                    ✨ 실제 고객 후기
+                    ✨ 실제 후기
                 </span>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">
-                    실제 고객님들의 <span class="text-gradient">성공 사례</span>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8" style="line-height: 2;">
+                    실제 사장님들의 <span class="text-gradient">생생한 후기</span>
                 </h2>
             </div>
 
@@ -1051,7 +1071,7 @@
                         <div class="message-bubble">
                             <div class="message-name">김○○ 대표 (부동산)</div>
                             <div class="message-text">
-                                랜딩페이지 적용한 지 일주일 됐는데요...
+                                광고용 홈페이지로 바꾼지 일주일 됐는데요...
                             </div>
                             <div class="message-time">오후 2:15</div>
                         </div>
@@ -1060,9 +1080,9 @@
                     <div class="message customer" style="animation-delay: 0.3s;">
                         <div class="message-bubble">
                             <div class="message-text">
-                                전환율이 진짜 올라갔어요!<br>
+                                문의가 진짜 늘었어요!<br>
                                 블로그 쓸 때는 100명 중 1명 문의였는데<br>
-                                지금은 <strong>5명이 문의</strong>하네요 😱
+                                지금은 <strong>5~6명이 문의</strong>해요 😱
                             </div>
                             <div class="message-time">오후 2:16</div>
                         </div>
@@ -1070,10 +1090,10 @@
 
                     <div class="message support" style="animation-delay: 0.5s;">
                         <div class="message-bubble">
-                            <div class="message-name">SpeedLanding</div>
+                            <div class="message-name">너를위한브랜드</div>
                             <div class="message-text">
-                                축하드립니다! 전환율 5배 달성하셨네요 🎉<br>
-                                앞으로도 더 좋은 결과 있으시길 바랍니다!
+                                축하드립니다! 문의율 5배 달성하셨네요 🎉<br>
+                                앞으로도 좋은 성과 이어가세요!
                             </div>
                             <div class="message-time">오후 2:18</div>
                         </div>
@@ -1090,7 +1110,7 @@
                         <div class="message-bubble">
                             <div class="message-name">이○○ 원장 (피부과)</div>
                             <div class="message-text">
-                                DB 수집이 자동으로 되니까 정말 편하네요
+                                고객정보가 자동으로 저장되니까 정말 편해요
                             </div>
                             <div class="message-time">오전 11:30</div>
                         </div>
@@ -1099,8 +1119,8 @@
                     <div class="message customer" style="animation-delay: 0.3s;">
                         <div class="message-bubble">
                             <div class="message-text">
-                                구글시트에 실시간으로 쌓이는 거 보면 뿌듯해요 ㅎㅎ<br>
-                                광고비도 <strong>절반으로 줄었습니다!</strong> 👍
+                                구글시트에 실시간으로 쌓이는 거 보면서<br>
+                                광고 효율이 <strong>눈에 보이니까</strong> 좋네요 👍
                             </div>
                             <div class="message-time">오전 11:31</div>
                         </div>
@@ -1108,11 +1128,10 @@
 
                     <div class="message support" style="animation-delay: 0.5s;">
                         <div class="message-bubble">
-                            <div class="message-name">SpeedLanding</div>
+                            <div class="message-name">너를위한브랜드</div>
                             <div class="message-text">
-                                광고비 절감까지 성공하셨네요!<br>
-                                구글시트 연동이 업무 효율에 큰 도움 되셨다니<br>
-                                저희도 기쁩니다 😊
+                                광고 효과를 실시간으로 확인하실 수 있어<br>
+                                더 효율적인 운영이 가능하시죠 😊
                             </div>
                             <div class="message-time">오전 11:35</div>
                         </div>
@@ -1122,15 +1141,15 @@
         </div>
     </section>
 
-    <!-- FAQ Section (클릭하면 열리는 형식 - 답변 숨김) -->
-    <section id="faq" class="section-padding bg-white">
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding bg-gray-50">
         <div class="container">
             <div class="text-center mb-16">
                 <span class="inline-block px-6 py-3 bg-blue-500 text-white rounded-full font-bold mb-6">
                     ❓ 자주 묻는 질문
                 </span>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8">
-                    궁금하신 점을 <span class="text-gradient">해결해드립니다</span>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-8" style="line-height: 2;">
+                    궁금한 점을 <span class="text-gradient">해결해드립니다</span>
                 </h2>
             </div>
 
@@ -1138,16 +1157,34 @@
                 <div class="faq-item reveal">
                     <div class="faq-question">
                         <div class="flex items-center flex-1">
-                            <span class="text-3xl mr-4">📈</span>
-                            <span>정말 전환율이 5배나 올라가나요?</span>
+                            <span class="text-3xl mr-4">🤔</span>
+                            <span>광고 전용 홈페이지가 뭔가요?</span>
                         </div>
                         <span class="faq-arrow">▼</span>
                     </div>
                     <div class="faq-answer">
                         <div class="text-gray-700" style="line-height: 1.8;">
-                            2024년 하반기 저희 서비스를 이용하신 50개 기업의 평균 데이터입니다. 
-                            블로그 평균 전환율 1%에서 랜딩페이지 평균 5%로 실제 측정된 결과입니다. 
-                            물론 업종과 상품에 따라 차이는 있지만, 최소 3배 이상의 전환율 향상을 보장합니다.
+                            일반 홈페이지는 회사 소개나 정보 제공이 목적이라면, 
+                            광고 전용 홈페이지는 오직 '문의/구매'만을 목적으로 만든 특별한 홈페이지입니다. 
+                            전문용어로는 '랜딩페이지'라고 하는데, 복잡한 메뉴 없이 한 페이지에 
+                            고객이 필요한 정보만 담아 문의율을 5배 이상 높입니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <div class="flex items-center flex-1">
+                            <span class="text-3xl mr-4">📈</span>
+                            <span>정말 문의가 5배나 늘어나나요?</span>
+                        </div>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="text-gray-700" style="line-height: 1.8;">
+                            2024년 하반기 저희 서비스를 이용하신 50개 업체의 평균 데이터입니다. 
+                            일반 홈페이지 평균 문의율 1%에서 광고용 홈페이지 평균 5%로 실제 측정된 결과입니다. 
+                            물론 업종과 상품에 따라 차이는 있지만, 최소 3배 이상의 문의 증가를 보장합니다.
                         </div>
                     </div>
                 </div>
@@ -1162,7 +1199,7 @@
                     </div>
                     <div class="faq-answer">
                         <div class="text-gray-700" style="line-height: 1.8;">
-                            Standard는 1일, Deluxe는 2일, Premium은 최대 3일 이내 제작 완료됩니다. 
+                            기본형은 1일, 맞춤형은 2일, 프리미엄은 최대 3일 이내 제작 완료됩니다. 
                             긴급한 경우 추가 비용 없이 당일 제작도 가능합니다. 
                             제작 완료 전까지는 100% 환불이 가능하니 안심하세요.
                         </div>
@@ -1173,14 +1210,14 @@
                     <div class="faq-question">
                         <div class="flex items-center flex-1">
                             <span class="text-3xl mr-4">📊</span>
-                            <span>DB 자동수집은 어떻게 되나요?</span>
+                            <span>고객정보 자동 수집은 어떻게 되나요?</span>
                         </div>
                         <span class="faq-arrow">▼</span>
                     </div>
                     <div class="faq-answer">
                         <div class="text-gray-700" style="line-height: 1.8;">
                             고객이 문의 양식을 작성하면 자동으로 지정하신 이메일로 발송됩니다. 
-                            Deluxe와 Premium 패키지는 구글 스프레드시트에 실시간으로 저장되어 
+                            맞춤형과 프리미엄 패키지는 구글 스프레드시트에 실시간으로 저장되어 
                             언제 어디서나 확인하실 수 있습니다. 별도의 프로그램 설치는 필요 없습니다.
                         </div>
                     </div>
@@ -1197,27 +1234,10 @@
                     <div class="faq-answer">
                         <div class="text-gray-700" style="line-height: 1.8;">
                             패키지에 명시된 내용 외에는 추가 비용이 없습니다. 
-                            Standard는 도메인 개별 구매가 필요하며(연 1~2만원), 
-                            Premium은 도메인 1년 무료 제공됩니다. 
-                            Premium의 경우 1개월 무제한 수정 기간 이후 추가 수정 시에만 
+                            기본형은 도메인 개별 구매가 필요하며(연 1~2만원), 
+                            프리미엄은 도메인 1년 무료 제공됩니다. 
+                            프리미엄의 경우 1개월 무제한 수정 기간 이후 추가 수정 시에만 
                             별도 비용(회당 3만원)이 발생합니다.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal">
-                    <div class="faq-question">
-                        <div class="flex items-center flex-1">
-                            <span class="text-3xl mr-4">📘</span>
-                            <span>무료 전자책은 어떤 내용인가요?</span>
-                        </div>
-                        <span class="faq-arrow">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="text-gray-700" style="line-height: 1.8;">
-                            '파워링크 광고비 10배 효율화 실전 매뉴얼'로 정가 59,000원 상당의 전자책입니다. 
-                            실제 사례를 바탕으로 한 광고 최적화 전략, 키워드 선정법, 
-                            전환율을 높이는 카피라이팅 기법 등이 담겨 있습니다. 선착순 500명까지만 무료입니다.
                         </div>
                     </div>
                 </div>
@@ -1241,7 +1261,7 @@
             <div class="countdown-container">
                 <div class="text-center text-white">
                     <h3 class="text-3xl md:text-4xl font-black mb-8">
-                        ⏰ <span class="text-yellow-400">지금이 마지막 기회</span>입니다
+                        ⏰ <span class="text-yellow-400">지금이 기회</span>입니다
                     </h3>
                     
                     <p class="text-xl mb-8 text-gray-300">
@@ -1284,29 +1304,29 @@
                 <div class="bg-gradient-to-br from-purple-900/60 to-blue-900/60 backdrop-blur-lg rounded-3xl p-8 md:p-12 border-3 border-purple-500/50 shadow-2xl">
                     <div class="text-center text-white">
                         <div class="text-3xl md:text-4xl font-black mb-8" style="line-height: 1.8;">
-                            <span class="text-yellow-400">💡 마케팅의 진짜 핵심은</span><br>
-                            잠재고객 모으기가 아닌<br>
-                            <span class="text-5xl md:text-6xl text-gradient-fire">구매 전환</span>입니다
+                            <span class="text-yellow-400">💡 성공하는 사장님의 비밀</span><br>
+                            광고는 많이 하는 게 아니라<br>
+                            <span class="text-5xl md:text-6xl text-gradient-fire">제대로</span> 하는 겁니다
                         </div>
                         
                         <div class="grid md:grid-cols-2 gap-8 mb-10">
                             <div class="bg-black/30 rounded-2xl p-6">
                                 <div class="text-6xl mb-4">❌</div>
-                                <h3 class="text-2xl font-bold mb-3 text-red-400">잘못된 접근</h3>
+                                <h3 class="text-2xl font-bold mb-3 text-red-400">일반 홈페이지</h3>
                                 <p class="text-lg" style="line-height: 2;">
-                                    방문자 1000명<br>
-                                    전환율 1%<br>
-                                    <strong class="text-red-400 text-2xl">= 10명 구매</strong>
+                                    광고비 월 100만원<br>
+                                    문의율 1%<br>
+                                    <strong class="text-red-400 text-2xl">= 10명 문의</strong>
                                 </p>
                             </div>
                             
                             <div class="bg-black/30 rounded-2xl p-6">
                                 <div class="text-6xl mb-4">✅</div>
-                                <h3 class="text-2xl font-bold mb-3 text-green-400">올바른 접근</h3>
+                                <h3 class="text-2xl font-bold mb-3 text-green-400">광고 전용 홈페이지</h3>
                                 <p class="text-lg" style="line-height: 2;">
-                                    방문자 200명<br>
-                                    전환율 5%<br>
-                                    <strong class="text-green-400 text-2xl">= 10명 구매</strong>
+                                    광고비 월 20만원<br>
+                                    문의율 5%<br>
+                                    <strong class="text-green-400 text-2xl">= 10명 문의</strong>
                                 </p>
                             </div>
                         </div>
@@ -1316,30 +1336,30 @@
                                 🎯 같은 결과, <span class="text-yellow-400">5배 적은 광고비</span>
                             </p>
                             <p class="text-xl" style="line-height: 1.8;">
-                                높은 전환율이 곧 <strong class="text-3xl text-white">매출 증대</strong>의 비밀입니다
+                                높은 문의율이 곧 <strong class="text-3xl text-white">매출 증대</strong>의 비밀입니다
                             </p>
                         </div>
                         
                         <p class="text-2xl mb-8 font-bold" style="line-height: 2;">
                             <span class="text-yellow-400">지금 이 순간</span>이<br>
-                            당신의 비즈니스를 바꿀 <span class="text-gradient-fire text-3xl">결정적 순간</span>입니다
+                            당신의 사업을 바꿀 <span class="text-gradient-fire text-3xl">결정적 순간</span>입니다
                         </p>
                         
                         <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
-                            <button onclick="openTallyWithData('전자책', 'final-ebook')" 
+                            <button onclick="openTallyWithData('무료가이드북', 'final-ebook')" 
                                 class="cta-premium" 
                                 style="font-size: 1.25rem; padding: 1.5rem 3rem; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
-                                📘 무료 전자책으로 시작하기
+                                📘 무료 가이드북으로 시작하기
                             </button>
-                            <button onclick="openTallyWithData('샘플', 'final-sample')" 
+                            <button onclick="openTallyWithData('무료상담', 'final-sample')" 
                                 class="cta-premium" 
                                 style="font-size: 1.25rem; padding: 1.5rem 3rem; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
-                                ✨ 무료 샘플로 확인하기
+                                ✨ 무료 상담으로 확인하기
                             </button>
                         </div>
                         
                         <p class="text-lg text-gray-300">
-                            💳 카드 정보 불필요 · ✅ 100% 무료 · 🚀 즉시 시작
+                            💳 신용카드 불필요 · ✅ 100% 무료 · 🚀 바로 시작
                         </p>
                         
                         <div class="mt-8 pt-8 border-t border-gray-700">
@@ -1357,8 +1377,8 @@
     <footer class="bg-gray-900 text-gray-400 py-12">
         <div class="container">
             <div class="text-center">
-                <div class="text-3xl font-black text-gradient mb-6">SpeedLanding</div>
-                <p class="mb-4">광고 클릭을 매출로 바꾸는 전환 최적화 솔루션</p>
+                <div class="text-3xl font-black text-gradient mb-6">너를위한브랜드</div>
+                <p class="mb-4">광고비는 그대로, 문의는 5배로</p>
                 
                 <div class="mb-8">
                     <p class="text-sm font-bold text-white mb-2">
@@ -1519,14 +1539,6 @@
         `;
         document.head.appendChild(style);
 
-        // Price Animation
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('priceOld').classList.add('fade-out');
-                document.getElementById('priceNew').classList.add('fade-in');
-            }, 2000);
-        });
-
         // Waste Money Counter (증가)
         let wasteMoney = 749434;
         const wasteMoneyEl = document.getElementById('wasteMoney');
@@ -1542,7 +1554,7 @@
         
         setInterval(updateWasteMoney, 500);
 
-        // Missed Customers Counter (270부터 시작, 더 빠르게)
+        // Missed Customers Counter (270부터 시작, 빠르게)
         let missedCustomers = 270;
         const missedCustomersEl = document.getElementById('missedCustomers');
         
@@ -1560,25 +1572,6 @@
                 }
             }, 1000); // 1초마다 1명씩 증가
         });
-
-        // Ad Spend Counter
-        let adSpend = 1000000;
-        const adSpendEl = document.getElementById('adSpendCounter');
-        
-        function updateAdSpend() {
-            const randomDecrease = Math.floor(Math.random() * 2501) + 500;
-            adSpend -= randomDecrease;
-            
-            if (adSpend < 0) {
-                adSpend = 0;
-            }
-            
-            if (adSpendEl) {
-                adSpendEl.textContent = '₩' + adSpend.toLocaleString();
-            }
-        }
-        
-        setInterval(updateAdSpend, 500);
 
         // Countdown Timer
         function updateCountdown() {
