@@ -227,37 +227,41 @@
             background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
             border-color: #3b82f6;
         }
-        
-        /* Badge Premium */
+
+        /* Badge Medal Style */
         .badge-icon {
             position: absolute;
-            top: -15px;
+            top: -20px;
             left: 20px;
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
             font-size: 0.875rem;
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            box-shadow: 0 5px 20px rgba(239, 68, 68, 0.4);
+            letter-spacing: 0.05em;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             animation: badgeBounce 2s ease-in-out infinite;
+            border: 3px solid rgba(255, 255, 255, 0.5);
         }
-        
+
         .badge-icon.best {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            box-shadow: 0 5px 20px rgba(245, 158, 11, 0.4);
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5), inset 0 -3px 10px rgba(0, 0, 0, 0.2);
         }
-        
+
         .badge-icon.hit {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5), inset 0 -3px 10px rgba(0, 0, 0, 0.2);
         }
-        
+
         @keyframes badgeBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-3px); }
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-5px) rotate(5deg); }
         }
         
         /* Message Chat Style */
@@ -915,7 +919,7 @@
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- 프리미엄 광고 홈페이지 (왼쪽, BEST) -->
                 <div class="package-card premium reveal">
-                    <span class="badge-icon best">★ 인기</span>
+                    <span class="badge-icon best">BEST</span>
 
                     <div class="text-center mb-8 mt-8">
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">프리미엄 광고 홈페이지</h3>
@@ -987,7 +991,7 @@
 
                 <!-- 기본형 광고 홈페이지 (가운데, HIT) -->
                 <div class="package-card standard reveal">
-                    <span class="badge-icon hit">실속형</span>
+                    <span class="badge-icon hit">HIT</span>
 
                     <div class="text-center mb-8 mt-8">
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">기본형 광고 홈페이지</h3>
